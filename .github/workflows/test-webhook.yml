@@ -1,12 +1,17 @@
-name: Send Alerts
+name: Test Discord Webhook
 
 on:
-  workflow_call:
   workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "test" to confirm sending a test notification'
+        required: true
+        default: ''
 
 jobs:
-  send-alerts:
+  test-webhook:
     runs-on: ubuntu-latest
+    if: github.event.inputs.confirm == 'test'
     
     steps:
       - name: Checkout repository
@@ -21,10 +26,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       
-      - name: Send alerts
+      - name: Send test notification
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
-        run: python scripts/send_alerts.py
+        run: python scripts/send_alerts.py --test

@@ -14,6 +14,8 @@ Environment Variables:
 
 import json
 import os
+import sys
+import argparse
 import httpx
 from pathlib import Path
 from datetime import datetime, timezone
@@ -26,7 +28,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 CHANGELOG_DIR = DATA_DIR / "changelog"
 
 # Configuration
-WEBSITE_URL = "https://yourusername.github.io/llm-price-tracker"
+WEBSITE_URL = "https://mrunreal.github.io/LLMTracker"
 REQUEST_TIMEOUT = 30.0
 
 
@@ -343,10 +345,11 @@ def send_discord(message: dict[str, Any]) -> bool:
     Returns:
         True if successful, False otherwise
     """
-    webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
+    # Check both WEBHOOK_URL (user's secret name) and DISCORD_WEBHOOK_URL (spec name)
+    webhook_url = os.environ.get("WEBHOOK_URL") or os.environ.get("DISCORD_WEBHOOK_URL")
     
     if not webhook_url:
-        print("⚠ DISCORD_WEBHOOK_URL not set, skipping Discord notification")
+        print("⚠ WEBHOOK_URL / DISCORD_WEBHOOK_URL not set, skipping Discord notification")
         return False
     
     try:
@@ -424,35 +427,104 @@ def send_email(changelog: dict[str, Any]) -> bool:
         return False
 
 
+def create_test_changelog() -> dict[str, Any]:
+    """
+    Create a dummy changelog for testing Discord webhook.
+    
+    Returns:
+        Test changelog with sample price changes
+    """
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "changes": [
+            {
+                "model_id": "openai/gpt-4o",
+                "change_type": "price_decrease",
+                "field": "input_per_million",
+                "old_value": 5.00,
+                "new_value": 2.50,
+                "percent_change": -50.0,
+                "detected_at": datetime.now(timezone.utc).isoformat()
+            },
+            {
+                "model_id": "anthropic/claude-3-5-sonnet",
+                "change_type": "price_decrease",
+                "field": "output_per_million",
+                "old_value": 15.00,
+                "new_value": 12.00,
+                "percent_change": -20.0,
+                "detected_at": datetime.now(timezone.utc).isoformat()
+            },
+            {
+                "model_id": "google/gemini-2-pro",
+                "change_type": "new_model",
+                "new_value": {
+                    "input_per_million": 1.25,
+                    "output_per_million": 5.00
+                },
+                "detected_at": datetime.now(timezone.utc).isoformat()
+            }
+        ],
+        "summary": {
+            "price_increases": 0,
+            "price_decreases": 2,
+            "new_models": 1,
+            "removed_models": 0
+        }
+    }
+
+
 def main() -> None:
     """
     Main entry point for the alert sender.
     
     Workflow:
-    1. Load changelog/latest.json
+    1. Load changelog/latest.json (or use test data with --test flag)
     2. Format messages for each platform
     3. Send to Discord, Slack, Email (if configured)
+    
+    Usage:
+        python send_alerts.py          # Send real changelog alerts
+        python send_alerts.py --test    # Send dummy test notification
     """
+    parser = argparse.ArgumentParser(
+        description="Send LLM Price Tracker alerts to Discord, Slack, and Email"
+    )
+    parser.add_argument(
+        "--test",
+        action="store_true",
+        help="Send a dummy test notification to verify webhook configuration"
+    )
+    args = parser.parse_args()
+    
     print("=" * 60)
     print("LLM Price Tracker - Alert Sender")
+    if args.test:
+        print("🧪 TEST MODE - Using dummy changelog data")
     print(f"Started at: {datetime.now(timezone.utc).isoformat()}")
     print("=" * 60)
     
-    # Load changelog
-    changelog_path = CHANGELOG_DIR / "latest.json"
-    
-    if not changelog_path.exists():
-        print("⚠ No changelog found at", changelog_path)
-        print("  Run detect_changes.py first to generate changelog")
-        return
-    
-    print("\n📂 Loading changelog...")
-    changelog = load_json(changelog_path)
+    # Load changelog (or use test data)
+    if args.test:
+        print("\n📂 Creating test changelog...")
+        changelog = create_test_changelog()
+        print("✓ Created test changelog with sample price changes")
+    else:
+        changelog_path = CHANGELOG_DIR / "latest.json"
+        
+        if not changelog_path.exists():
+            print("⚠ No changelog found at", changelog_path)
+            print("  Run detect_changes.py first to generate changelog")
+            print("  Or use --test to send a test notification")
+            return
+        
+        print("\n📂 Loading changelog...")
+        changelog = load_json(changelog_path)
     
     changes = changelog.get("changes", [])
     summary = changelog.get("summary", {})
     
-    print(f"✓ Loaded changelog with {len(changes)} changes")
+    print(f"✓ Changelog has {len(changes)} changes")
     print(f"  Summary: {summary}")
     
     if not changes:
@@ -476,14 +548,19 @@ def main() -> None:
     slack_message = format_slack_message(changelog)
     results["slack"] = send_slack(slack_message)
     
-    # Email
-    results["email"] = send_email(changelog)
+    # Email (skip in test mode to avoid spamming subscribers)
+    if args.test:
+        print("⚠ Skipping email in test mode to avoid spamming subscribers")
+    else:
+        results["email"] = send_email(changelog)
     
     # Summary
     print("\n" + "=" * 60)
     sent_count = sum(1 for v in results.values() if v)
     skipped_count = sum(1 for v in results.values() if not v)
     print(f"✅ Alert sending completed: {sent_count} sent, {skipped_count} skipped")
+    if args.test:
+        print("🧪 This was a TEST notification with dummy data")
     print("=" * 60)
 
 
