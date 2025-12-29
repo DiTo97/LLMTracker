@@ -169,7 +169,7 @@ def get_nav(active_page: str = "") -> str:
                     {nav_link("calculator.html", "🧮 Calculator", "calculator")}
                     {nav_link("find.html", "🔍 Find Model", "find")}
                     {nav_link("changelog.html", "📈 Changes", "changelog")}
-                    {nav_link("api.html", "🔌 API", "api")}
+                    {nav_link("api.html", "� Data", "api")}
                 </div>
                 <div class="flex items-center md:hidden">
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" 
@@ -186,7 +186,7 @@ def get_nav(active_page: str = "") -> str:
             <a href="calculator.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🧮 Calculator</a>
             <a href="find.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🔍 Find Model</a>
             <a href="changelog.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">📈 Changes</a>
-            <a href="api.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🔌 API</a>
+            <a href="api.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">� Data</a>
         </div>
     </nav>
 '''
@@ -215,7 +215,7 @@ def get_footer() -> str:
                         <li><a href="compare.html" class="hover:text-white transition-colors">Model Comparison</a></li>
                         <li><a href="calculator.html" class="hover:text-white transition-colors">Cost Calculator</a></li>
                         <li><a href="find.html" class="hover:text-white transition-colors">Model Finder</a></li>
-                        <li><a href="api.html" class="hover:text-white transition-colors">API Access</a></li>
+                        <li><a href="api.html" class="hover:text-white transition-colors">Raw Data</a></li>
                     </ul>
                 </div>
                 <div>
@@ -544,8 +544,8 @@ def generate_index(prices: dict, changelog: dict) -> str:
             </a>
             <a href="api.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover group">
                 <div class="text-3xl mb-4">🔌</div>
-                <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 transition-colors">API Access</h3>
-                <p class="text-gray-500 text-sm mt-2">Integrate pricing data into your own applications</p>
+                <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-600 transition-colors">Raw Data</h3>
+                <p class="text-gray-500 text-sm mt-2">Access pricing data as JSON for your own projects</p>
             </a>
         </div>
     </main>
@@ -1670,23 +1670,23 @@ def generate_api(prices: dict) -> str:
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>LLM Price API - Free Pricing Data Access</title>
-    {get_common_head("LLM Price API", "Free API access to LLM pricing data. No authentication required. Updated every 6 hours.")}
+    <title>LLM Price Data - Free JSON Access</title>
+    {get_common_head("LLM Price Data", "Free access to LLM pricing data as JSON. No authentication required. Updated every 6 hours.")}
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
     {get_nav("api")}
     
     <main class="max-w-4xl mx-auto px-4 py-8">
         <div class="mb-8">
-            <h1 class="text-3xl font-bold text-gray-900 mb-2">🔌 API Documentation</h1>
-            <p class="text-gray-600">Access LLM pricing data programmatically</p>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">📁 Raw Data Access</h1>
+            <p class="text-gray-600">Access LLM pricing data as JSON for your own projects</p>
         </div>
         
         <!-- Overview -->
         <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
             <h2 class="text-lg font-semibold text-gray-900 mb-4">Overview</h2>
             <p class="text-gray-600 mb-4">
-                All pricing data is available as static JSON files. No authentication required. 
+                All pricing data is available as static JSON files hosted on GitHub. No authentication required. 
                 Data is updated automatically every 6 hours.
             </p>
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">

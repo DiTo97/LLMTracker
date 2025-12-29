@@ -25,15 +25,15 @@ Pricing data is aggregated from:
 
 Data is automatically updated every 6 hours via GitHub Actions.
 
-## API Access
+## Raw Data
 
-Access the pricing data directly (no authentication required):
+Access the pricing data directly as JSON (no authentication required):
 
 ```
 https://raw.githubusercontent.com/MrUnreal/LLMTracker/main/data/current/prices.json
 ```
 
-See the [API documentation](https://mrunreal.github.io/LLMTracker/api.html) for schema details.
+See the [data documentation](https://mrunreal.github.io/LLMTracker/api.html) for schema details.
 
 ## How It Works
 
