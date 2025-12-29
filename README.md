@@ -2,6 +2,10 @@
 
 A fully automated LLM pricing tracker that scrapes pricing from multiple sources, detects price changes, and provides a recommendation engine.
 
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/mrunrealgit)
+
+> ☕ **If this tool saves you money, consider [buying me a coffee](https://buymeacoffee.com/mrunrealgit)!**
+
 ## Features
 
 - 🔄 **Automated Scraping**: Fetches pricing data every 6 hours from OpenRouter and LiteLLM
