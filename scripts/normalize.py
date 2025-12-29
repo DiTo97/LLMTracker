@@ -47,6 +47,7 @@ class ModelInfo(BaseModel):
     pricing: PricingInfo
     context_window: int = Field(default=0, description="Maximum context window size")
     max_output_tokens: int = Field(default=0, description="Maximum output tokens")
+    model_type: str = Field(default="chat", description="Model type: chat, image_generation, embedding, audio, etc.")
     supports_vision: bool = Field(default=False)
     supports_function_calling: bool = Field(default=False)
     supports_streaming: bool = Field(default=True)
@@ -257,6 +258,15 @@ def normalize_openrouter(raw_data: dict[str, Any], fetched_at: str) -> dict[str,
             # Determine capabilities
             architecture = item.get("architecture", {}) or {}
             modality = architecture.get("modality", "")
+            output_modalities = architecture.get("output_modalities", [])
+            
+            # Determine model type from modality
+            if "image" in (output_modalities or []):
+                model_type = "image_generation"
+            elif modality and "text" in modality.lower():
+                model_type = "chat"
+            else:
+                model_type = "chat"  # Default for OpenRouter
             
             provider = extract_provider(model_id)
             
@@ -271,6 +281,7 @@ def normalize_openrouter(raw_data: dict[str, Any], fetched_at: str) -> dict[str,
                 ),
                 context_window=context_window,
                 max_output_tokens=max_output,
+                model_type=model_type,
                 supports_vision="image" in modality.lower() if modality else False,
                 supports_function_calling=True,  # Most models on OpenRouter support this
                 supports_streaming=True,
@@ -348,6 +359,24 @@ def normalize_litellm(raw_data: dict[str, Any], fetched_at: str) -> dict[str, Mo
             # LiteLLM uses litellm_provider or we extract from key
             provider = model_data.get("litellm_provider", "") or extract_provider(model_key)
             
+            # Get model type from LiteLLM mode field
+            mode = model_data.get("mode", "chat")
+            # Normalize mode names
+            if mode in ("chat", "completion", "responses"):
+                model_type = "chat"
+            elif mode in ("image_generation", "image_edit"):
+                model_type = "image"
+            elif mode == "embedding":
+                model_type = "embedding"
+            elif mode in ("audio_transcription", "audio_speech"):
+                model_type = "audio"
+            elif mode == "video_generation":
+                model_type = "video"
+            elif mode == "rerank":
+                model_type = "rerank"
+            else:
+                model_type = mode if mode else "chat"
+            
             # Determine capabilities
             supports_vision = model_data.get("supports_vision", False) or False
             supports_fc = model_data.get("supports_function_calling", False) or False
@@ -363,6 +392,7 @@ def normalize_litellm(raw_data: dict[str, Any], fetched_at: str) -> dict[str, Mo
                 ),
                 context_window=max_input,
                 max_output_tokens=max_output,
+                model_type=model_type,
                 supports_vision=supports_vision,
                 supports_function_calling=supports_fc,
                 supports_streaming=True,

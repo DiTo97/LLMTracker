@@ -287,10 +287,11 @@ def generate_index(prices: dict, changelog: dict) -> str:
     except Exception:
         update_str = last_update
     
-    # Get top 10 cheapest models (filter out negatives and zeros)
+    # Get top 10 cheapest CHAT models (filter out images, embeddings, etc.)
     valid_models = [
         (mid, m) for mid, m in models.items()
         if m.get("pricing", {}).get("input_per_million", -1) > 0
+        and m.get("model_type", "chat") == "chat"  # Only chat/text models
     ]
     sorted_models = sorted(
         valid_models,
@@ -578,11 +579,22 @@ def generate_compare(prices: dict) -> str:
         
         <!-- Filters -->
         <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
-            <div class="grid md:grid-cols-4 gap-4">
+            <div class="grid md:grid-cols-5 gap-4">
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Search</label>
                     <input type="text" id="search" placeholder="Search models..." 
                            class="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Type</label>
+                    <select id="modelType" class="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none appearance-none bg-white cursor-pointer">
+                        <option value="">All Types</option>
+                        <option value="chat" selected>💬 Chat/Text</option>
+                        <option value="image">🖼️ Image</option>
+                        <option value="embedding">📊 Embedding</option>
+                        <option value="audio">🔊 Audio</option>
+                        <option value="rerank">🔀 Rerank</option>
+                    </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Provider</label>
@@ -694,12 +706,14 @@ def generate_compare(prices: dict) -> str:
         
         function applyFilters() {{
             const search = document.getElementById('search').value.toLowerCase();
+            const modelType = document.getElementById('modelType').value;
             const provider = document.getElementById('provider').value;
             const category = document.getElementById('category').value;
             const sort = document.getElementById('sort').value;
             
             let filtered = allModels.filter(m => {{
                 if (search && !m.display_name?.toLowerCase().includes(search) && !m.id.toLowerCase().includes(search)) return false;
+                if (modelType && m.model_type !== modelType) return false;
                 if (provider && m.provider !== provider) return false;
                 if (category && m.category !== category) return false;
                 return true;
@@ -736,7 +750,8 @@ def generate_compare(prices: dict) -> str:
                     <td class="py-3 px-4 text-sm text-gray-600">${{formatContext(m.context_window)}}</td>
                     <td class="py-3 px-4">${{getCategoryBadge(m.category || 'standard')}}</td>
                     <td class="py-3 px-4">
-                        <div class="flex gap-1">
+                        <div class="flex gap-1 flex-wrap">
+                            ${{getTypeBadge(m.model_type)}}
                             ${{m.supports_vision ? '<span class="text-xs bg-purple-100 text-purple-600 px-1.5 py-0.5 rounded">Vision</span>' : ''}}
                             ${{m.supports_function_calling ? '<span class="text-xs bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded">Functions</span>' : ''}}
                         </div>
@@ -745,8 +760,21 @@ def generate_compare(prices: dict) -> str:
             `).join('');
         }}
         
+        function getTypeBadge(type) {{
+            const badges = {{
+                'chat': '',  // Default, no badge needed
+                'image': '<span class="text-xs bg-pink-100 text-pink-600 px-1.5 py-0.5 rounded">🖼️ Image</span>',
+                'image_generation': '<span class="text-xs bg-pink-100 text-pink-600 px-1.5 py-0.5 rounded">🖼️ Image</span>',
+                'embedding': '<span class="text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">📊 Embed</span>',
+                'audio': '<span class="text-xs bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded">🔊 Audio</span>',
+                'rerank': '<span class="text-xs bg-cyan-100 text-cyan-600 px-1.5 py-0.5 rounded">🔀 Rerank</span>'
+            }};
+            return badges[type] || '';
+        }}
+        
         function resetFilters() {{
             document.getElementById('search').value = '';
+            document.getElementById('modelType').value = 'chat';
             document.getElementById('provider').value = '';
             document.getElementById('category').value = '';
             document.getElementById('sort').value = 'input_asc';
@@ -754,6 +782,7 @@ def generate_compare(prices: dict) -> str:
         }}
         
         document.getElementById('search').addEventListener('input', applyFilters);
+        document.getElementById('modelType').addEventListener('change', applyFilters);
         document.getElementById('provider').addEventListener('change', applyFilters);
         document.getElementById('category').addEventListener('change', applyFilters);
         document.getElementById('sort').addEventListener('change', applyFilters);
