@@ -1298,7 +1298,7 @@ def generate_find(prices: dict) -> str:
                         <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">${{m.category || 'standard'}}</span>
                     </div>
                     <div class="flex gap-2">
-                        <a href="https://openrouter.ai" target="_blank" class="flex-1 text-center bg-brand-500 text-white py-2 rounded-lg text-sm font-medium hover:bg-brand-600 transition-colors">
+                        <a href="https://openrouter.ai/models?q=${{encodeURIComponent(m.display_name || m.id)}}" target="_blank" class="flex-1 text-center bg-brand-500 text-white py-2 rounded-lg text-sm font-medium hover:bg-brand-600 transition-colors">
                             Try on OpenRouter
                         </a>
                         <a href="calculator.html" class="px-4 py-2 border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
