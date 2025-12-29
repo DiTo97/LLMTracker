@@ -5,10 +5,10 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate and compare LLM API costs based on your token usage. Find the cheapest model for your needs.">
+    <meta name="description" content="Calculate and compare LLM costs based on your token usage. Find the cheapest model for your needs.">
     <meta name="keywords" content="LLM pricing, AI model costs, GPT pricing, Claude pricing, language model comparison">
     <meta property="og:title" content="LLM Cost Calculator">
-    <meta property="og:description" content="Calculate and compare LLM API costs based on your token usage. Find the cheapest model for your needs.">
+    <meta property="og:description" content="Calculate and compare LLM costs based on your token usage. Find the cheapest model for your needs.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
@@ -101,7 +101,7 @@
                     <a href="calculator.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 bg-brand-100 text-brand-700">🧮 Calculator</a>
                     <a href="find.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-600 hover:text-brand-600 hover:bg-brand-50">🔍 Find Model</a>
                     <a href="changelog.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-600 hover:text-brand-600 hover:bg-brand-50">📈 Changes</a>
-                    <a href="api.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-600 hover:text-brand-600 hover:bg-brand-50">� Data</a>
+                    <a href="api.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-600 hover:text-brand-600 hover:bg-brand-50">📁 Data</a>
                 </div>
                 <div class="flex items-center md:hidden">
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" 
@@ -118,7 +118,7 @@
             <a href="calculator.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🧮 Calculator</a>
             <a href="find.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🔍 Find Model</a>
             <a href="changelog.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">📈 Changes</a>
-            <a href="api.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">� Data</a>
+            <a href="api.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">📁 Data</a>
         </div>
     </nav>
 
@@ -126,7 +126,7 @@
     <main class="max-w-5xl mx-auto px-4 py-8">
         <div class="mb-8">
             <h1 class="text-3xl font-bold text-gray-900 mb-2">🧮 Cost Calculator</h1>
-            <p class="text-gray-600">Estimate your LLM API costs based on token usage</p>
+            <p class="text-gray-600">Estimate your LLM costs based on token usage</p>
         </div>
         
         <div class="grid lg:grid-cols-2 gap-8">
@@ -292,8 +292,8 @@
         
         async function loadData() {
             const response = await fetch('data/prices.json');
-            const data = await response.json();
-            modelsData = data.models || {};
+            const Data = await response.json();
+            modelsData = Data.models || {};
             
             // Check if model ID was passed in URL
             const urlParams = new URLSearchParams(window.location.search);

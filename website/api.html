@@ -101,7 +101,7 @@
                     <a href="calculator.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-600 hover:text-brand-600 hover:bg-brand-50">🧮 Calculator</a>
                     <a href="find.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-600 hover:text-brand-600 hover:bg-brand-50">🔍 Find Model</a>
                     <a href="changelog.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-600 hover:text-brand-600 hover:bg-brand-50">📈 Changes</a>
-                    <a href="api.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 bg-brand-100 text-brand-700">� Data</a>
+                    <a href="api.html" class="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 bg-brand-100 text-brand-700">📁 Data</a>
                 </div>
                 <div class="flex items-center md:hidden">
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" 
@@ -118,7 +118,7 @@
             <a href="calculator.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🧮 Calculator</a>
             <a href="find.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🔍 Find Model</a>
             <a href="changelog.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">📈 Changes</a>
-            <a href="api.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">� Data</a>
+            <a href="api.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">📁 Data</a>
         </div>
     </nav>
 
@@ -141,7 +141,7 @@
                     <span class="text-amber-500">⚠️</span>
                     <div>
                         <p class="font-medium text-amber-800">Fair Use Policy</p>
-                        <p class="text-sm text-amber-700">Please cache responses on your end. The data only updates every 6 hours.</p>
+                        <p class="text-sm text-amber-700">Please cache responses on your end. The Data only updates every 6 hours.</p>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,7 @@
                 <div>
                     <h4 class="font-medium text-gray-900 mb-2">JavaScript</h4>
                     <pre class="bg-gray-900 text-gray-100 p-4 rounded-xl text-sm overflow-x-auto"><code>const res = await fetch('data/prices.json');
-const data = await res.json();
+const Data = await res.json();
 
 // Find cheapest model
 const cheapest = Object.values(data.models)
@@ -199,7 +199,7 @@ console.log(cheapest.display_name, cheapest.pricing);</code></pre>
 data = requests.get("https://.../prices.json").json()
 
 # Get all OpenAI models
-openai = [m for m in data["models"].values() if m["provider"] == "openai"]
+openai = [m for m in Data["models"].values() if m["provider"] == "openai"]
 for m in openai:
     print(f"{m['display_name']}: ${m['pricing']['input_per_million']}/M")</code></pre>
                 </div>

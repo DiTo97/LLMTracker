@@ -169,7 +169,7 @@ def get_nav(active_page: str = "") -> str:
                     {nav_link("calculator.html", "🧮 Calculator", "calculator")}
                     {nav_link("find.html", "🔍 Find Model", "find")}
                     {nav_link("changelog.html", "📈 Changes", "changelog")}
-                    {nav_link("api.html", "� Data", "api")}
+                    {nav_link("api.html", "📁 Data", "api")}
                 </div>
                 <div class="flex items-center md:hidden">
                     <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" 
@@ -186,7 +186,7 @@ def get_nav(active_page: str = "") -> str:
             <a href="calculator.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🧮 Calculator</a>
             <a href="find.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">🔍 Find Model</a>
             <a href="changelog.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">📈 Changes</a>
-            <a href="api.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">� Data</a>
+            <a href="api.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-brand-50">📁 Data</a>
         </div>
     </nav>
 '''
@@ -670,7 +670,7 @@ def generate_compare(prices: dict) -> str:
         
         async function loadData() {{
             const response = await fetch('data/prices.json');
-            const data = await response.json();
+            const Data = await response.json();
             allModels = Object.entries(data.models || {{}}).map(([id, m]) => ({{
                 id, ...m,
                 input: m.pricing?.input_per_million || 0,
@@ -812,7 +812,7 @@ def generate_calculator(prices: dict) -> str:
 <html lang="en">
 <head>
     <title>LLM Cost Calculator - Estimate Your AI Spending</title>
-    {get_common_head("LLM Cost Calculator", "Calculate and compare LLM API costs based on your token usage. Find the cheapest model for your needs.")}
+    {get_common_head("LLM Cost Calculator", "Calculate and compare LLM costs based on your token usage. Find the cheapest model for your needs.")}
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
     {get_nav("calculator")}
@@ -820,7 +820,7 @@ def generate_calculator(prices: dict) -> str:
     <main class="max-w-5xl mx-auto px-4 py-8">
         <div class="mb-8">
             <h1 class="text-3xl font-bold text-gray-900 mb-2">🧮 Cost Calculator</h1>
-            <p class="text-gray-600">Estimate your LLM API costs based on token usage</p>
+            <p class="text-gray-600">Estimate your LLM costs based on token usage</p>
         </div>
         
         <div class="grid lg:grid-cols-2 gap-8">
@@ -937,8 +937,8 @@ def generate_calculator(prices: dict) -> str:
         
         async function loadData() {{
             const response = await fetch('data/prices.json');
-            const data = await response.json();
-            modelsData = data.models || {{}};
+            const Data = await response.json();
+            modelsData = Data.models || {{}};
             
             // Check if model ID was passed in URL
             const urlParams = new URLSearchParams(window.location.search);
@@ -1197,11 +1197,11 @@ def generate_find(prices: dict) -> str:
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-3">Category</label>
                             <div class="flex flex-wrap gap-2">
-                                <button onclick="setCategory('')" class="cat-btn active px-3 py-1.5 text-sm rounded-lg border transition-all" data-cat="">All</button>
-                                <button onclick="setCategory('flagship')" class="cat-btn px-3 py-1.5 text-sm rounded-lg border transition-all" data-cat="flagship">Flagship</button>
-                                <button onclick="setCategory('standard')" class="cat-btn px-3 py-1.5 text-sm rounded-lg border transition-all" data-cat="standard">Standard</button>
-                                <button onclick="setCategory('budget')" class="cat-btn px-3 py-1.5 text-sm rounded-lg border transition-all" data-cat="budget">Budget</button>
-                                <button onclick="setCategory('code')" class="cat-btn px-3 py-1.5 text-sm rounded-lg border transition-all" data-cat="code">Code</button>
+                                <button onclick="setCategory('')" class="cat-btn active px-3 py-1.5 text-sm rounded-lg border transition-all" Data-cat="">All</button>
+                                <button onclick="setCategory('flagship')" class="cat-btn px-3 py-1.5 text-sm rounded-lg border transition-all" Data-cat="flagship">Flagship</button>
+                                <button onclick="setCategory('standard')" class="cat-btn px-3 py-1.5 text-sm rounded-lg border transition-all" Data-cat="standard">Standard</button>
+                                <button onclick="setCategory('budget')" class="cat-btn px-3 py-1.5 text-sm rounded-lg border transition-all" Data-cat="budget">Budget</button>
+                                <button onclick="setCategory('code')" class="cat-btn px-3 py-1.5 text-sm rounded-lg border transition-all" Data-cat="code">Code</button>
                             </div>
                         </div>
                     </div>
@@ -1244,7 +1244,7 @@ def generate_find(prices: dict) -> str:
         
         async function loadData() {{
             const response = await fetch('data/prices.json');
-            const data = await response.json();
+            const Data = await response.json();
             allModels = Object.entries(data.models || {{}}).map(([id, m]) => ({{
                 id, ...m,
                 input: m.pricing?.input_per_million || 0,
@@ -1448,10 +1448,10 @@ def _load_all_changelogs() -> list[dict]:
             continue  # Skip latest.json, we'll use dated files
         try:
             with open(file, "r", encoding="utf-8") as f:
-                data = json.load(f)
+                Data = json.load(f)
                 # Extract date from filename (2025-12-29.json)
                 date_str = file.stem
-                data["_date"] = date_str
+                Data["_date"] = date_str
                 changelogs.append(data)
         except Exception:
             continue
@@ -1694,7 +1694,7 @@ def generate_api(prices: dict) -> str:
                     <span class="text-amber-500">⚠️</span>
                     <div>
                         <p class="font-medium text-amber-800">Fair Use Policy</p>
-                        <p class="text-sm text-amber-700">Please cache responses on your end. The data only updates every 6 hours.</p>
+                        <p class="text-sm text-amber-700">Please cache responses on your end. The Data only updates every 6 hours.</p>
                     </div>
                 </div>
             </div>
@@ -1735,7 +1735,7 @@ def generate_api(prices: dict) -> str:
                 <div>
                     <h4 class="font-medium text-gray-900 mb-2">JavaScript</h4>
                     <pre class="bg-gray-900 text-gray-100 p-4 rounded-xl text-sm overflow-x-auto"><code>const res = await fetch('data/prices.json');
-const data = await res.json();
+const Data = await res.json();
 
 // Find cheapest model
 const cheapest = Object.values(data.models)
@@ -1752,7 +1752,7 @@ console.log(cheapest.display_name, cheapest.pricing);</code></pre>
 data = requests.get("https://.../prices.json").json()
 
 # Get all OpenAI models
-openai = [m for m in data["models"].values() if m["provider"] == "openai"]
+openai = [m for m in Data["models"].values() if m["provider"] == "openai"]
 for m in openai:
     print(f"{{m['display_name']}}: ${{m['pricing']['input_per_million']}}/M")</code></pre>
                 </div>
@@ -1791,7 +1791,7 @@ def main() -> None:
     print("LLM Price Tracker - Site Generator")
     print("=" * 60)
     
-    # Load data
+    # Load Data
     prices = load_json(CURRENT_DIR / "prices.json")
     changelog = load_json(CHANGELOG_DIR / "latest.json")
     
