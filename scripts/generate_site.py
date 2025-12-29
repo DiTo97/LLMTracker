@@ -1038,11 +1038,15 @@ def generate_calculator(prices: dict) -> str:
             document.getElementById('input-cost').textContent = '$' + (inputCostPerReq * requests * 30).toFixed(2);
             document.getElementById('output-cost').textContent = '$' + (outputCostPerReq * requests * 30).toFixed(2);
             
-            // Find alternatives
+            // Find alternatives (only same model type)
+            const selectedModelType = model.model_type || 'chat';
             const alternatives = Object.entries(modelsData)
                 .filter(([id, m]) => {{
                     if (id === selectedModelId) return false;
                     const inp = m.pricing?.input_per_million || 0;
+                    const modelType = m.model_type || 'chat';
+                    // Only show alternatives of the same type
+                    if (modelType !== selectedModelType) return false;
                     return inp > 0 && inp < inputPrice * 0.8;
                 }})
                 .sort((a, b) => (a[1].pricing?.input_per_million || 0) - (b[1].pricing?.input_per_million || 0))
