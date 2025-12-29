@@ -1,79 +1,53 @@
-# LLM Price Tracker
+# 💰 LLM Price Tracker
 
-A fully automated LLM pricing tracker that scrapes pricing from multiple sources, detects price changes, and provides a recommendation engine.
+**Compare pricing for 2,100+ AI models from OpenRouter and LiteLLM. Updated every 6 hours.**
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/mrunrealgit)
+🌐 **[Live Site](https://mrunreal.github.io/LLMTracker/)** · 📊 [Compare Models](https://mrunreal.github.io/LLMTracker/compare.html) · 🧮 [Cost Calculator](https://mrunreal.github.io/LLMTracker/calculator.html)
 
-> ☕ **If this tool saves you money, consider [buying me a coffee](https://buymeacoffee.com/mrunrealgit)!**
+---
 
 ## Features
 
-- 🔄 **Automated Scraping**: Fetches pricing data every 6 hours from OpenRouter and LiteLLM
-- 📊 **Price Tracking**: Historical price data stored in Git
-- 🔔 **Alerts**: Discord, Slack, and email notifications for price changes
-- 🔍 **Recommendation Engine**: Find the best model for your needs
-- 💰 **Cost Calculator**: Estimate costs based on token usage
-- 📈 **Comparison Tool**: Side-by-side model comparison
-
-## Architecture
-
-This project is 95% GitHub-hosted:
-- **GitHub Actions**: Automated scraping and deployment
-- **Git Repository**: Data storage and version control
-- **GitHub Pages**: Static website hosting
-
-## Quick Start
-
-### Local Development
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/MrUnreal/LLMTracker.git
-   cd llm-price-tracker
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the scraper:
-   ```bash
-   python scripts/scrape.py
-   python scripts/normalize.py
-   python scripts/detect_changes.py
-   python scripts/generate_site.py
-   ```
-
-4. View the website:
-   Open `website/index.html` in your browser
-
-### GitHub Setup
-
-1. Fork this repository
-2. Enable GitHub Pages (Settings → Pages → Source: main branch, /website folder)
-3. Add secrets for alerts (optional):
-   - `DISCORD_WEBHOOK_URL`
-   - `SLACK_WEBHOOK_URL`
-   - `BUTTONDOWN_API_KEY`
+| Feature | Description |
+|---------|-------------|
+| 📊 **Model Comparison** | Side-by-side comparison of 2,100+ models with sorting and filtering |
+| 🧮 **Cost Calculator** | Estimate monthly costs based on your token usage |
+| 🔍 **Model Finder** | Find models by category, price range, or context window |
+| 📈 **Price Changes** | Track historical price changes over time |
+| 🔌 **Free API** | Access raw JSON data for your own applications |
 
 ## Data Sources
 
-- **OpenRouter API**: https://openrouter.ai/api/v1/models
-- **LiteLLM**: https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
+Pricing data is aggregated from:
 
-## API
+- **[OpenRouter](https://openrouter.ai/)** — 350+ models with real-time pricing
+- **[LiteLLM](https://github.com/BerriAI/litellm)** — 2,200+ model configurations
 
-Access the pricing data directly:
+Data is automatically updated every 6 hours via GitHub Actions.
+
+## API Access
+
+Access the pricing data directly (no authentication required):
 
 ```
-https://raw.githubusercontent.com/yourusername/llm-price-tracker/main/data/current/prices.json
+https://raw.githubusercontent.com/MrUnreal/LLMTracker/main/data/current/prices.json
 ```
 
-## Contributing
+See the [API documentation](https://mrunreal.github.io/LLMTracker/api.html) for schema details.
 
-Contributions are welcome! Please read the contributing guidelines before submitting a PR.
+## How It Works
+
+1. **GitHub Actions** scrapes pricing APIs every 6 hours
+2. **Data is normalized** into a unified schema and committed to Git
+3. **Static website** is regenerated and deployed to GitHub Pages
+4. **Price changes** are detected and logged in the changelog
+
+No databases, no servers — just Git as the source of truth.
 
 ## License
 
-MIT License - see LICENSE file for details.
+MIT License
+
+---
+
+<sub>If this tool saves you money, consider [buying me a coffee](https://buymeacoffee.com/mrunrealgit) ☕</sub>
