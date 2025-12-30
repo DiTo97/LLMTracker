@@ -561,6 +561,13 @@ def main() -> None:
     print(f"✅ Alert sending completed: {sent_count} sent, {skipped_count} skipped")
     if args.test:
         print("🧪 This was a TEST notification with dummy data")
+    else:
+        # Delete latest.json after successful notification to prevent duplicate alerts
+        # The dated file (e.g., 2024-12-30.json) is preserved for history
+        changelog_path = CHANGELOG_DIR / "latest.json"
+        if sent_count > 0 and changelog_path.exists():
+            changelog_path.unlink()
+            print("🗑️  Deleted latest.json to prevent duplicate alerts")
     print("=" * 60)
 
 
