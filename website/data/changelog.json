@@ -1,39 +1,48 @@
 {
-  "generated_at": "2025-12-29T18:04:21.999340+00:00",
+  "generated_at": "2025-12-30T12:04:37.075727+00:00",
   "changes": [
     {
-      "model_id": "z-ai/glm-4.6",
+      "model_id": "tngtech/tng-r1t-chimera",
       "change_type": "price_decrease",
       "field": "input_per_million",
-      "old_value": 0.39,
-      "new_value": 0.35,
-      "percent_change": -10.26,
-      "detected_at": "2025-12-29T18:04:21.997373+00:00"
+      "old_value": 0.3,
+      "new_value": 0.25,
+      "percent_change": -16.67,
+      "detected_at": "2025-12-30T12:04:37.073824+00:00"
     },
     {
-      "model_id": "z-ai/glm-4.6",
+      "model_id": "tngtech/tng-r1t-chimera",
       "change_type": "price_decrease",
       "field": "output_per_million",
-      "old_value": 1.9,
-      "new_value": 1.5,
-      "percent_change": -21.05,
-      "detected_at": "2025-12-29T18:04:21.997373+00:00"
+      "old_value": 1.2,
+      "new_value": 0.85,
+      "percent_change": -29.17,
+      "detected_at": "2025-12-30T12:04:37.073824+00:00"
     },
     {
-      "model_id": "z-ai/glm-4.6",
-      "change_type": "context_change",
-      "field": "context_window",
-      "old_value": 204800,
-      "new_value": 202752,
-      "percent_change": -1.0,
-      "detected_at": "2025-12-29T18:04:21.997373+00:00"
+      "model_id": "tngtech/deepseek-r1t2-chimera",
+      "change_type": "price_decrease",
+      "field": "input_per_million",
+      "old_value": 0.3,
+      "new_value": 0.25,
+      "percent_change": -16.67,
+      "detected_at": "2025-12-30T12:04:37.073824+00:00"
+    },
+    {
+      "model_id": "tngtech/deepseek-r1t2-chimera",
+      "change_type": "price_decrease",
+      "field": "output_per_million",
+      "old_value": 1.2,
+      "new_value": 0.85,
+      "percent_change": -29.17,
+      "detected_at": "2025-12-30T12:04:37.073824+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 2,
+    "price_decreases": 4,
     "new_models": 0,
     "removed_models": 0,
-    "other_changes": 1
+    "other_changes": 0
   }
 }
