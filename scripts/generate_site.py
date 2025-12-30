@@ -70,7 +70,8 @@ def get_common_head(title: str, description: str = "") -> str:
     <meta property="og:description" content="{desc}">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+    <link rel="icon" type="image/jpeg" href="images/icon.jpg">
+    <link rel="apple-touch-icon" href="images/icon.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {{
@@ -78,16 +79,21 @@ def get_common_head(title: str, description: str = "") -> str:
                 extend: {{
                     colors: {{
                         brand: {{
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            200: '#c7d2fe',
-                            300: '#a5b4fc',
-                            400: '#818cf8',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                            800: '#3730a3',
-                            900: '#312e81',
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            200: '#a5f3fc',
+                            300: '#67e8f9',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490',
+                            800: '#155e75',
+                            900: '#164e63',
+                        }},
+                        dark: {{
+                            900: '#0d1b2a',
+                            800: '#1b2838',
+                            700: '#2a3f54',
                         }}
                     }}
                 }}
@@ -100,13 +106,19 @@ def get_common_head(title: str, description: str = "") -> str:
         * {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }}
         
         .gradient-bg {{ 
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            background: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #22d3ee 100%);
         }}
         .gradient-text {{
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }}
+        .neon-glow {{
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.1);
+        }}
+        .dark-section {{
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 100%);
         }}
         .glass {{
             background: rgba(255, 255, 255, 0.95);
@@ -158,8 +170,8 @@ def get_nav(active_page: str = "") -> str:
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center space-x-2 group">
-                        <span class="text-2xl">💰</span>
-                        <span class="text-xl font-bold bg-gradient-to-r from-brand-600 to-purple-600 bg-clip-text text-transparent">
+                        <img src="images/icon.jpg" alt="LLM Price Tracker" class="w-8 h-8 rounded-lg">
+                        <span class="text-xl font-bold bg-gradient-to-r from-brand-500 to-cyan-400 bg-clip-text text-transparent">
                             LLM Prices
                         </span>
                     </a>
@@ -309,7 +321,7 @@ def generate_index(prices: dict, changelog: dict) -> str:
         category = model.get("category", "standard")
         
         badge_color = {
-            "flagship": "bg-purple-100 text-purple-700",
+            "flagship": "bg-teal-100 text-teal-700",
             "standard": "bg-blue-100 text-blue-700", 
             "budget": "bg-green-100 text-green-700",
             "code": "bg-amber-100 text-amber-700",
@@ -386,7 +398,7 @@ def generate_index(prices: dict, changelog: dict) -> str:
     <header class="gradient-bg text-white py-20 relative overflow-hidden">
         <div class="absolute inset-0 bg-black/10"></div>
         <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
         <div class="max-w-7xl mx-auto px-4 text-center relative">
             <div class="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6">
                 <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
@@ -434,7 +446,7 @@ def generate_index(prices: dict, changelog: dict) -> str:
                 <div class="text-gray-600 text-sm">Models Tracked</div>
             </div>
             <div class="bg-white rounded-2xl shadow-lg p-6 text-center card-hover">
-                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span class="text-2xl">🏢</span>
                 </div>
                 <div class="text-4xl font-bold text-gray-900">{provider_count}</div>
@@ -510,8 +522,8 @@ def generate_index(prices: dict, changelog: dict) -> str:
         </div>
         
         <!-- CTA Section -->
-        <div class="mt-12 bg-gradient-to-r from-brand-600 to-purple-600 rounded-2xl p-8 text-white text-center relative overflow-hidden">
-            <div class="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
+        <div class="mt-12 dark-section rounded-2xl p-8 text-white text-center relative overflow-hidden neon-glow">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-cyan-400/10 rounded-full blur-2xl"></div>
             <div class="relative">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4">🔔 Never Miss a Price Drop</h2>
                 <p class="text-white/90 mb-6 max-w-lg mx-auto">
@@ -519,11 +531,11 @@ def generate_index(prices: dict, changelog: dict) -> str:
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
                     <a href="https://discord.gg/AZUajwQuvA" target="_blank"
-                       class="bg-white text-brand-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
+                       class="bg-cyan-400 text-dark-900 px-8 py-3 rounded-xl font-semibold hover:bg-cyan-300 transition-all shadow-lg">
                         💬 Join Discord
                     </a>
                     <a href="https://github.com/MrUnreal/LLMTracker" target="_blank"
-                       class="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/30 transition-all border border-white/30">
+                       class="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/30 transition-all border border-cyan-400/30">
                         ⭐ Star on GitHub
                     </a>
                 </div>
@@ -696,7 +708,7 @@ def generate_compare(prices: dict) -> str:
         
         function getCategoryBadge(cat) {{
             const colors = {{
-                flagship: 'bg-purple-100 text-purple-700',
+                flagship: 'bg-teal-100 text-teal-700',
                 standard: 'bg-blue-100 text-blue-700',
                 budget: 'bg-green-100 text-green-700',
                 code: 'bg-amber-100 text-amber-700',
@@ -753,7 +765,7 @@ def generate_compare(prices: dict) -> str:
                     <td class="py-3 px-4">
                         <div class="flex gap-1 flex-wrap">
                             ${{getTypeBadge(m.model_type)}}
-                            ${{m.supports_vision ? '<span class="text-xs bg-purple-100 text-purple-600 px-1.5 py-0.5 rounded">Vision</span>' : ''}}
+                            ${{m.supports_vision ? '<span class="text-xs bg-teal-100 text-teal-600 px-1.5 py-0.5 rounded">Vision</span>' : ''}}
                             ${{m.supports_function_calling ? '<span class="text-xs bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded">Functions</span>' : ''}}
                         </div>
                     </td>
@@ -880,7 +892,7 @@ def generate_calculator(prices: dict) -> str:
                 <h2 class="text-lg font-semibold text-gray-900 mb-6">Estimated Costs</h2>
                 
                 <div class="space-y-4">
-                    <div class="bg-gradient-to-r from-brand-500 to-purple-500 rounded-xl p-6 text-white">
+                    <div class="bg-gradient-to-r from-brand-500 to-cyan-400 rounded-xl p-6 text-white">
                         <div class="text-sm opacity-90 mb-1">Monthly Cost</div>
                         <div class="text-4xl font-bold" id="monthly-cost">$0.00</div>
                     </div>
@@ -1235,7 +1247,7 @@ def generate_find(prices: dict) -> str:
     <style>
         .cat-btn {{ background: white; border-color: #e5e7eb; color: #6b7280; }}
         .cat-btn:hover {{ border-color: #a5b4fc; }}
-        .cat-btn.active {{ background: #eef2ff; border-color: #6366f1; color: #4f46e5; }}
+        .cat-btn.active {{ background: #ecfeff; border-color: #06b6d4; color: #0891b2; }}
     </style>
     
     <script>
@@ -1314,7 +1326,7 @@ def generate_find(prices: dict) -> str:
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        ${{m.supports_vision ? '<span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Vision</span>' : ''}}
+                        ${{m.supports_vision ? '<span class="text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded-full">Vision</span>' : ''}}
                         ${{m.supports_function_calling ? '<span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Functions</span>' : ''}}
                         ${{m.supports_streaming ? '<span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Streaming</span>' : ''}}
                         <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">${{m.category || 'standard'}}</span>
@@ -1411,7 +1423,7 @@ def generate_changelog(changelog: dict) -> str:
         </div>
         
         <!-- Subscribe CTA (prominent) -->
-        <div class="mb-10 bg-gradient-to-r from-brand-500 via-purple-500 to-pink-500 rounded-2xl p-6 md:p-8 text-white shadow-xl">
+        <div class="mb-10 bg-gradient-to-r from-brand-500 via-cyan-500 to-teal-400 rounded-2xl p-6 md:p-8 text-white shadow-xl">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div>
                     <h2 class="text-xl md:text-2xl font-bold mb-1">🔔 Never Miss a Price Drop</h2>
@@ -1501,7 +1513,7 @@ def _generate_timeline(changelogs: list[dict]) -> str:
         html_parts.append(f'''
         <div class="timeline-item relative pl-16 pb-10">
             <!-- Date Marker -->
-            <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-brand-500 to-purple-500 rounded-xl flex items-center justify-center shadow-lg">
+            <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-brand-500 to-cyan-400 rounded-xl flex items-center justify-center shadow-lg">
                 <span class="text-white font-bold text-sm">{date_obj.day if 'date_obj' in dir() else '?'}</span>
             </div>
             
@@ -1773,7 +1785,7 @@ for m in openai:
                     <a href="https://openrouter.ai/api/v1/models" target="_blank" class="text-brand-600 hover:underline">OpenRouter API</a>
                 </li>
                 <li class="flex items-center gap-2">
-                    <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    <span class="w-2 h-2 bg-cyan-500 rounded-full"></span>
                     <a href="https://github.com/BerriAI/litellm" target="_blank" class="text-brand-600 hover:underline">LiteLLM Model Prices</a>
                 </li>
             </ul>
@@ -1800,6 +1812,7 @@ def main() -> None:
     # Ensure website directory exists
     WEBSITE_DIR.mkdir(parents=True, exist_ok=True)
     (WEBSITE_DIR / "data").mkdir(exist_ok=True)
+    (WEBSITE_DIR / "images").mkdir(exist_ok=True)
     
     # Copy prices.json for client-side access
     if (CURRENT_DIR / "prices.json").exists():
@@ -1810,6 +1823,12 @@ def main() -> None:
     if (CHANGELOG_DIR / "latest.json").exists():
         shutil.copy(CHANGELOG_DIR / "latest.json", WEBSITE_DIR / "data" / "changelog.json")
         print("✓ Copied changelog.json to website/data/")
+    
+    # Copy icon for branding
+    icon_src = PROJECT_ROOT / "images" / "icon.jpg"
+    if icon_src.exists():
+        shutil.copy(icon_src, WEBSITE_DIR / "images" / "icon.jpg")
+        print("✓ Copied icon.jpg to website/images/")
     
     # Generate all pages
     print("\n🔨 Generating pages...")
