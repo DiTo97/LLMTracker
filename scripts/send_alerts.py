@@ -543,6 +543,13 @@ def main() -> None:
         
         print("\n📂 Loading changelog...")
         changelog = load_json(changelog_path)
+        
+        # Check if already notified to prevent duplicate alerts
+        if changelog.get("notified", False):
+            print("⚠ This changelog was already notified at:", changelog.get("notified_at", "unknown"))
+            print("  Skipping to avoid duplicate alerts")
+            print("  (latest.json is kept for API access)")
+            return
     
     changes = changelog.get("changes", [])
     summary = changelog.get("summary", {})
@@ -585,12 +592,15 @@ def main() -> None:
     if args.test:
         print("🧪 This was a TEST notification with dummy data")
     else:
-        # Delete latest.json after successful notification to prevent duplicate alerts
-        # The dated file (e.g., 2024-12-30.json) is preserved for history
+        # Mark latest.json as notified to prevent duplicate alerts
+        # This keeps the file available for API access while avoiding re-sends
         changelog_path = CHANGELOG_DIR / "latest.json"
         if sent_count > 0 and changelog_path.exists():
-            changelog_path.unlink()
-            print("🗑️  Deleted latest.json to prevent duplicate alerts")
+            changelog["notified"] = True
+            changelog["notified_at"] = datetime.now(timezone.utc).isoformat()
+            with open(changelog_path, "w", encoding="utf-8") as f:
+                json.dump(changelog, f, indent=2)
+            print("✓ Marked latest.json as notified (kept for API access)")
     print("=" * 60)
 
 

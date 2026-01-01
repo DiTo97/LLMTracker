@@ -103,7 +103,7 @@ jobs:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
         run: python scripts/send_alerts.py
       
-      - name: Commit deletion of latest.json
+      - name: Commit notified status
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -111,6 +111,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Cleanup: Remove latest.json after sending alerts"
+            git commit -m "Mark changelog as notified"
             git push
           fi
