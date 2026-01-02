@@ -1,29 +1,44 @@
 {
-  "generated_at": "2026-01-02T12:04:28.994581+00:00",
+  "generated_at": "2026-01-02T18:04:11.829251+00:00",
   "changes": [
     {
-      "model_id": "fireworks_ai/accounts/fireworks/models/deepseek-v3p2",
-      "change_type": "price_decrease",
-      "field": "input_per_million",
-      "old_value": 1.2,
-      "new_value": 0.56,
-      "percent_change": -53.33,
-      "detected_at": "2026-01-02T12:04:28.992455+00:00"
+      "model_id": "azure/gpt-image-1-mini",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 2.0,
+        "output_per_million": 0.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-02T18:04:11.826443+00:00"
     },
     {
-      "model_id": "fireworks_ai/accounts/fireworks/models/deepseek-v3p2",
-      "change_type": "price_increase",
+      "model_id": "azure/gpt-image-1",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 5.0,
+        "output_per_million": 0.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-02T18:04:11.826443+00:00"
+    },
+    {
+      "model_id": "gpt-image-1",
+      "change_type": "price_decrease",
       "field": "output_per_million",
-      "old_value": 1.2,
-      "new_value": 1.68,
-      "percent_change": 40.0,
-      "detected_at": "2026-01-02T12:04:28.992455+00:00"
+      "old_value": 40.0,
+      "new_value": 0.0,
+      "percent_change": -100.0,
+      "detected_at": "2026-01-02T18:04:11.826443+00:00"
     }
   ],
   "summary": {
-    "price_increases": 1,
+    "price_increases": 0,
     "price_decreases": 1,
-    "new_models": 0,
+    "new_models": 2,
     "removed_models": 0,
     "other_changes": 0
   }
