@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-01-03T18:04:01.330032+00:00",
+  "fetched_at": "2026-01-04T00:11:18.657490+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 2282,
+  "model_count": 2283,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -29739,6 +29739,20 @@
       "supports_tool_choice": true,
       "supports_vision": true,
       "supports_web_search": true
+    },
+    "zai/glm-4.7": {
+      "cache_creation_input_token_cost": 0,
+      "cache_read_input_token_cost": 1.1e-07,
+      "input_cost_per_token": 6e-07,
+      "output_cost_per_token": 2.2e-06,
+      "litellm_provider": "zai",
+      "max_input_tokens": 200000,
+      "max_output_tokens": 128000,
+      "mode": "chat",
+      "supports_function_calling": true,
+      "supports_reasoning": true,
+      "supports_tool_choice": true,
+      "source": "https://docs.z.ai/guides/overview/pricing"
     },
     "zai/glm-4.6": {
       "input_cost_per_token": 6e-07,
