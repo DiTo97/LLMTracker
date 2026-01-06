@@ -158,22 +158,22 @@
         <!-- All-Time Summary Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             <div class="bg-white rounded-xl shadow-lg border border-green-100 p-5 text-center transform hover:scale-105 transition-transform">
-                <div class="text-3xl font-bold text-green-600">14</div>
+                <div class="text-3xl font-bold text-green-600">16</div>
                 <div class="text-sm text-gray-600 font-medium">Price Drops</div>
                 <div class="text-xs text-green-500 mt-1">💰 Savings!</div>
             </div>
             <div class="bg-white rounded-xl shadow-lg border border-red-100 p-5 text-center transform hover:scale-105 transition-transform">
-                <div class="text-3xl font-bold text-red-600">33</div>
+                <div class="text-3xl font-bold text-red-600">35</div>
                 <div class="text-sm text-gray-600 font-medium">Price Increases</div>
                 <div class="text-xs text-red-500 mt-1">📈 Watch out</div>
             </div>
             <div class="bg-white rounded-xl shadow-lg border border-blue-100 p-5 text-center transform hover:scale-105 transition-transform">
-                <div class="text-3xl font-bold text-blue-600">6</div>
+                <div class="text-3xl font-bold text-blue-600">21</div>
                 <div class="text-sm text-gray-600 font-medium">New Models</div>
                 <div class="text-xs text-blue-500 mt-1">🆕 Fresh arrivals</div>
             </div>
             <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-5 text-center transform hover:scale-105 transition-transform">
-                <div class="text-3xl font-bold text-gray-600">3</div>
+                <div class="text-3xl font-bold text-gray-600">19</div>
                 <div class="text-sm text-gray-600 font-medium">Discontinued</div>
                 <div class="text-xs text-gray-500 mt-1">👋 Goodbye</div>
             </div>
@@ -212,8 +212,8 @@
                             <p class="text-sm text-gray-500">Tuesday</p>
                         </div>
                         <div class="flex items-center gap-3 text-sm">
-                            <span class="flex items-center gap-1 text-green-600"><span class="w-2 h-2 bg-green-500 rounded-full"></span>0 drops</span>
-                            <span class="flex items-center gap-1 text-blue-600"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>3 new</span>
+                            <span class="flex items-center gap-1 text-green-600"><span class="w-2 h-2 bg-green-500 rounded-full"></span>2 drops</span>
+                            <span class="flex items-center gap-1 text-blue-600"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>18 new</span>
                         </div>
                     </div>
                 </div>
@@ -222,17 +222,68 @@
                 <div class="p-6 space-y-6">
                     
     <div>
+        <h4 class="text-sm font-semibold text-green-700 mb-3">📉 Price Drops</h4>
+        <div class="space-y-2">
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-green-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/gemma-7b-it</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm"><span class="text-gray-400 line-through">$0.08</span> → <span class="text-green-600 font-bold">$0.07</span></div>
+                    <div class="text-xs text-green-600 font-medium">-12% Output</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-green-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">fireworks_ai/accounts/fireworks/models/deepseek-v3p2</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm"><span class="text-gray-400 line-through">$1.68</span> → <span class="text-green-600 font-bold">$1.20</span></div>
+                    <div class="text-xs text-green-600 font-medium">-29% Output</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div>
         <h4 class="text-sm font-semibold text-red-700 mb-3">📈 Price Increases</h4>
         <div class="space-y-2">
             
             <div class="flex items-center justify-between py-2 px-3 bg-red-50 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">meta-llama/llama-3.1-8b-instruct</span>
+                    <span class="font-medium text-gray-900">gpt-image-1</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-right">
-                    <div class="text-sm"><span class="text-gray-400 line-through">$0.03</span> → <span class="text-red-600 font-bold">$0.05</span></div>
-                    <div class="text-xs text-red-600 font-medium">+67% Output</div>
+                    <div class="text-sm"><span class="text-gray-400 line-through">$0.00</span> → <span class="text-red-600 font-bold">$40.00</span></div>
+                    <div class="text-xs text-red-600 font-medium">+100% Output</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-red-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/gemma-7b-it</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm"><span class="text-gray-400 line-through">$0.05</span> → <span class="text-red-600 font-bold">$0.07</span></div>
+                    <div class="text-xs text-red-600 font-medium">+40% Input</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-red-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">fireworks_ai/accounts/fireworks/models/deepseek-v3p2</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm"><span class="text-gray-400 line-through">$0.56</span> → <span class="text-red-600 font-bold">$1.20</span></div>
+                    <div class="text-xs text-red-600 font-medium">+114% Input</div>
                 </div>
             </div>
             
@@ -245,7 +296,7 @@
             
             <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">tngtech/tng-r1t-chimera:free</span>
+                    <span class="font-medium text-gray-900">groq/llama-guard-3-8b</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-right">
@@ -256,7 +307,7 @@
             
             <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">allenai/olmo-3.1-32b-think</span>
+                    <span class="font-medium text-gray-900">groq/llama3-groq-70b-8192-tool-use-preview</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-right">
@@ -267,7 +318,172 @@
             
             <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">allenai/olmo-3-32b-think</span>
+                    <span class="font-medium text-gray-900">groq/deepseek-r1-distill-llama-70b</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.2-90b-vision-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.2-11b-vision-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.3-70b-specdec</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/gemma2-9b-it</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/mixtral-8x7b-32768</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama3-groq-8b-8192-tool-use-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama2-70b-4096</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.2-11b-text-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.2-1b-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.1-70b-versatile</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/mistral-saba-24b</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.1-405b-reasoning</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.2-3b-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/moonshotai/kimi-k2-instruct</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
+                    <div class="text-xs text-gray-500">input / output per M</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">groq/llama-3.2-90b-text-preview</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-right">
@@ -285,7 +501,7 @@
             
             <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-500 line-through">allenai/olmo-3-32b-think:free</span>
+                    <span class="font-medium text-gray-500 line-through">minimax/MiniMax-M2.1</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-gray-500 text-sm">Discontinued</div>
@@ -293,7 +509,7 @@
             
             <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-500 line-through">anthropic/claude-3-opus</span>
+                    <span class="font-medium text-gray-500 line-through">vertex_ai/gemini-3-flash-preview</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-gray-500 text-sm">Discontinued</div>
@@ -301,7 +517,135 @@
             
             <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-500 line-through">allenai/olmo-3.1-32b-think:free</span>
+                    <span class="font-medium text-gray-500 line-through">minimax/MiniMax-M2.1-lightning</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">gpt-image-1.5</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">gemini/gemini-3-flash-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">azure/gpt-5.2-chat</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">azure/gpt-image-1.5</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">vertex_ai/deepseek-ai/deepseek-ocr-maas</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">azure/gpt-image-1</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">azure/gpt-image-1.5-2025-12-16</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">groq/meta-llama/llama-guard-4-12b</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">gpt-4o-transcribe-diarize</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">openrouter/google/gemini-3-flash-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">gemini-3-flash-preview</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">azure_ai/gpt-oss-120b</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">azure/gpt-image-1-mini</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">minimax/MiniMax-M2</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">zai/glm-4.7</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">gpt-image-1.5-2025-12-16</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-gray-500 text-sm">Discontinued</div>
