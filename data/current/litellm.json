@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-01-07T12:04:42.794135+00:00",
+  "fetched_at": "2026-01-07T18:04:24.210973+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 2307,
+  "model_count": 2308,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -4910,6 +4910,15 @@
       "mode": "image_generation",
       "output_cost_per_image": 0.04,
       "source": "https://azuremarketplace.microsoft.com/pt-br/marketplace/apps/cohere.cohere-embed-4-offer?tab=PlansAndPrice",
+      "supported_endpoints": [
+        "/v1/images/generations"
+      ]
+    },
+    "azure_ai/flux.2-pro": {
+      "litellm_provider": "azure_ai",
+      "mode": "image_generation",
+      "output_cost_per_image": 0.04,
+      "source": "https://ai.azure.com/explore/models/flux.2-pro/version/1/registry/azureml-blackforestlabs",
       "supported_endpoints": [
         "/v1/images/generations"
       ]
