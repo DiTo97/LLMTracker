@@ -1,48 +1,216 @@
 {
-  "generated_at": "2026-01-06T18:04:24.303644+00:00",
+  "generated_at": "2026-01-07T00:09:33.885380+00:00",
   "changes": [
     {
-      "model_id": "microsoft/phi-3.5-mini-128k-instruct",
-      "change_type": "removed_model",
+      "model_id": "llamagate/qwen3-8b",
+      "change_type": "new_model",
       "field": "model",
-      "old_value": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.1
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.04,
+        "output_per_million": 0.14
       },
-      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-01-06T18:04:24.301175+00:00"
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
     },
     {
-      "model_id": "microsoft/phi-3-mini-128k-instruct",
-      "change_type": "removed_model",
+      "model_id": "llamagate/llama-3.1-8b",
+      "change_type": "new_model",
       "field": "model",
-      "old_value": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.1
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.03,
+        "output_per_million": 0.05
       },
-      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-01-06T18:04:24.301175+00:00"
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
     },
     {
-      "model_id": "microsoft/phi-3-medium-128k-instruct",
-      "change_type": "removed_model",
+      "model_id": "amazon.nova-2-multimodal-embeddings-v1:0",
+      "change_type": "new_model",
       "field": "model",
-      "old_value": {
-        "input_per_million": 1.0,
-        "output_per_million": 1.0
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.135,
+        "output_per_million": 0.0
       },
-      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-01-06T18:04:24.301175+00:00"
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/codellama-7b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.06,
+        "output_per_million": 0.12
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/llama-3.2-3b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.04,
+        "output_per_million": 0.08
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/openthinker-7b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.15
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/qwen2.5-coder-7b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.06,
+        "output_per_million": 0.12
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/deepseek-coder-6.7b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.06,
+        "output_per_million": 0.12
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/nomic-embed-text",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.02,
+        "output_per_million": 0.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/deepseek-r1-8b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.1,
+        "output_per_million": 0.2
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/qwen3-vl-8b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.55
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/llava-7b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.1,
+        "output_per_million": 0.2
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/qwen3-embedding-8b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.02,
+        "output_per_million": 0.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/gemma3-4b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.03,
+        "output_per_million": 0.08
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/deepseek-r1-7b-qwen",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.15
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/dolphin3-8b",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.08,
+        "output_per_million": 0.15
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
+    },
+    {
+      "model_id": "llamagate/mistral-7b-v0.3",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.1,
+        "output_per_million": 0.15
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-07T00:09:33.883495+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
     "price_decreases": 0,
-    "new_models": 0,
-    "removed_models": 3,
+    "new_models": 17,
+    "removed_models": 0,
     "other_changes": 0
   }
 }
