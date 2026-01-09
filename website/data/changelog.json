@@ -1,23 +1,47 @@
 {
-  "generated_at": "2026-01-08T18:04:04.513125+00:00",
+  "generated_at": "2026-01-09T00:10:27.793777+00:00",
   "changes": [
     {
-      "model_id": "allenai/olmo-3.1-32b-instruct",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.2,
-        "output_per_million": 0.6
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-08T18:04:04.509734+00:00"
+      "model_id": "liquid/lfm-2.2-6b",
+      "change_type": "price_decrease",
+      "field": "input_per_million",
+      "old_value": 0.05,
+      "new_value": 0.01,
+      "percent_change": -80.0,
+      "detected_at": "2026-01-09T00:10:27.791681+00:00"
+    },
+    {
+      "model_id": "liquid/lfm-2.2-6b",
+      "change_type": "price_decrease",
+      "field": "output_per_million",
+      "old_value": 0.1,
+      "new_value": 0.02,
+      "percent_change": -80.0,
+      "detected_at": "2026-01-09T00:10:27.791681+00:00"
+    },
+    {
+      "model_id": "liquid/lfm2-8b-a1b",
+      "change_type": "price_decrease",
+      "field": "input_per_million",
+      "old_value": 0.05,
+      "new_value": 0.01,
+      "percent_change": -80.0,
+      "detected_at": "2026-01-09T00:10:27.791681+00:00"
+    },
+    {
+      "model_id": "liquid/lfm2-8b-a1b",
+      "change_type": "price_decrease",
+      "field": "output_per_million",
+      "old_value": 0.1,
+      "new_value": 0.02,
+      "percent_change": -80.0,
+      "detected_at": "2026-01-09T00:10:27.791681+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 0,
-    "new_models": 1,
+    "price_decreases": 4,
+    "new_models": 0,
     "removed_models": 0,
     "other_changes": 0
   }
