@@ -1,44 +1,30 @@
 {
-  "generated_at": "2026-01-12T06:05:20.924164+00:00",
+  "generated_at": "2026-01-12T12:04:31.954556+00:00",
   "changes": [
     {
-      "model_id": "kwaipilot/kat-coder-pro:free",
-      "change_type": "removed_model",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-01-12T06:05:20.921151+00:00"
-    },
-    {
-      "model_id": "openrouter/openai/gpt-oss-20b",
+      "model_id": "minimax/minimax-m2.1",
       "change_type": "price_decrease",
       "field": "input_per_million",
-      "old_value": 0.18,
-      "new_value": 0.02,
-      "percent_change": -88.89,
-      "detected_at": "2026-01-12T06:05:20.921151+00:00"
+      "old_value": 0.28,
+      "new_value": 0.27,
+      "percent_change": -3.57,
+      "detected_at": "2026-01-12T12:04:31.951973+00:00"
     },
     {
-      "model_id": "openrouter/openai/gpt-oss-20b",
+      "model_id": "minimax/minimax-m2.1",
       "change_type": "price_decrease",
       "field": "output_per_million",
-      "old_value": 0.8,
-      "new_value": 0.1,
-      "percent_change": -87.5,
-      "detected_at": "2026-01-12T06:05:20.921151+00:00"
+      "old_value": 1.2,
+      "new_value": 1.12,
+      "percent_change": -6.67,
+      "detected_at": "2026-01-12T12:04:31.951973+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
     "price_decreases": 2,
     "new_models": 0,
-    "removed_models": 1,
+    "removed_models": 0,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-01-12T06:05:39.204336+00:00"
+  }
 }
