@@ -1,41 +1,24 @@
 {
-  "generated_at": "2026-01-13T00:09:06.675966+00:00",
+  "generated_at": "2026-01-13T12:04:38.267677+00:00",
   "changes": [
     {
-      "model_id": "deepseek/deepseek-r1-0528",
-      "change_type": "price_increase",
-      "field": "input_per_million",
-      "old_value": 0.4,
-      "new_value": 0.45,
-      "percent_change": 12.5,
-      "detected_at": "2026-01-13T00:09:06.673946+00:00"
-    },
-    {
-      "model_id": "deepseek/deepseek-r1-0528",
-      "change_type": "price_increase",
-      "field": "output_per_million",
-      "old_value": 1.75,
-      "new_value": 2.15,
-      "percent_change": 22.86,
-      "detected_at": "2026-01-13T00:09:06.673946+00:00"
-    },
-    {
-      "model_id": "deepseek/deepseek-r1-0528",
-      "change_type": "context_change",
-      "field": "context_window",
-      "old_value": 163840,
-      "new_value": 131072,
-      "percent_change": -20.0,
-      "detected_at": "2026-01-13T00:09:06.673946+00:00"
+      "model_id": "azure_ai/claude-opus-4-5",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 5.0,
+        "output_per_million": 25.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-13T12:04:38.265554+00:00"
     }
   ],
   "summary": {
-    "price_increases": 2,
+    "price_increases": 0,
     "price_decreases": 0,
-    "new_models": 0,
+    "new_models": 1,
     "removed_models": 0,
-    "other_changes": 1
-  },
-  "notified": true,
-  "notified_at": "2026-01-13T00:09:22.965069+00:00"
+    "other_changes": 0
+  }
 }

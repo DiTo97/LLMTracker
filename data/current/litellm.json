@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-01-13T06:04:09.048921+00:00",
+  "fetched_at": "2026-01-13T12:04:37.653579+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 2419,
+  "model_count": 2420,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -1324,6 +1324,24 @@
       "max_tokens": 64000,
       "mode": "chat",
       "output_cost_per_token": 5e-06,
+      "supports_assistant_prefill": true,
+      "supports_computer_use": true,
+      "supports_function_calling": true,
+      "supports_pdf_input": true,
+      "supports_prompt_caching": true,
+      "supports_reasoning": true,
+      "supports_response_schema": true,
+      "supports_tool_choice": true,
+      "supports_vision": true
+    },
+    "azure_ai/claude-opus-4-5": {
+      "input_cost_per_token": 5e-06,
+      "litellm_provider": "azure_ai",
+      "max_input_tokens": 200000,
+      "max_output_tokens": 64000,
+      "max_tokens": 64000,
+      "mode": "chat",
+      "output_cost_per_token": 2.5e-05,
       "supports_assistant_prefill": true,
       "supports_computer_use": true,
       "supports_function_calling": true,
