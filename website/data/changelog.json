@@ -1,95 +1,24 @@
 {
-  "generated_at": "2026-01-20T18:05:09.446241+00:00",
+  "generated_at": "2026-01-21T18:12:41.902346+00:00",
   "changes": [
     {
-      "model_id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "model_id": "writer/palmyra-x5",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0
+        "input_per_million": 0.6,
+        "output_per_million": 6.0
       },
       "percent_change": null,
-      "detected_at": "2026-01-20T18:05:09.443991+00:00"
-    },
-    {
-      "model_id": "gemini-2.5-computer-use-preview-10-2025",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 1.25,
-        "output_per_million": 10.0
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-20T18:05:09.443991+00:00"
-    },
-    {
-      "model_id": "liquid/lfm-2.5-1.2b-instruct:free",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-20T18:05:09.443991+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "change_type": "price_decrease",
-      "field": "input_per_million",
-      "old_value": 0.98,
-      "new_value": 0.45,
-      "percent_change": -54.08,
-      "detected_at": "2026-01-20T18:05:09.443991+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 3.95,
-      "new_value": 3.5,
-      "percent_change": -11.39,
-      "detected_at": "2026-01-20T18:05:09.443991+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "change_type": "context_change",
-      "field": "context_window",
-      "old_value": 131072,
-      "new_value": 262144,
-      "percent_change": 100.0,
-      "detected_at": "2026-01-20T18:05:09.443991+00:00"
-    },
-    {
-      "model_id": "nousresearch/hermes-2-pro-llama-3-8b",
-      "change_type": "price_increase",
-      "field": "input_per_million",
-      "old_value": 0.025,
-      "new_value": 0.14,
-      "percent_change": 460.0,
-      "detected_at": "2026-01-20T18:05:09.443991+00:00"
-    },
-    {
-      "model_id": "nousresearch/hermes-2-pro-llama-3-8b",
-      "change_type": "price_increase",
-      "field": "output_per_million",
-      "old_value": 0.08,
-      "new_value": 0.14,
-      "percent_change": 75.0,
-      "detected_at": "2026-01-20T18:05:09.443991+00:00"
+      "detected_at": "2026-01-21T18:12:41.900247+00:00"
     }
   ],
   "summary": {
-    "price_increases": 2,
-    "price_decreases": 2,
-    "new_models": 3,
+    "price_increases": 0,
+    "price_decreases": 0,
+    "new_models": 1,
     "removed_models": 0,
-    "other_changes": 1
-  },
-  "notified": true,
-  "notified_at": "2026-01-20T18:05:26.459971+00:00"
+    "other_changes": 0
+  }
 }

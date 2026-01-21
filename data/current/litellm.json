@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-01-21T12:04:49.994769+00:00",
+  "fetched_at": "2026-01-21T18:12:41.142658+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 2433,
+  "model_count": 2434,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -12701,8 +12701,8 @@
       "supports_web_search": true
     },
     "gemini-2.5-flash-lite": {
-      "cache_read_input_token_cost": 2.5e-08,
-      "input_cost_per_audio_token": 5e-07,
+      "cache_read_input_token_cost": 1e-08,
+      "input_cost_per_audio_token": 3e-07,
       "input_cost_per_token": 1e-07,
       "litellm_provider": "vertex_ai-language-models",
       "max_audio_length_hours": 8.4,
@@ -12746,7 +12746,7 @@
       "supports_web_search": true
     },
     "gemini-2.5-flash-lite-preview-09-2025": {
-      "cache_read_input_token_cost": 2.5e-08,
+      "cache_read_input_token_cost": 1e-08,
       "input_cost_per_audio_token": 3e-07,
       "input_cost_per_token": 1e-07,
       "litellm_provider": "vertex_ai-language-models",
@@ -14537,8 +14537,8 @@
       "supports_web_search": true
     },
     "gemini/gemini-2.5-flash-lite": {
-      "cache_read_input_token_cost": 2.5e-08,
-      "input_cost_per_audio_token": 5e-07,
+      "cache_read_input_token_cost": 1e-08,
+      "input_cost_per_audio_token": 3e-07,
       "input_cost_per_token": 1e-07,
       "litellm_provider": "gemini",
       "max_audio_length_hours": 8.4,
@@ -14584,7 +14584,7 @@
       "tpm": 250000
     },
     "gemini/gemini-2.5-flash-lite-preview-09-2025": {
-      "cache_read_input_token_cost": 2.5e-08,
+      "cache_read_input_token_cost": 1e-08,
       "input_cost_per_audio_token": 3e-07,
       "input_cost_per_token": 1e-07,
       "litellm_provider": "gemini",
@@ -34067,6 +34067,19 @@
       "output_cost_per_token": 0,
       "litellm_provider": "llamagate",
       "mode": "embedding"
+    },
+    "sarvam/sarvam-m": {
+      "cache_creation_input_token_cost": 0,
+      "cache_creation_input_token_cost_above_1hr": 0,
+      "cache_read_input_token_cost": 0,
+      "input_cost_per_token": 0,
+      "litellm_provider": "sarvam",
+      "max_input_tokens": 8192,
+      "max_output_tokens": 32000,
+      "max_tokens": 32000,
+      "mode": "chat",
+      "output_cost_per_token": 0,
+      "supports_reasoning": true
     }
   }
 }
