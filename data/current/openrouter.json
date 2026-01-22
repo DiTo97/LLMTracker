@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-01-22T00:11:16.441824+00:00",
+  "fetched_at": "2026-01-22T06:04:46.082326+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 345,
   "data": [
@@ -4789,7 +4789,7 @@
         "web_search": "0",
         "internal_reasoning": "0",
         "input_cache_read": "0.00000003",
-        "input_cache_write": "0.0000000833"
+        "input_cache_write": "0.00000008333333333333334"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -4849,7 +4849,7 @@
         "web_search": "0",
         "internal_reasoning": "0",
         "input_cache_read": "0.00000001",
-        "input_cache_write": "0.0000000833"
+        "input_cache_write": "0.00000008333333333333334"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -7947,7 +7947,7 @@
         "web_search": "0",
         "internal_reasoning": "0",
         "input_cache_read": "0.00000001",
-        "input_cache_write": "0.0000000833"
+        "input_cache_write": "0.00000008333333333333334"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -12485,7 +12485,7 @@
         "web_search": "0",
         "internal_reasoning": "0",
         "input_cache_read": "0.000000025",
-        "input_cache_write": "0.0000000833"
+        "input_cache_write": "0.00000008333333333333334"
       },
       "top_provider": {
         "context_length": 1048576,
@@ -12827,8 +12827,6 @@
         "stop",
         "structured_outputs",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_k",
         "top_p"
       ],
