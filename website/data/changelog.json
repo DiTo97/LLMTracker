@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-01-22T06:04:46.765000+00:00",
+  "generated_at": "2026-01-22T18:04:23.848924+00:00",
   "changes": [
     {
-      "model_id": "gpt-audio-mini",
+      "model_id": "gmi/moonshotai/Kimi-K2-Thinking",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 2.4
+        "input_per_million": 0.8,
+        "output_per_million": 1.2
       },
       "percent_change": null,
-      "detected_at": "2026-01-22T06:04:46.761796+00:00"
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
     },
     {
-      "model_id": "gpt-audio-2025-08-28",
+      "model_id": "gmi/openai/gpt-4o",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
@@ -23,52 +23,203 @@
         "output_per_million": 10.0
       },
       "percent_change": null,
-      "detected_at": "2026-01-22T06:04:46.761796+00:00"
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
     },
     {
-      "model_id": "gpt-audio-mini-2025-12-15",
+      "model_id": "gmi/anthropic/claude-opus-4",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 2.4
+        "input_per_million": 15.0,
+        "output_per_million": 75.0
       },
       "percent_change": null,
-      "detected_at": "2026-01-22T06:04:46.761796+00:00"
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
     },
     {
-      "model_id": "gpt-audio",
+      "model_id": "gmi/Qwen/Qwen3-VL-235B-A22B-Instruct-FP8",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 2.5,
+        "input_per_million": 0.3,
+        "output_per_million": 1.4
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/google/gemini-3-flash-preview",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.5,
+        "output_per_million": 3.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/anthropic/claude-sonnet-4",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/anthropic/claude-opus-4.5",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 5.0,
+        "output_per_million": 25.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/openai/gpt-5.2",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 1.75,
+        "output_per_million": 14.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/anthropic/claude-sonnet-4.5",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/openai/gpt-5.1",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 1.25,
         "output_per_million": 10.0
       },
       "percent_change": null,
-      "detected_at": "2026-01-22T06:04:46.761796+00:00"
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
     },
     {
-      "model_id": "gpt-audio-mini-2025-10-06",
+      "model_id": "gmi/deepseek-ai/DeepSeek-V3.2",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 2.4
+        "input_per_million": 0.28,
+        "output_per_million": 0.4
       },
       "percent_change": null,
-      "detected_at": "2026-01-22T06:04:46.761796+00:00"
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/MiniMaxAI/MiniMax-M2.1",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.3,
+        "output_per_million": 1.2
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/google/gemini-3-pro-preview",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 2.0,
+        "output_per_million": 12.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/zai-org/GLM-4.7-FP8",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.4,
+        "output_per_million": 2.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/openai/gpt-4o-mini",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.15,
+        "output_per_million": 0.6
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/deepseek-ai/DeepSeek-V3-0324",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.28,
+        "output_per_million": 0.88
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "gmi/openai/gpt-5",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 1.25,
+        "output_per_million": 10.0
+      },
+      "percent_change": null,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
+    },
+    {
+      "model_id": "alibaba/tongyi-deepresearch-30b-a3b",
+      "change_type": "price_increase",
+      "field": "output_per_million",
+      "old_value": 0.4,
+      "new_value": 0.45,
+      "percent_change": 12.5,
+      "detected_at": "2026-01-22T18:04:23.845495+00:00"
     }
   ],
   "summary": {
-    "price_increases": 0,
+    "price_increases": 1,
     "price_decreases": 0,
-    "new_models": 5,
+    "new_models": 17,
     "removed_models": 0,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-01-22T06:04:59.809038+00:00"
+  }
 }
