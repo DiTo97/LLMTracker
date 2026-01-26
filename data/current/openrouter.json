@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-01-26T00:11:06.815985+00:00",
+  "fetched_at": "2026-01-26T06:05:35.560829+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 346,
   "data": [
@@ -3217,10 +3217,6 @@
       "pricing": {
         "prompt": "0.000000075",
         "completion": "0.0000003",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0",
         "input_cache_read": "0.000000037"
       },
       "top_provider": {
@@ -4456,7 +4452,8 @@
         "request": "0",
         "image": "0",
         "web_search": "0",
-        "internal_reasoning": "0"
+        "internal_reasoning": "0",
+        "input_cache_read": "0.00000011"
       },
       "top_provider": {
         "context_length": 204800,
@@ -5860,11 +5857,7 @@
       },
       "pricing": {
         "prompt": "0.0000006",
-        "completion": "0.0000025",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0.0000025"
       },
       "top_provider": {
         "context_length": 262144,
@@ -11404,11 +11397,7 @@
       },
       "pricing": {
         "prompt": "0.0000025",
-        "completion": "0.00001",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0.00001"
       },
       "top_provider": {
         "context_length": 256000,
@@ -13018,11 +13007,7 @@
       },
       "pricing": {
         "prompt": "0.000003",
-        "completion": "0.000003",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0.000003"
       },
       "top_provider": {
         "context_length": 16000,
@@ -13208,11 +13193,7 @@
       },
       "pricing": {
         "prompt": "0.0000000375",
-        "completion": "0.00000015",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0.00000015"
       },
       "top_provider": {
         "context_length": 128000,
@@ -13774,11 +13755,7 @@
       },
       "pricing": {
         "prompt": "0.0000045",
-        "completion": "0.0000045",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0.0000045"
       },
       "top_provider": {
         "context_length": 16000,
@@ -14663,11 +14640,7 @@
       },
       "pricing": {
         "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0.0000006"
       },
       "top_provider": {
         "context_length": 128000,
@@ -14713,11 +14686,7 @@
       },
       "pricing": {
         "prompt": "0.0000025",
-        "completion": "0.00001",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0.00001"
       },
       "top_provider": {
         "context_length": 128000,
