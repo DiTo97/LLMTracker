@@ -1,53 +1,87 @@
-# 💰 LLM Price Tracker
+# LLMTracker (tokenprice fork)
 
-**Compare pricing for 2,100+ AI models from OpenRouter and LiteLLM. Updated every 6 hours.**
+This is a fork of [LLMTracker](https://github.com/MrUnreal/LLMTracker) with extended support for **cache pricing** fields.
 
-🌐 **[Live Site](https://mrunreal.github.io/LLMTracker/)** · 📊 [Compare Models](https://mrunreal.github.io/LLMTracker/compare.html) · 🧮 [Cost Calculator](https://mrunreal.github.io/LLMTracker/calculator.html)
+## Why the fork?
 
----
+The original LLMTracker doesn't track cache read/write token pricing, even though the source data (OpenRouter API and LiteLLM) provides this information. This fork adds:
+
+- `cache_read_per_million`: Cost per million tokens for cache hits
+- `cache_creation_per_million`: Cost per million tokens for cache writes/misses
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| 📊 **Model Comparison** | Side-by-side comparison of 2,100+ models with sorting and filtering |
-| 🧮 **Cost Calculator** | Estimate monthly costs based on your token usage |
-| 🔍 **Model Finder** | Find models by category, price range, or context window |
-| 📈 **Price Changes** | Track historical price changes over time |
-| 🔌 **Free API** | Access raw JSON data for your own applications |
+- **Cache Pricing Support**: Track cache read and cache creation costs
+- **GitHub Pages Dashboard**: Interactive website to compare model prices
+- **Automated Updates**: Prices updated every 6 hours via GitHub Actions
+- **Alerting**: Discord, Slack, and email notifications for price changes
+- **Uses uv**: Modern Python package manager for fast, reproducible builds
+
+## Setup
+
+This project uses [uv](https://docs.astral.sh/uv/) for dependency management.
+
+```bash
+# Install dependencies
+uv sync
+
+# Run the scraper
+uv run python scripts/scrape.py
+
+# Normalize data
+uv run python scripts/normalize.py
+
+# Detect changes
+uv run python scripts/detect_changes.py
+
+# Generate website
+uv run python scripts/generate_site.py
+```
 
 ## Data Sources
 
-Pricing data is aggregated from:
+- **OpenRouter API**: `https://openrouter.ai/api/v1/models`
+  - `input_cache_read` → `cache_read_per_million`
+  - `input_cache_write` → `cache_creation_per_million`
 
-- **[OpenRouter](https://openrouter.ai/)** — 350+ models with real-time pricing
-- **[LiteLLM](https://github.com/BerriAI/litellm)** — 2,200+ model configurations
+- **LiteLLM**: `https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json`
+  - `cache_read_input_token_cost` → `cache_read_per_million`
+  - `cache_creation_input_token_cost` → `cache_creation_per_million`
 
-Data is automatically updated every 6 hours via GitHub Actions.
+## Schema
 
-## Raw Data
-
-Access the pricing data directly as JSON (no authentication required):
-
+```json
+{
+  "models": {
+    "openai/gpt-4o": {
+      "provider": "openai",
+      "model_id": "openai/gpt-4o",
+      "pricing": {
+        "input_per_million": 2.5,
+        "output_per_million": 10.0,
+        "cache_read_per_million": 1.25,
+        "cache_creation_per_million": null,
+        "currency": "USD"
+      }
+    }
+  }
+}
 ```
-https://raw.githubusercontent.com/MrUnreal/LLMTracker/main/data/current/prices.json
-```
 
-See the [data documentation](https://mrunreal.github.io/LLMTracker/api.html) for schema details.
+## GitHub Actions Workflows
 
-## How It Works
+- **scrape.yml**: Runs every 6 hours to fetch and normalize pricing data
+- **deploy.yml**: Deploys the website to GitHub Pages
+- **alerts.yml**: Sends notifications when price changes are detected
 
-1. **GitHub Actions** scrapes pricing APIs every 6 hours
-2. **Data is normalized** into a unified schema and committed to Git
-3. **Static website** is regenerated and deployed to GitHub Pages
-4. **Price changes** are detected and logged in the changelog
+## Environment Variables (for alerts)
 
-No databases, no servers — just Git as the source of truth.
+- `WEBHOOK_URL` / `DISCORD_WEBHOOK_URL`: Discord webhook for notifications
+- `SLACK_WEBHOOK_URL`: Slack webhook for notifications
+- `BUTTONDOWN_API_KEY`: Buttondown API key for email alerts
 
-## License
+## Credits
 
-MIT License
+- Original project: [LLMTracker](https://github.com/MrUnreal/LLMTracker) by MrUnreal
+- Pricing data: [OpenRouter](https://openrouter.ai), [LiteLLM](https://github.com/BerriAI/litellm)
 
----
-
-<sub>If this tool saves you money, consider [buying me a coffee](https://buymeacoffee.com/mrunrealgit) ☕</sub>

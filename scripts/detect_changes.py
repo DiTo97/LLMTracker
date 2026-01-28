@@ -40,6 +40,7 @@ class ChangeType(str, Enum):
     REMOVED_MODEL = "removed_model"
     CONTEXT_CHANGE = "context_change"
     CAPABILITY_CHANGE = "capability_change"
+    CACHE_PRICE_CHANGE = "cache_price_change"
 
 
 class Change(BaseModel):
@@ -59,6 +60,7 @@ class ChangelogSummary(BaseModel):
     price_decreases: int = 0
     new_models: int = 0
     removed_models: int = 0
+    cache_price_changes: int = 0
     other_changes: int = 0
 
 
@@ -146,6 +148,7 @@ def detect_price_changes(
     Detects:
     - price_increase: Input or output price went up
     - price_decrease: Input or output price went down
+    - cache_price_change: Cache read/write pricing changed
     - new_model: Model exists in new but not old
     - removed_model: Model exists in old but not new
     
@@ -176,7 +179,9 @@ def detect_price_changes(
             old_value=None,
             new_value={
                 "input_per_million": pricing.get("input_per_million"),
-                "output_per_million": pricing.get("output_per_million")
+                "output_per_million": pricing.get("output_per_million"),
+                "cache_read_per_million": pricing.get("cache_read_per_million"),
+                "cache_creation_per_million": pricing.get("cache_creation_per_million"),
             },
             detected_at=now
         ))
@@ -191,7 +196,9 @@ def detect_price_changes(
             field="model",
             old_value={
                 "input_per_million": pricing.get("input_per_million"),
-                "output_per_million": pricing.get("output_per_million")
+                "output_per_million": pricing.get("output_per_million"),
+                "cache_read_per_million": pricing.get("cache_read_per_million"),
+                "cache_creation_per_million": pricing.get("cache_creation_per_million"),
             },
             new_value=None,
             detected_at=now
@@ -239,6 +246,42 @@ def detect_price_changes(
                 detected_at=now
             ))
         
+        # Check cache read price
+        old_cache_read = old_pricing.get("cache_read_per_million")
+        new_cache_read = new_pricing.get("cache_read_per_million")
+        
+        if old_cache_read != new_cache_read and (old_cache_read is not None or new_cache_read is not None):
+            old_val = old_cache_read or 0
+            new_val = new_cache_read or 0
+            percent = calculate_percent_change(old_val, new_val) if old_val > 0 else None
+            changes.append(Change(
+                model_id=model_id,
+                change_type=ChangeType.CACHE_PRICE_CHANGE,
+                field="cache_read_per_million",
+                old_value=old_cache_read,
+                new_value=new_cache_read,
+                percent_change=percent,
+                detected_at=now
+            ))
+        
+        # Check cache creation price
+        old_cache_creation = old_pricing.get("cache_creation_per_million")
+        new_cache_creation = new_pricing.get("cache_creation_per_million")
+        
+        if old_cache_creation != new_cache_creation and (old_cache_creation is not None or new_cache_creation is not None):
+            old_val = old_cache_creation or 0
+            new_val = new_cache_creation or 0
+            percent = calculate_percent_change(old_val, new_val) if old_val > 0 else None
+            changes.append(Change(
+                model_id=model_id,
+                change_type=ChangeType.CACHE_PRICE_CHANGE,
+                field="cache_creation_per_million",
+                old_value=old_cache_creation,
+                new_value=new_cache_creation,
+                percent_change=percent,
+                detected_at=now
+            ))
+        
         # Check context window changes
         old_context = old_model.get("context_window", 0)
         new_context = new_model.get("context_window", 0)
@@ -278,6 +321,8 @@ def generate_changelog(changes: list[Change]) -> Changelog:
             summary.new_models += 1
         elif change.change_type == ChangeType.REMOVED_MODEL:
             summary.removed_models += 1
+        elif change.change_type == ChangeType.CACHE_PRICE_CHANGE:
+            summary.cache_price_changes += 1
         else:
             summary.other_changes += 1
     
@@ -365,6 +410,7 @@ def main() -> bool:
             print(f"\n📊 Changes detected:")
             print(f"   Price increases: {changelog.summary.price_increases}")
             print(f"   Price decreases: {changelog.summary.price_decreases}")
+            print(f"   Cache price changes: {changelog.summary.cache_price_changes}")
             print(f"   New models: {changelog.summary.new_models}")
             print(f"   Removed models: {changelog.summary.removed_models}")
             print(f"   Other changes: {changelog.summary.other_changes}")

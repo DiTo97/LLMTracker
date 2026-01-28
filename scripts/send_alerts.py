@@ -28,7 +28,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 CHANGELOG_DIR = DATA_DIR / "changelog"
 
 # Configuration
-WEBSITE_URL = "https://mrunreal.github.io/LLMTracker"
+WEBSITE_URL = "https://dito97.github.io/LLMTracker"
 REQUEST_TIMEOUT = 30.0
 
 

@@ -14,32 +14,34 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.detect.outputs.has_changes }}
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
-      - name: Setup Python
-        uses: actions/setup-python@v5
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
-          python-version: '3.12'
-          cache: 'pip'
-      
+          version: "latest"
+
+      - name: Setup Python
+        run: uv python install 3.12
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
-      
+        run: uv sync
+
       - name: Run scraper
-        run: python scripts/scrape.py
-      
+        run: uv run python scripts/scrape.py
+
       - name: Normalize data
-        run: python scripts/normalize.py
-      
+        run: uv run python scripts/normalize.py
+
       - name: Detect changes
         id: detect
         run: |
-          if python scripts/detect_changes.py; then
+          if uv run python scripts/detect_changes.py; then
             if [ -f "data/changelog/latest.json" ]; then
               echo "has_changes=true" >> $GITHUB_OUTPUT
             else
@@ -48,16 +50,16 @@ jobs:
           else
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
-      
+
       - name: Generate website
-        run: python scripts/generate_site.py
-      
+        run: uv run python scripts/generate_site.py
+
       - name: Copy changelog to website
         run: |
           if [ -f "data/changelog/latest.json" ]; then
             cp data/changelog/latest.json website/data/changelog.json
           fi
-      
+
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -66,7 +68,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Price update: $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git commit -m "chore: price update $(date -u '+%Y-%m-%d %H:%M') UTC"
             git push
           fi
 
@@ -76,33 +78,35 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Pull latest changes
         run: git pull origin main
-      
-      - name: Setup Python
-        uses: actions/setup-python@v5
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
         with:
-          python-version: '3.12'
-          cache: 'pip'
-      
+          version: "latest"
+
+      - name: Setup Python
+        run: uv python install 3.12
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
-      
+        run: uv sync
+
       - name: Send alerts
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
-        run: python scripts/send_alerts.py
-      
+        run: uv run python scripts/send_alerts.py
+
       - name: Commit notified status
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
