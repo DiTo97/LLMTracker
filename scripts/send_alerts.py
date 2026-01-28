@@ -139,9 +139,9 @@ def format_discord_message(changelog: dict[str, Any]) -> dict[str, Any]:
     # Build description
     lines = [f"{emoji} **LLM Price Alert**\n"]
     
-    # Group changes by type
-    price_decreases = [c for c in changes if c.get("change_type") == "price_decrease"]
-    price_increases = [c for c in changes if c.get("change_type") == "price_increase"]
+    # Group changes by type (filter out zero percent changes)
+    price_decreases = [c for c in changes if c.get("change_type") == "price_decrease" and c.get("percent_change", 0) != 0]
+    price_increases = [c for c in changes if c.get("change_type") == "price_increase" and c.get("percent_change", 0) != 0]
     new_models = [c for c in changes if c.get("change_type") == "new_model"]
     removed_models = [c for c in changes if c.get("change_type") == "removed_model"]
     
@@ -188,7 +188,7 @@ def format_discord_message(changelog: dict[str, Any]) -> dict[str, Any]:
         description = description[:3997] + "..."
     
     embed = {
-        "title": "tokentracking Price Update",
+        "title": "tokentracking alerts",
         "description": description,
         "url": f"{WEBSITE_URL}/changelog.html",
         "color": color,
@@ -235,9 +235,9 @@ def format_slack_message(changelog: dict[str, Any]) -> dict[str, Any]:
         {"type": "divider"}
     ]
     
-    # Group changes by type
-    price_decreases = [c for c in changes if c.get("change_type") == "price_decrease"]
-    price_increases = [c for c in changes if c.get("change_type") == "price_increase"]
+    # Group changes by type (filter out zero percent changes)
+    price_decreases = [c for c in changes if c.get("change_type") == "price_decrease" and c.get("percent_change", 0) != 0]
+    price_increases = [c for c in changes if c.get("change_type") == "price_increase" and c.get("percent_change", 0) != 0]
     new_models = [c for c in changes if c.get("change_type") == "new_model"]
     
     if price_decreases:
@@ -320,9 +320,9 @@ def format_email(changelog: dict[str, Any]) -> tuple[str, str]:
         "<hr>"
     ]
     
-    # Group changes
-    price_decreases = [c for c in changes if c.get("change_type") == "price_decrease"]
-    price_increases = [c for c in changes if c.get("change_type") == "price_increase"]
+    # Group changes (filter out zero percent changes)
+    price_decreases = [c for c in changes if c.get("change_type") == "price_decrease" and c.get("percent_change", 0) != 0]
+    price_increases = [c for c in changes if c.get("change_type") == "price_increase" and c.get("percent_change", 0) != 0]
     new_models = [c for c in changes if c.get("change_type") == "new_model"]
     
     if price_decreases:
