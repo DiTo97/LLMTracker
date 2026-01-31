@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-01-31T01:52:55.851147+00:00",
+  "fetched_at": "2026-01-31T06:37:40.186832+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 2470,
+  "model_count": 2471,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -1521,6 +1521,14 @@
       "supports_parallel_function_calling": true,
       "supports_response_schema": true,
       "supports_tool_choice": true
+    },
+    "azure_ai/model_router": {
+      "input_cost_per_token": 1.4e-07,
+      "output_cost_per_token": 0,
+      "litellm_provider": "azure_ai",
+      "mode": "chat",
+      "source": "https://azure.microsoft.com/en-us/pricing/details/ai-services/",
+      "comment": "Flat cost of $0.14 per M input tokens for Azure AI Foundry Model Router infrastructure. Use pattern: azure_ai/model_router/<deployment-name> where deployment-name is your Azure deployment (e.g., azure-model-router)"
     },
     "azure/eu/gpt-4o-2024-08-06": {
       "deprecation_date": "2026-02-27",

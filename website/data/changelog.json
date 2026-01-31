@@ -1,232 +1,27 @@
 {
-  "generated_at": "2026-01-30T12:53:37.610485+00:00",
+  "generated_at": "2026-01-31T06:37:40.858477+00:00",
   "changes": [
     {
-      "model_id": "openrouter/z-ai/glm-4.7-flash",
+      "model_id": "azure_ai/model_router",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.07,
-        "output_per_million": 0.4,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "openrouter/minimax/minimax-m2.1",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.27,
-        "output_per_million": 1.2,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "eu.amazon.nova-2-pro-preview-20251202-v1:0",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.1875,
-        "output_per_million": 17.5,
-        "cache_read_per_million": 0.546875,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "amazon.nova-2-pro-preview-20251202-v1:0",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.1875,
-        "output_per_million": 17.5,
-        "cache_read_per_million": 0.546875,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "apac.amazon.nova-2-pro-preview-20251202-v1:0",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.1875,
-        "output_per_million": 17.5,
-        "cache_read_per_million": 0.546875,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "openrouter/z-ai/glm-4.7",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.4,
-        "output_per_million": 1.5,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "openrouter/moonshotai/kimi-k2.5",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 3.0,
-        "cache_read_per_million": 0.1,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "us.amazon.nova-2-pro-preview-20251202-v1:0",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.1875,
-        "output_per_million": 17.5,
-        "cache_read_per_million": 0.546875,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "openrouter/xiaomi/mimo-v2-flash",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.09,
-        "output_per_million": 0.29,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "gemini/gemini-robotics-er-1.5-preview",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.3,
-        "output_per_million": 2.5,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "google/gemini-2.0-flash-exp:free",
-      "change_type": "removed_model",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.0,
+        "input_per_million": 0.14,
         "output_per_million": 0.0,
         "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
-      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "moonshotai/kimi-k2.5",
-      "change_type": "price_decrease",
-      "field": "input_per_million",
-      "old_value": 0.6,
-      "new_value": 0.5,
-      "percent_change": -16.67,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "moonshotai/kimi-k2.5",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 3.0,
-      "new_value": 2.8,
-      "percent_change": -6.67,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "nvidia/nemotron-3-nano-30b-a3b",
-      "change_type": "price_decrease",
-      "field": "input_per_million",
-      "old_value": 0.06,
-      "new_value": 0.05,
-      "percent_change": -16.67,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "nvidia/nemotron-3-nano-30b-a3b",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 0.24,
-      "new_value": 0.2,
-      "percent_change": -16.67,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "azure/gpt-5.2-codex",
-      "change_type": "context_change",
-      "field": "context_window",
-      "old_value": 128000,
-      "new_value": 272000,
-      "percent_change": 112.5,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "openrouter/openai/gpt-5.2-codex",
-      "change_type": "context_change",
-      "field": "context_window",
-      "old_value": 400000,
-      "new_value": 272000,
-      "percent_change": -32.0,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
-    },
-    {
-      "model_id": "gpt-5.2-codex",
-      "change_type": "context_change",
-      "field": "context_window",
-      "old_value": 400000,
-      "new_value": 272000,
-      "percent_change": -32.0,
-      "detected_at": "2026-01-30T12:53:37.608241+00:00"
+      "detected_at": "2026-01-31T06:37:40.855015+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 4,
-    "new_models": 10,
-    "removed_models": 1,
+    "price_decreases": 0,
+    "new_models": 1,
+    "removed_models": 0,
     "cache_price_changes": 0,
-    "other_changes": 3
-  },
-  "notified": true,
-  "notified_at": "2026-01-30T12:53:54.345943+00:00"
+    "other_changes": 0
+  }
 }
