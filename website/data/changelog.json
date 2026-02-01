@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-01-31T06:37:40.858477+00:00",
+  "generated_at": "2026-02-01T18:33:54.354894+00:00",
   "changes": [
     {
-      "model_id": "azure_ai/model_router",
+      "model_id": "openrouter/free",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.14,
-        "output_per_million": 0.0,
+        "input_per_million": -1000000.0,
+        "output_per_million": -1000000.0,
         "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-01-31T06:37:40.855015+00:00"
+      "detected_at": "2026-02-01T18:33:54.352686+00:00"
     }
   ],
   "summary": {
@@ -23,7 +23,5 @@
     "removed_models": 0,
     "cache_price_changes": 0,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-01-31T06:37:54.949242+00:00"
+  }
 }
