@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-02-01T18:33:53.616025+00:00",
+  "fetched_at": "2026-02-02T02:04:45.113452+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 347,
+  "model_count": 346,
   "data": [
     {
       "id": "openrouter/free",
@@ -6769,7 +6769,7 @@
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 131072,
         "is_moderated": true
       },
       "per_request_limits": null,
@@ -6927,7 +6927,7 @@
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 131072,
         "is_moderated": true
       },
       "per_request_limits": null,
@@ -7481,7 +7481,6 @@
         "frequency_penalty",
         "max_tokens",
         "presence_penalty",
-        "seed",
         "stop",
         "temperature",
         "tool_choice",
@@ -7788,44 +7787,6 @@
         "temperature",
         "top_k",
         "top_p"
-      ],
-      "default_parameters": {},
-      "expiration_date": null
-    },
-    {
-      "id": "moonshotai/kimi-k2:free",
-      "canonical_slug": "moonshotai/kimi-k2",
-      "hugging_face_id": "moonshotai/Kimi-K2-Instruct",
-      "name": "MoonshotAI: Kimi K2 0711 (free)",
-      "created": 1752263252,
-      "description": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training.",
-      "context_length": 32768,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 32768,
-        "max_completion_tokens": null,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "seed",
-        "stop",
-        "temperature"
       ],
       "default_parameters": {},
       "expiration_date": null
@@ -11595,7 +11556,7 @@
       },
       "top_provider": {
         "context_length": 32768,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12489,7 +12450,7 @@
       },
       "top_provider": {
         "context_length": 32768,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12600,8 +12561,6 @@
         "stop",
         "structured_outputs",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_k",
         "top_p"
       ],
@@ -12718,7 +12677,7 @@
       },
       "top_provider": {
         "context_length": 16384,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -13494,7 +13453,7 @@
       },
       "top_provider": {
         "context_length": 32768,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -13947,7 +13906,7 @@
       },
       "top_provider": {
         "context_length": 32768,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -14221,7 +14180,7 @@
       },
       "top_provider": {
         "context_length": 32768,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 4096,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -14407,7 +14366,7 @@
       },
       "top_provider": {
         "context_length": 32768,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 32768,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -14541,7 +14500,7 @@
       },
       "top_provider": {
         "context_length": 65536,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -15204,7 +15163,7 @@
       },
       "top_provider": {
         "context_length": 8192,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 2048,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -16231,7 +16190,7 @@
       },
       "top_provider": {
         "context_length": 4096,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 2048,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -16599,7 +16558,7 @@
       },
       "top_provider": {
         "context_length": 6144,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 4096,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -16649,7 +16608,7 @@
       },
       "top_provider": {
         "context_length": 4096,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 4096,
         "is_moderated": false
       },
       "per_request_limits": null,
