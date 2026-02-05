@@ -1,166 +1,41 @@
 {
-  "generated_at": "2026-02-05T01:59:39.698558+00:00",
+  "generated_at": "2026-02-05T06:58:12.768824+00:00",
   "changes": [
     {
-      "model_id": "allenai/molmo-2-8b",
+      "model_id": "openrouter/qwen/qwen3-235b-a22b-2507",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.2,
-        "output_per_million": 0.2,
+        "input_per_million": 0.071,
+        "output_per_million": 0.1,
         "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
+      "detected_at": "2026-02-05T06:58:12.766768+00:00"
     },
     {
-      "model_id": "allenai/molmo-2-8b:free",
-      "change_type": "removed_model",
+      "model_id": "openrouter/qwen/qwen3-235b-a22b-thinking-2507",
+      "change_type": "new_model",
       "field": "model",
-      "old_value": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "deepcogito/cogito-v2-preview-llama-405b",
-      "change_type": "removed_model",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 3.5,
-        "output_per_million": 3.5,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "deepcogito/cogito-v2-preview-llama-109b-moe",
-      "change_type": "removed_model",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.18,
-        "output_per_million": 0.59,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "deepcogito/cogito-v2-preview-llama-70b",
-      "change_type": "removed_model",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.88,
-        "output_per_million": 0.88,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "google/gemma-3-27b-it",
-      "change_type": "context_change",
-      "field": "context_window",
-      "old_value": 96000,
-      "new_value": 128000,
-      "percent_change": 33.33,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "minimax/minimax-m2.1",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 1.1,
-      "new_value": 0.95,
-      "percent_change": -13.64,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "minimax/minimax-m2.1",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
       "old_value": null,
-      "new_value": 0.03,
+      "new_value": {
+        "input_per_million": 0.11,
+        "output_per_million": 0.6,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      },
       "percent_change": null,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-coder-next",
-      "change_type": "price_decrease",
-      "field": "input_per_million",
-      "old_value": 0.2,
-      "new_value": 0.07,
-      "percent_change": -65.0,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-coder-next",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 1.5,
-      "new_value": 0.3,
-      "percent_change": -80.0,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "deepseek/deepseek-v3.1-terminus",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
-      "old_value": 0.168,
-      "new_value": 0.13,
-      "percent_change": -22.62,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-vl-235b-a22b-instruct",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 1.2,
-      "new_value": 0.88,
-      "percent_change": -26.67,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-vl-235b-a22b-instruct",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
-      "old_value": null,
-      "new_value": 0.11,
-      "percent_change": null,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-235b-a22b-2507",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 0.463,
-      "new_value": 0.1,
-      "percent_change": -78.4,
-      "detected_at": "2026-02-05T01:59:39.695658+00:00"
+      "detected_at": "2026-02-05T06:58:12.766768+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 5,
-    "new_models": 1,
-    "removed_models": 4,
-    "cache_price_changes": 3,
-    "other_changes": 1
-  },
-  "notified": true,
-  "notified_at": "2026-02-05T01:59:58.214247+00:00"
+    "price_decreases": 0,
+    "new_models": 2,
+    "removed_models": 0,
+    "cache_price_changes": 0,
+    "other_changes": 0
+  }
 }
