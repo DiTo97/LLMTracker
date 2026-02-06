@@ -1,9 +1,59 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-02-06T12:57:19.910631+00:00",
+  "fetched_at": "2026-02-06T18:50:00.695523+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 344,
+  "model_count": 345,
   "data": [
+    {
+      "id": "openrouter/pony-alpha",
+      "canonical_slug": "openrouter/pony-alpha",
+      "hugging_face_id": "",
+      "name": "Pony Alpha",
+      "created": 1770393855,
+      "description": "Pony is a cutting-edge foundation model with strong performance in coding, agentic workflows, reasoning, and roleplay, making it well suited for hands-on coding and real-world use.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model.",
+      "context_length": 200000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0",
+        "request": "0",
+        "image": "0",
+        "web_search": "0",
+        "internal_reasoning": "0"
+      },
+      "top_provider": {
+        "context_length": 200000,
+        "max_completion_tokens": 131000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 1,
+        "top_p": 0.95,
+        "frequency_penalty": null
+      },
+      "expiration_date": null
+    },
     {
       "id": "anthropic/claude-opus-4.6",
       "canonical_slug": "anthropic/claude-4.6-opus-20260205",
@@ -657,7 +707,7 @@
       "name": "Z.AI: GLM 4.7 Flash",
       "created": 1768833913,
       "description": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency. It is further optimized for agentic coding use cases, strengthening coding capabilities, long-horizon task planning, and tool collaboration, and has achieved leading performance among open-source models of the same size on several current public benchmark leaderboards.",
-      "context_length": 200000,
+      "context_length": 202752,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -670,13 +720,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000007",
+        "prompt": "0.00000006",
         "completion": "0.0000004",
-        "input_cache_read": "0.00000001"
+        "input_cache_read": "0.0000000100000002"
       },
       "top_provider": {
-        "context_length": 200000,
-        "max_completion_tokens": 131072,
+        "context_length": 202752,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5987,7 +6037,7 @@
         "top_p"
       ],
       "default_parameters": {},
-      "expiration_date": null
+      "expiration_date": "2026-02-08"
     },
     {
       "id": "qwen/qwen3-30b-a3b-thinking-2507",

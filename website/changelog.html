@@ -158,7 +158,7 @@
         <!-- All-Time Summary Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             <div class="bg-white rounded-xl shadow-lg border border-green-100 p-5 text-center transform hover:scale-105 transition-transform">
-                <div class="text-3xl font-bold text-green-600">54</div>
+                <div class="text-3xl font-bold text-green-600">55</div>
                 <div class="text-sm text-gray-600 font-medium">Price Drops</div>
                 <div class="text-xs text-green-500 mt-1">💰 Savings!</div>
             </div>
@@ -168,12 +168,12 @@
                 <div class="text-xs text-red-500 mt-1">📈 Watch out</div>
             </div>
             <div class="bg-white rounded-xl shadow-lg border border-blue-100 p-5 text-center transform hover:scale-105 transition-transform">
-                <div class="text-3xl font-bold text-blue-600">116</div>
+                <div class="text-3xl font-bold text-blue-600">114</div>
                 <div class="text-sm text-gray-600 font-medium">New Models</div>
                 <div class="text-xs text-blue-500 mt-1">🆕 Fresh arrivals</div>
             </div>
             <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-5 text-center transform hover:scale-105 transition-transform">
-                <div class="text-3xl font-bold text-gray-600">12</div>
+                <div class="text-3xl font-bold text-gray-600">16</div>
                 <div class="text-sm text-gray-600 font-medium">Discontinued</div>
                 <div class="text-xs text-gray-500 mt-1">👋 Goodbye</div>
             </div>
@@ -212,8 +212,8 @@
                             <p class="text-sm text-gray-500">Friday</p>
                         </div>
                         <div class="flex items-center gap-3 text-sm">
-                            <span class="flex items-center gap-1 text-green-600"><span class="w-2 h-2 bg-green-500 rounded-full"></span>0 drops</span>
-                            <span class="flex items-center gap-1 text-blue-600"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>5 new</span>
+                            <span class="flex items-center gap-1 text-green-600"><span class="w-2 h-2 bg-green-500 rounded-full"></span>1 drops</span>
+                            <span class="flex items-center gap-1 text-blue-600"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>3 new</span>
                         </div>
                     </div>
                 </div>
@@ -222,12 +222,30 @@
                 <div class="p-6 space-y-6">
                     
     <div>
+        <h4 class="text-sm font-semibold text-green-700 mb-3">📉 Price Drops</h4>
+        <div class="space-y-2">
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-green-50 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-900">z-ai/glm-4.7-flash</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm"><span class="text-gray-400 line-through">$0.07</span> → <span class="text-green-600 font-bold">$0.06</span></div>
+                    <div class="text-xs text-green-600 font-medium">-14% Input</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div>
         <h4 class="text-sm font-semibold text-blue-700 mb-3">🆕 New Models</h4>
         <div class="space-y-2">
             
             <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">apac.anthropic.claude-opus-4-6-v1</span>
+                    <span class="font-medium text-gray-900">openrouter/pony-alpha</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-right">
@@ -238,7 +256,7 @@
             
             <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">us.anthropic.claude-opus-4-6-v1</span>
+                    <span class="font-medium text-gray-900">us/claude-opus-4-6</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-right">
@@ -249,7 +267,7 @@
             
             <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">anthropic.claude-opus-4-6-v1</span>
+                    <span class="font-medium text-gray-900">us/claude-opus-4-6-20260205</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
                 <div class="text-right">
@@ -258,26 +276,43 @@
                 </div>
             </div>
             
-            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+        </div>
+    </div>
+    
+    <div>
+        <h4 class="text-sm font-semibold text-gray-700 mb-3">❌ Discontinued</h4>
+        <div class="space-y-2">
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">global.anthropic.claude-opus-4-6-v1</span>
+                    <span class="font-medium text-gray-500 line-through">anthropic.claude-opus-4-6-v1:0</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
-                <div class="text-right">
-                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
-                    <div class="text-xs text-gray-500">input / output per M</div>
-                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
             </div>
             
-            <div class="flex items-center justify-between py-2 px-3 bg-blue-50 rounded-lg">
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
                 <div>
-                    <span class="font-medium text-gray-900">eu.anthropic.claude-opus-4-6-v1</span>
+                    <span class="font-medium text-gray-500 line-through">global.anthropic.claude-opus-4-6-v1:0</span>
                     <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
-                <div class="text-right">
-                    <div class="text-sm text-blue-600 font-medium">$0.00 / $0.00</div>
-                    <div class="text-xs text-gray-500">input / output per M</div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">eu.anthropic.claude-opus-4-6-v1:0</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
                 </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
+            </div>
+            
+            <div class="flex items-center justify-between py-2 px-3 bg-gray-100 rounded-lg">
+                <div>
+                    <span class="font-medium text-gray-500 line-through">apac.anthropic.claude-opus-4-6-v1:0</span>
+                    <span class="text-gray-400 text-sm ml-2"></span>
+                </div>
+                <div class="text-gray-500 text-sm">Discontinued</div>
             </div>
             
         </div>
