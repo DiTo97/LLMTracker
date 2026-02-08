@@ -1,24 +1,40 @@
 {
-  "generated_at": "2026-02-08T02:28:25.537904+00:00",
+  "generated_at": "2026-02-08T06:48:47.336796+00:00",
   "changes": [
+    {
+      "model_id": "moonshotai/kimi-k2.5",
+      "change_type": "price_decrease",
+      "field": "input_per_million",
+      "old_value": 0.45,
+      "new_value": 0.3,
+      "percent_change": -33.33,
+      "detected_at": "2026-02-08T06:48:47.334142+00:00"
+    },
+    {
+      "model_id": "moonshotai/kimi-k2.5",
+      "change_type": "price_decrease",
+      "field": "output_per_million",
+      "old_value": 2.25,
+      "new_value": 1.5,
+      "percent_change": -33.33,
+      "detected_at": "2026-02-08T06:48:47.334142+00:00"
+    },
     {
       "model_id": "moonshotai/kimi-k2.5",
       "change_type": "cache_price_change",
       "field": "cache_read_per_million",
-      "old_value": 0.075,
-      "new_value": 0.07,
-      "percent_change": -6.67,
-      "detected_at": "2026-02-08T02:28:25.535538+00:00"
+      "old_value": 0.07,
+      "new_value": 0.05,
+      "percent_change": -28.57,
+      "detected_at": "2026-02-08T06:48:47.334142+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 0,
+    "price_decreases": 2,
     "new_models": 0,
     "removed_models": 0,
     "cache_price_changes": 1,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-02-08T02:28:40.429009+00:00"
+  }
 }
