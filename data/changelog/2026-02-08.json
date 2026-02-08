@@ -1,41 +1,40 @@
 {
-  "generated_at": "2026-02-08T12:47:58.456670+00:00",
+  "generated_at": "2026-02-08T18:35:50.798813+00:00",
   "changes": [
     {
-      "model_id": "us.anthropic.claude-opus-4-6-v1:0",
-      "change_type": "removed_model",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 5.5,
-        "output_per_million": 27.5,
-        "cache_read_per_million": 0.55,
-        "cache_creation_per_million": 6.875
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-02-08T12:47:58.453778+00:00"
+      "model_id": "opengvlab/internvl3-78b",
+      "change_type": "price_increase",
+      "field": "input_per_million",
+      "old_value": 0.1,
+      "new_value": 0.15,
+      "percent_change": 50.0,
+      "detected_at": "2026-02-08T18:35:50.796601+00:00"
     },
     {
-      "model_id": "au.anthropic.claude-opus-4-6-v1:0",
-      "change_type": "removed_model",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 5.5,
-        "output_per_million": 27.5,
-        "cache_read_per_million": 0.55,
-        "cache_creation_per_million": 6.875
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-02-08T12:47:58.453778+00:00"
+      "model_id": "opengvlab/internvl3-78b",
+      "change_type": "price_increase",
+      "field": "output_per_million",
+      "old_value": 0.39,
+      "new_value": 0.6,
+      "percent_change": 53.85,
+      "detected_at": "2026-02-08T18:35:50.796601+00:00"
+    },
+    {
+      "model_id": "opengvlab/internvl3-78b",
+      "change_type": "cache_price_change",
+      "field": "cache_read_per_million",
+      "old_value": 0.05,
+      "new_value": 0.075,
+      "percent_change": 50.0,
+      "detected_at": "2026-02-08T18:35:50.796601+00:00"
     }
   ],
   "summary": {
-    "price_increases": 0,
+    "price_increases": 2,
     "price_decreases": 0,
     "new_models": 0,
-    "removed_models": 2,
-    "cache_price_changes": 0,
+    "removed_models": 0,
+    "cache_price_changes": 1,
     "other_changes": 0
   }
 }
