@@ -1,105 +1,22 @@
 {
-  "generated_at": "2026-02-07T06:40:42.160042+00:00",
+  "generated_at": "2026-02-08T02:28:25.537904+00:00",
   "changes": [
     {
-      "model_id": "openai/gpt-oss-20b",
-      "change_type": "price_increase",
-      "field": "input_per_million",
-      "old_value": 0.02,
-      "new_value": 0.03,
-      "percent_change": 50.0,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
-      "model_id": "openai/gpt-oss-20b",
-      "change_type": "price_increase",
-      "field": "output_per_million",
-      "old_value": 0.1,
-      "new_value": 0.14,
-      "percent_change": 40.0,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
-      "model_id": "openai/gpt-oss-20b",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
-      "old_value": 0.01,
-      "new_value": null,
-      "percent_change": -100.0,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-4.5-air",
-      "change_type": "price_increase",
-      "field": "input_per_million",
-      "old_value": 0.05,
-      "new_value": 0.13,
-      "percent_change": 160.0,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-4.5-air",
-      "change_type": "price_increase",
-      "field": "output_per_million",
-      "old_value": 0.22,
-      "new_value": 0.85,
-      "percent_change": 286.36,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
-      "model_id": "moonshotai/kimi-k2.5",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 2.5,
-      "new_value": 2.25,
-      "percent_change": -10.0,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
       "model_id": "moonshotai/kimi-k2.5",
       "change_type": "cache_price_change",
       "field": "cache_read_per_million",
-      "old_value": 0.1125,
-      "new_value": 0.075,
-      "percent_change": -33.33,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
-      "model_id": "mistralai/mistral-small-24b-instruct-2501",
-      "change_type": "price_increase",
-      "field": "input_per_million",
-      "old_value": 0.03,
-      "new_value": 0.05,
-      "percent_change": 66.67,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
-      "model_id": "mistralai/mistral-small-24b-instruct-2501",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 0.11,
-      "new_value": 0.08,
-      "percent_change": -27.27,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
-    },
-    {
-      "model_id": "mistralai/mistral-small-24b-instruct-2501",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
-      "old_value": 0.015,
-      "new_value": null,
-      "percent_change": -100.0,
-      "detected_at": "2026-02-07T06:40:42.156935+00:00"
+      "old_value": 0.075,
+      "new_value": 0.07,
+      "percent_change": -6.67,
+      "detected_at": "2026-02-08T02:28:25.535538+00:00"
     }
   ],
   "summary": {
-    "price_increases": 5,
-    "price_decreases": 2,
+    "price_increases": 0,
+    "price_decreases": 0,
     "new_models": 0,
     "removed_models": 0,
-    "cache_price_changes": 3,
+    "cache_price_changes": 1,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-02-07T06:40:55.913495+00:00"
+  }
 }
