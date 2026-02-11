@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-02-11T02:12:19.965568+00:00",
+  "fetched_at": "2026-02-11T06:59:35.751010+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 344,
+  "model_count": 345,
   "data": [
     {
       "id": "qwen/qwen3-max-thinking",
@@ -339,6 +339,53 @@
       "pricing": {
         "prompt": "0",
         "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 256000,
+        "max_completion_tokens": 256000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "stop",
+        "temperature",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      },
+      "expiration_date": null
+    },
+    {
+      "id": "stepfun/step-3.5-flash",
+      "canonical_slug": "stepfun/step-3.5-flash",
+      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
+      "name": "StepFun: Step 3.5 Flash",
+      "created": 1769728337,
+      "description": "Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token. It is a reasoning model that is incredibly speed efficient even at long contexts.",
+      "context_length": 256000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000002"
       },
       "top_provider": {
         "context_length": 256000,

@@ -1,39 +1,25 @@
 {
-  "generated_at": "2026-02-11T02:12:20.648130+00:00",
+  "generated_at": "2026-02-11T06:59:36.471673+00:00",
   "changes": [
     {
-      "model_id": "bedrock/moonshotai.kimi-k2-thinking",
+      "model_id": "stepfun/step-3.5-flash",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.73,
-        "output_per_million": 3.03,
-        "cache_read_per_million": null,
+        "input_per_million": 0.1,
+        "output_per_million": 0.3,
+        "cache_read_per_million": 0.02,
         "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-02-11T02:12:20.645661+00:00"
-    },
-    {
-      "model_id": "azure_ai/kimi-k2.5",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 3.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-11T02:12:20.645661+00:00"
+      "detected_at": "2026-02-11T06:59:36.469636+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
     "price_decreases": 0,
-    "new_models": 2,
+    "new_models": 1,
     "removed_models": 0,
     "cache_price_changes": 0,
     "other_changes": 0
