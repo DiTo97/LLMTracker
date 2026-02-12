@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-02-12T07:00:32.640017+00:00",
+  "fetched_at": "2026-02-12T13:05:23.831897+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 342,
   "data": [
@@ -15306,7 +15306,7 @@
         "top_p"
       ],
       "default_parameters": {},
-      "expiration_date": null
+      "expiration_date": "2026-02-25"
     },
     {
       "id": "openai/gpt-4o-2024-05-13",
