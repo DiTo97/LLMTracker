@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-02-14T12:45:26.955792+00:00",
+  "fetched_at": "2026-02-14T18:33:40.478774+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 2566,
   "data": {
@@ -6196,6 +6196,8 @@
       "source": "https://platform.moonshot.ai/docs/guide/kimi-k2-5-quickstart",
       "supports_function_calling": true,
       "supports_reasoning": true,
+      "supports_system_messages": true,
+      "supports_tool_choice": true,
       "supports_video_input": true,
       "supports_vision": true
     },
