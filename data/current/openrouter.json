@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-02-16T13:01:10.006927+00:00",
+  "fetched_at": "2026-02-16T18:41:21.207725+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 342,
   "data": [
@@ -31,7 +31,7 @@
       },
       "top_provider": {
         "context_length": 1000000,
-        "max_completion_tokens": 64000,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -62,7 +62,7 @@
       "name": "Qwen: Qwen3.5 397B A17B",
       "created": 1771223018,
       "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers state-of-the-art performance comparable to leading-edge models across a wide range of tasks, including language understanding, logical reasoning, code generation, agent-based tasks, image understanding, video understanding, and graphical user interface (GUI) interactions. With its robust code-generation and agent capabilities, the model exhibits strong generalization across diverse agent.",
-      "context_length": 256000,
+      "context_length": 262144,
       "architecture": {
         "modality": "text+image+video->text",
         "input_modalities": [
@@ -81,8 +81,8 @@
         "completion": "0.0000036"
       },
       "top_provider": {
-        "context_length": 256000,
-        "max_completion_tokens": 64000,
+        "context_length": 262144,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
