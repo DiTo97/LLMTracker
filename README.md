@@ -1,4 +1,4 @@
-# LLMTracker (tokenprice fork)
+# LLMTracker (fork)
 
 This is a fork of [LLMTracker](https://github.com/MrUnreal/LLMTracker) with extended support for **cache pricing** fields.
 
