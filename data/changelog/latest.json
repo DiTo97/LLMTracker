@@ -1,96 +1,72 @@
 {
-  "generated_at": "2026-02-17T13:01:25.917549+00:00",
+  "generated_at": "2026-02-17T18:56:47.121210+00:00",
   "changes": [
     {
-      "model_id": "z-ai/glm-4.6",
+      "model_id": "anthropic/claude-sonnet-4.6",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "cache_read_per_million": 0.3,
+        "cache_creation_per_million": 3.75
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-17T18:56:47.118115+00:00"
+    },
+    {
+      "model_id": "qwen/qwen3.5-397b-a17b",
       "change_type": "price_decrease",
       "field": "input_per_million",
-      "old_value": 0.35,
-      "new_value": 0.34,
-      "percent_change": -2.86,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
+      "old_value": 0.6,
+      "new_value": 0.15,
+      "percent_change": -75.0,
+      "detected_at": "2026-02-17T18:56:47.118115+00:00"
     },
     {
-      "model_id": "z-ai/glm-4.6",
-      "change_type": "price_increase",
-      "field": "output_per_million",
-      "old_value": 1.5,
-      "new_value": 1.7,
-      "percent_change": 13.33,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-4.6",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
-      "old_value": 0.175,
-      "new_value": 0.17,
-      "percent_change": -2.86,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-coder-next",
-      "change_type": "price_increase",
-      "field": "input_per_million",
-      "old_value": 0.07,
-      "new_value": 0.12,
-      "percent_change": 71.43,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-coder-next",
-      "change_type": "price_increase",
-      "field": "output_per_million",
-      "old_value": 0.3,
-      "new_value": 0.75,
-      "percent_change": 150.0,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3-coder-next",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
-      "old_value": 0.035,
-      "new_value": 0.06,
-      "percent_change": 71.43,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-4.7",
+      "model_id": "qwen/qwen3.5-397b-a17b",
       "change_type": "price_decrease",
-      "field": "input_per_million",
-      "old_value": 0.4,
-      "new_value": 0.38,
-      "percent_change": -5.0,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-4.7",
-      "change_type": "price_increase",
       "field": "output_per_million",
-      "old_value": 1.5,
-      "new_value": 1.7,
-      "percent_change": 13.33,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
+      "old_value": 3.6,
+      "new_value": 1.0,
+      "percent_change": -72.22,
+      "detected_at": "2026-02-17T18:56:47.118115+00:00"
     },
     {
-      "model_id": "z-ai/glm-4.7",
+      "model_id": "qwen/qwen3.5-397b-a17b",
       "change_type": "cache_price_change",
       "field": "cache_read_per_million",
-      "old_value": 0.2,
-      "new_value": 0.19,
-      "percent_change": -5.0,
-      "detected_at": "2026-02-17T13:01:25.914159+00:00"
+      "old_value": null,
+      "new_value": 0.15,
+      "percent_change": null,
+      "detected_at": "2026-02-17T18:56:47.118115+00:00"
+    },
+    {
+      "model_id": "minimax/minimax-m2.5",
+      "change_type": "price_decrease",
+      "field": "output_per_million",
+      "old_value": 1.2,
+      "new_value": 1.1,
+      "percent_change": -8.33,
+      "detected_at": "2026-02-17T18:56:47.118115+00:00"
+    },
+    {
+      "model_id": "minimax/minimax-m2.5",
+      "change_type": "cache_price_change",
+      "field": "cache_read_per_million",
+      "old_value": 0.029,
+      "new_value": 0.15,
+      "percent_change": 417.24,
+      "detected_at": "2026-02-17T18:56:47.118115+00:00"
     }
   ],
   "summary": {
-    "price_increases": 4,
-    "price_decreases": 2,
-    "new_models": 0,
+    "price_increases": 0,
+    "price_decreases": 3,
+    "new_models": 1,
     "removed_models": 0,
-    "cache_price_changes": 3,
+    "cache_price_changes": 2,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-02-17T13:01:41.882732+00:00"
+  }
 }
