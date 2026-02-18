@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-02-17T18:56:47.121210+00:00",
+  "generated_at": "2026-02-18T02:05:26.004577+00:00",
   "changes": [
     {
-      "model_id": "anthropic/claude-sonnet-4.6",
+      "model_id": "global.anthropic.claude-sonnet-4-6",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
@@ -13,60 +13,196 @@
         "cache_creation_per_million": 3.75
       },
       "percent_change": null,
-      "detected_at": "2026-02-17T18:56:47.118115+00:00"
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
     },
     {
-      "model_id": "qwen/qwen3.5-397b-a17b",
-      "change_type": "price_decrease",
-      "field": "input_per_million",
-      "old_value": 0.6,
-      "new_value": 0.15,
-      "percent_change": -75.0,
-      "detected_at": "2026-02-17T18:56:47.118115+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3.5-397b-a17b",
-      "change_type": "price_decrease",
-      "field": "output_per_million",
-      "old_value": 3.6,
-      "new_value": 1.0,
-      "percent_change": -72.22,
-      "detected_at": "2026-02-17T18:56:47.118115+00:00"
-    },
-    {
-      "model_id": "qwen/qwen3.5-397b-a17b",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
+      "model_id": "vertex_ai/claude-sonnet-4-6",
+      "change_type": "new_model",
+      "field": "model",
       "old_value": null,
-      "new_value": 0.15,
+      "new_value": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "cache_read_per_million": 0.3,
+        "cache_creation_per_million": 3.75
+      },
       "percent_change": null,
-      "detected_at": "2026-02-17T18:56:47.118115+00:00"
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
     },
     {
-      "model_id": "minimax/minimax-m2.5",
-      "change_type": "price_decrease",
+      "model_id": "claude-sonnet-4-6",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "cache_read_per_million": 0.3,
+        "cache_creation_per_million": 3.75
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "vertex_ai/claude-sonnet-4-6@default",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "cache_read_per_million": 0.3,
+        "cache_creation_per_million": 3.75
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "azure_ai/claude-sonnet-4-6",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "cache_read_per_million": 0.3,
+        "cache_creation_per_million": 3.75
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "us.anthropic.claude-sonnet-4-6",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.3,
+        "output_per_million": 16.5,
+        "cache_read_per_million": 0.33,
+        "cache_creation_per_million": 4.125
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "anthropic.claude-sonnet-4-6",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.0,
+        "output_per_million": 15.0,
+        "cache_read_per_million": 0.3,
+        "cache_creation_per_million": 3.75
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "vertex_ai/claude-opus-4-6@default",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 5.0,
+        "output_per_million": 25.0,
+        "cache_read_per_million": 0.5,
+        "cache_creation_per_million": 6.25
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "apac.anthropic.claude-sonnet-4-6",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.3,
+        "output_per_million": 16.5,
+        "cache_read_per_million": 0.33,
+        "cache_creation_per_million": 4.125
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "eu.anthropic.claude-sonnet-4-6",
+      "change_type": "new_model",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 3.3,
+        "output_per_million": 16.5,
+        "cache_read_per_million": 0.33,
+        "cache_creation_per_million": 4.125
+      },
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "openai/chatgpt-4o-latest",
+      "change_type": "removed_model",
+      "field": "model",
+      "old_value": {
+        "input_per_million": 5.0,
+        "output_per_million": 15.0,
+        "cache_read_per_million": null,
+        "cache_creation_per_million": null
+      },
+      "new_value": null,
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "google/gemini-2.5-flash-preview-09-2025",
+      "change_type": "removed_model",
+      "field": "model",
+      "old_value": {
+        "input_per_million": 0.3,
+        "output_per_million": 2.5,
+        "cache_read_per_million": 0.03,
+        "cache_creation_per_million": 0.083333
+      },
+      "new_value": null,
+      "percent_change": null,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "mistralai/devstral-2512",
+      "change_type": "price_increase",
+      "field": "input_per_million",
+      "old_value": 0.05,
+      "new_value": 0.4,
+      "percent_change": 700.0,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
+    },
+    {
+      "model_id": "mistralai/devstral-2512",
+      "change_type": "price_increase",
       "field": "output_per_million",
-      "old_value": 1.2,
-      "new_value": 1.1,
-      "percent_change": -8.33,
-      "detected_at": "2026-02-17T18:56:47.118115+00:00"
+      "old_value": 0.22,
+      "new_value": 2.0,
+      "percent_change": 809.09,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
     },
     {
-      "model_id": "minimax/minimax-m2.5",
+      "model_id": "mistralai/devstral-2512",
       "change_type": "cache_price_change",
       "field": "cache_read_per_million",
-      "old_value": 0.029,
-      "new_value": 0.15,
-      "percent_change": 417.24,
-      "detected_at": "2026-02-17T18:56:47.118115+00:00"
+      "old_value": 0.025,
+      "new_value": null,
+      "percent_change": -100.0,
+      "detected_at": "2026-02-18T02:05:26.002318+00:00"
     }
   ],
   "summary": {
-    "price_increases": 0,
-    "price_decreases": 3,
-    "new_models": 1,
-    "removed_models": 0,
-    "cache_price_changes": 2,
+    "price_increases": 2,
+    "price_decreases": 0,
+    "new_models": 10,
+    "removed_models": 2,
+    "cache_price_changes": 1,
     "other_changes": 0
   }
 }
