@@ -1,110 +1,26 @@
 {
-  "generated_at": "2026-02-19T18:50:05.074265+00:00",
+  "generated_at": "2026-02-20T02:00:03.273243+00:00",
   "changes": [
     {
-      "model_id": "google/gemini-3.1-pro-preview",
-      "change_type": "new_model",
+      "model_id": "openrouter/aurora-alpha",
+      "change_type": "removed_model",
       "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.0,
-        "output_per_million": 12.0,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": 0.375
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-19T18:50:05.071378+00:00"
-    },
-    {
-      "model_id": "gemini-3.1-pro-preview",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.0,
-        "output_per_million": 12.0,
-        "cache_read_per_million": 0.2,
+      "old_value": {
+        "input_per_million": 0.0,
+        "output_per_million": 0.0,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
+      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-02-19T18:50:05.071378+00:00"
-    },
-    {
-      "model_id": "vertex_ai/gemini-3.1-pro-preview",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.0,
-        "output_per_million": 12.0,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-19T18:50:05.071378+00:00"
-    },
-    {
-      "model_id": "gemini/gemini-3.1-pro-preview",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.0,
-        "output_per_million": 12.0,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-19T18:50:05.071378+00:00"
-    },
-    {
-      "model_id": "gemini-3.1-pro-preview-customtools",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.0,
-        "output_per_million": 12.0,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-19T18:50:05.071378+00:00"
-    },
-    {
-      "model_id": "vertex_ai/gemini-3.1-pro-preview-customtools",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.0,
-        "output_per_million": 12.0,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-19T18:50:05.071378+00:00"
-    },
-    {
-      "model_id": "gemini/gemini-3.1-pro-preview-customtools",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.0,
-        "output_per_million": 12.0,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-19T18:50:05.071378+00:00"
+      "detected_at": "2026-02-20T02:00:03.270617+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
     "price_decreases": 0,
-    "new_models": 7,
-    "removed_models": 0,
+    "new_models": 0,
+    "removed_models": 1,
     "cache_price_changes": 0,
     "other_changes": 0
   }
