@@ -1,94 +1,27 @@
 {
-  "generated_at": "2026-02-20T18:45:15.534217+00:00",
+  "generated_at": "2026-02-21T06:40:22.275633+00:00",
   "changes": [
     {
-      "model_id": "fireworks_ai/kimi-k2p5",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 3.0,
-        "cache_read_per_million": 0.1,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-20T18:45:15.531658+00:00"
-    },
-    {
-      "model_id": "fireworks_ai/glm-4p7",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 2.2,
-        "cache_read_per_million": 0.3,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-20T18:45:15.531658+00:00"
-    },
-    {
-      "model_id": "fireworks_ai/accounts/fireworks/models/glm-4p7",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 2.2,
-        "cache_read_per_million": 0.3,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-20T18:45:15.531658+00:00"
-    },
-    {
-      "model_id": "fireworks_ai/accounts/fireworks/models/minimax-m2p1",
+      "model_id": "openrouter/minimax/minimax-m2.5",
       "change_type": "new_model",
       "field": "model",
       "old_value": null,
       "new_value": {
         "input_per_million": 0.3,
-        "output_per_million": 1.2,
-        "cache_read_per_million": 0.03,
+        "output_per_million": 1.1,
+        "cache_read_per_million": 0.15,
         "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-02-20T18:45:15.531658+00:00"
-    },
-    {
-      "model_id": "fireworks_ai/minimax-m2p1",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.3,
-        "output_per_million": 1.2,
-        "cache_read_per_million": 0.03,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-20T18:45:15.531658+00:00"
-    },
-    {
-      "model_id": "fireworks_ai/accounts/fireworks/models/kimi-k2p5",
-      "change_type": "cache_price_change",
-      "field": "cache_read_per_million",
-      "old_value": null,
-      "new_value": 0.1,
-      "percent_change": null,
-      "detected_at": "2026-02-20T18:45:15.531658+00:00"
+      "detected_at": "2026-02-21T06:40:22.273175+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
     "price_decreases": 0,
-    "new_models": 5,
+    "new_models": 1,
     "removed_models": 0,
-    "cache_price_changes": 1,
+    "cache_price_changes": 0,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-02-20T18:45:33.783883+00:00"
+  }
 }
