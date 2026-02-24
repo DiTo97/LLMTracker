@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-02-24T02:01:10.879164+00:00",
+  "fetched_at": "2026-02-24T06:59:09.824643+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 337,
   "data": [
@@ -15476,7 +15476,7 @@
         "top_p"
       ],
       "default_parameters": {},
-      "expiration_date": "2026-08-23"
+      "expiration_date": null
     },
     {
       "id": "mistralai/mistral-large",
