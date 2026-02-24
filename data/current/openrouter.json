@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-02-23T19:01:13.252022+00:00",
+  "fetched_at": "2026-02-24T02:01:10.879164+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 337,
   "data": [
@@ -189,9 +189,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.000001",
-        "input_cache_read": "0.00000015"
+        "prompt": "0.00000055",
+        "completion": "0.0000035",
+        "input_cache_read": "0.00000055"
       },
       "top_provider": {
         "context_length": 262144,
@@ -7396,7 +7396,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
-      "expiration_date": null
+      "expiration_date": "2026-02-12"
     },
     {
       "id": "z-ai/glm-4.5-air:free",
@@ -15476,7 +15476,7 @@
         "top_p"
       ],
       "default_parameters": {},
-      "expiration_date": null
+      "expiration_date": "2026-08-23"
     },
     {
       "id": "mistralai/mistral-large",
