@@ -1,57 +1,27 @@
 {
-  "generated_at": "2026-02-25T02:03:47.090632+00:00",
+  "generated_at": "2026-02-25T13:02:42.841733+00:00",
   "changes": [
     {
-      "model_id": "aion-labs/aion-2.0",
-      "change_type": "new_model",
+      "model_id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "change_type": "removed_model",
       "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.8,
-        "output_per_million": 1.6,
+      "old_value": {
+        "input_per_million": 0.6,
+        "output_per_million": 1.8,
         "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
+      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-02-25T02:03:47.088255+00:00"
-    },
-    {
-      "model_id": "gpt-5.3-codex",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 1.75,
-        "output_per_million": 14.0,
-        "cache_read_per_million": 0.175,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-25T02:03:47.088255+00:00"
-    },
-    {
-      "model_id": "openai/gpt-5.3-codex",
-      "change_type": "new_model",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 1.75,
-        "output_per_million": 14.0,
-        "cache_read_per_million": 0.175,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-02-25T02:03:47.088255+00:00"
+      "detected_at": "2026-02-25T13:02:42.839161+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
     "price_decreases": 0,
-    "new_models": 3,
-    "removed_models": 0,
+    "new_models": 0,
+    "removed_models": 1,
     "cache_price_changes": 0,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-02-25T02:04:07.256821+00:00"
+  }
 }
