@@ -1,8 +1,8 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-02-26T01:58:58.082016+00:00",
+  "fetched_at": "2026-02-26T06:59:02.013939+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 343,
+  "model_count": 342,
   "data": [
     {
       "id": "qwen/qwen3.5-35b-a3b",
@@ -2787,11 +2787,8 @@
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
-        "logit_bias",
         "max_tokens",
-        "min_p",
         "presence_penalty",
-        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
@@ -2799,7 +2796,6 @@
         "temperature",
         "tool_choice",
         "tools",
-        "top_k",
         "top_p"
       ],
       "default_parameters": {
@@ -14188,7 +14184,6 @@
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
-        "logit_bias",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -15936,52 +15931,6 @@
         "top_p"
       ],
       "default_parameters": {},
-      "expiration_date": null
-    },
-    {
-      "id": "mistralai/mistral-7b-instruct-v0.2",
-      "canonical_slug": "mistralai/mistral-7b-instruct-v0.2",
-      "hugging_face_id": "mistralai/Mistral-7B-Instruct-v0.2",
-      "name": "Mistral: Mistral 7B Instruct v0.2",
-      "created": 1703721600,
-      "description": "A high-performing, industry-standard 7.3B parameter model, with optimizations for speed and context length.\n\nAn improved version of [Mistral 7B Instruct](/modelsmistralai/mistral-7b-instruct-v0.1), with the following changes:\n\n- 32k context window (vs 8k context in v0.1)\n- Rope-theta = 1e6\n- No Sliding-Window Attention",
-      "context_length": 32768,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": "mistral"
-      },
-      "pricing": {
-        "prompt": "0.0000002",
-        "completion": "0.0000002"
-      },
-      "top_provider": {
-        "context_length": 32768,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.3
-      },
       "expiration_date": null
     },
     {
