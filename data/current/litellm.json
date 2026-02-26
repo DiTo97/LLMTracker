@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-02-26T06:59:02.084857+00:00",
+  "fetched_at": "2026-02-26T13:03:47.633997+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 2602,
   "data": {
@@ -6227,13 +6227,13 @@
       "supports_tool_choice": true
     },
     "azure_ai/mistral-small-2503": {
-      "input_cost_per_token": 1e-06,
+      "input_cost_per_token": 1e-07,
       "litellm_provider": "azure_ai",
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "max_tokens": 128000,
       "mode": "chat",
-      "output_cost_per_token": 3e-06,
+      "output_cost_per_token": 3e-07,
       "supports_function_calling": true,
       "supports_tool_choice": true,
       "supports_vision": true
