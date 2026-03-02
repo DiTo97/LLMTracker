@@ -47,6 +47,7 @@ class Change(BaseModel):
     """A single price or model change."""
     model_id: str
     change_type: ChangeType
+    model_type: Optional[str] = None
     field: Optional[str] = None
     old_value: Optional[Any] = None
     new_value: Optional[Any] = None
@@ -175,6 +176,7 @@ def detect_price_changes(
         changes.append(Change(
             model_id=model_id,
             change_type=ChangeType.NEW_MODEL,
+            model_type=new_model.get("model_type", "chat"),
             field="model",
             old_value=None,
             new_value={
@@ -193,6 +195,7 @@ def detect_price_changes(
         changes.append(Change(
             model_id=model_id,
             change_type=ChangeType.REMOVED_MODEL,
+            model_type=old_model.get("model_type", "chat"),
             field="model",
             old_value={
                 "input_per_million": pricing.get("input_per_million"),
@@ -208,48 +211,52 @@ def detect_price_changes(
     for model_id in old_model_ids & new_model_ids:
         old_model = old_models[model_id]
         new_model = new_models[model_id]
-        
+
         old_pricing = old_model.get("pricing", {})
         new_pricing = new_model.get("pricing", {})
-        
+
+        model_type = new_model.get("model_type", "chat")
+
         # Check input price
         old_input = old_pricing.get("input_per_million", 0)
         new_input = new_pricing.get("input_per_million", 0)
-        
+
         if old_input != new_input:
             percent = calculate_percent_change(old_input, new_input)
             change_type = ChangeType.PRICE_INCREASE if new_input > old_input else ChangeType.PRICE_DECREASE
             changes.append(Change(
                 model_id=model_id,
                 change_type=change_type,
+                model_type=model_type,
                 field="input_per_million",
                 old_value=old_input,
                 new_value=new_input,
                 percent_change=percent,
                 detected_at=now
             ))
-        
+
         # Check output price
         old_output = old_pricing.get("output_per_million", 0)
         new_output = new_pricing.get("output_per_million", 0)
-        
+
         if old_output != new_output:
             percent = calculate_percent_change(old_output, new_output)
             change_type = ChangeType.PRICE_INCREASE if new_output > old_output else ChangeType.PRICE_DECREASE
             changes.append(Change(
                 model_id=model_id,
                 change_type=change_type,
+                model_type=model_type,
                 field="output_per_million",
                 old_value=old_output,
                 new_value=new_output,
                 percent_change=percent,
                 detected_at=now
             ))
-        
+
         # Check cache read price
         old_cache_read = old_pricing.get("cache_read_per_million")
         new_cache_read = new_pricing.get("cache_read_per_million")
-        
+
         if old_cache_read != new_cache_read and (old_cache_read is not None or new_cache_read is not None):
             old_val = old_cache_read or 0
             new_val = new_cache_read or 0
@@ -257,17 +264,18 @@ def detect_price_changes(
             changes.append(Change(
                 model_id=model_id,
                 change_type=ChangeType.CACHE_PRICE_CHANGE,
+                model_type=model_type,
                 field="cache_read_per_million",
                 old_value=old_cache_read,
                 new_value=new_cache_read,
                 percent_change=percent,
                 detected_at=now
             ))
-        
+
         # Check cache creation price
         old_cache_creation = old_pricing.get("cache_creation_per_million")
         new_cache_creation = new_pricing.get("cache_creation_per_million")
-        
+
         if old_cache_creation != new_cache_creation and (old_cache_creation is not None or new_cache_creation is not None):
             old_val = old_cache_creation or 0
             new_val = new_cache_creation or 0
@@ -275,21 +283,23 @@ def detect_price_changes(
             changes.append(Change(
                 model_id=model_id,
                 change_type=ChangeType.CACHE_PRICE_CHANGE,
+                model_type=model_type,
                 field="cache_creation_per_million",
                 old_value=old_cache_creation,
                 new_value=new_cache_creation,
                 percent_change=percent,
                 detected_at=now
             ))
-        
+
         # Check context window changes
         old_context = old_model.get("context_window", 0)
         new_context = new_model.get("context_window", 0)
-        
+
         if old_context != new_context and (old_context > 0 or new_context > 0):
             changes.append(Change(
                 model_id=model_id,
                 change_type=ChangeType.CONTEXT_CHANGE,
+                model_type=model_type,
                 field="context_window",
                 old_value=old_context,
                 new_value=new_context,

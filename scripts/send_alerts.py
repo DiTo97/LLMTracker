@@ -1,15 +1,17 @@
 """
 LLM Price Tracker - Alert Sender Module
 
-Purpose: Send notifications to Discord, Slack, and Email when price changes are detected.
+Purpose: Send notifications to Discord, Slack, Email, and Telegram when price changes are detected.
 
 Input:
 - data/changelog/latest.json
 
 Environment Variables:
 - DISCORD_WEBHOOK_URL: Discord webhook for notifications
-- SLACK_WEBHOOK_URL: Slack webhook for notifications  
+- SLACK_WEBHOOK_URL: Slack webhook for notifications
 - BUTTONDOWN_API_KEY: Buttondown API key for email alerts
+- TELEGRAM_BOT_TOKEN: Telegram bot token for notifications
+- TELEGRAM_CHAT_ID: Telegram chat ID for notifications
 """
 
 import json
@@ -28,7 +30,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 CHANGELOG_DIR = DATA_DIR / "changelog"
 
 # Configuration
-WEBSITE_URL = "https://dito97.github.io/tokentracking"
+WEBSITE_URL = "https://MrUnreal.github.io/LLMTracker"
 REQUEST_TIMEOUT = 30.0
 
 
@@ -107,6 +109,31 @@ def format_change_line(change: dict[str, Any], include_links: bool = False) -> s
         return f"• {model_display}: {field} changed"
 
 
+MODEL_TYPE_LABELS = {
+    "chat": "Chat",
+    "image_generation": "Image Generation",
+    "embedding": "Embedding",
+    "transcription": "Transcription",
+    "reranking": "Reranking",
+    "video": "Video",
+    "ocr": "OCR",
+}
+
+
+def _model_type_label(model_type: str) -> str:
+    """Get a human-readable label for a model type."""
+    return MODEL_TYPE_LABELS.get(model_type, model_type.replace("_", " ").title())
+
+
+def _group_by_model_type(changes: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    """Group a list of changes by their model_type field, preserving order."""
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for change in changes:
+        mt = change.get("model_type", "chat")
+        groups.setdefault(mt, []).append(change)
+    return groups
+
+
 def format_discord_message(changelog: dict[str, Any]) -> dict[str, Any]:
     """
     Create Discord embed format.
@@ -138,43 +165,32 @@ def format_discord_message(changelog: dict[str, Any]) -> dict[str, Any]:
     
     # Build description
     lines = [f"{emoji} **LLM Price Alert**\n"]
-    
+
     # Group changes by type (filter out zero percent changes)
     price_decreases = [c for c in changes if c.get("change_type") == "price_decrease" and c.get("percent_change", 0) != 0]
     price_increases = [c for c in changes if c.get("change_type") == "price_increase" and c.get("percent_change", 0) != 0]
     new_models = [c for c in changes if c.get("change_type") == "new_model"]
     removed_models = [c for c in changes if c.get("change_type") == "removed_model"]
-    
-    if price_decreases:
-        lines.append("**📉 Price Decreases:**")
-        for change in price_decreases[:10]:  # Limit to 10
-            lines.append(format_change_line(change, include_links=True))
-        if len(price_decreases) > 10:
-            lines.append(f"  ...and {len(price_decreases) - 10} more")
+
+    for section_emoji, section_title, section_changes, use_links in [
+        ("📉", "Price Decreases", price_decreases, True),
+        ("📈", "Price Increases", price_increases, True),
+        ("🆕", "New Models", new_models, True),
+        ("🗑️", "Removed Models", removed_models, False),
+    ]:
+        if not section_changes:
+            continue
+        lines.append(f"**{section_emoji} {section_title}:**")
+        by_type = _group_by_model_type(section_changes)
+        for mt, mt_changes in by_type.items():
+            label = _model_type_label(mt)
+            lines.append(f"  __{label}__")
+            limit = 5 if section_title == "Removed Models" else 10
+            for change in mt_changes[:limit]:
+                lines.append(format_change_line(change, include_links=use_links))
+            if len(mt_changes) > limit:
+                lines.append(f"  ...and {len(mt_changes) - limit} more")
         lines.append("")
-    
-    if price_increases:
-        lines.append("**📈 Price Increases:**")
-        for change in price_increases[:10]:
-            lines.append(format_change_line(change, include_links=True))
-        if len(price_increases) > 10:
-            lines.append(f"  ...and {len(price_increases) - 10} more")
-        lines.append("")
-    
-    if new_models:
-        lines.append("**🆕 New Models:**")
-        for change in new_models[:10]:
-            lines.append(format_change_line(change, include_links=True))
-        if len(new_models) > 10:
-            lines.append(f"  ...and {len(new_models) - 10} more")
-        lines.append("")
-    
-    if removed_models:
-        lines.append("**🗑️ Removed Models:**")
-        for change in removed_models[:5]:
-            lines.append(format_change_line(change))  # No links for removed
-        if len(removed_models) > 5:
-            lines.append(f"  ...and {len(removed_models) - 5} more")
     
     # Add quick links section
     lines.append("")
@@ -239,38 +255,24 @@ def format_slack_message(changelog: dict[str, Any]) -> dict[str, Any]:
     price_decreases = [c for c in changes if c.get("change_type") == "price_decrease" and c.get("percent_change", 0) != 0]
     price_increases = [c for c in changes if c.get("change_type") == "price_increase" and c.get("percent_change", 0) != 0]
     new_models = [c for c in changes if c.get("change_type") == "new_model"]
-    
-    if price_decreases:
-        text = "*📉 Price Decreases:*\n"
-        for change in price_decreases[:8]:
-            text += format_change_line(change) + "\n"
-        if len(price_decreases) > 8:
-            text += f"_...and {len(price_decreases) - 8} more_"
-        
-        blocks.append({
-            "type": "section",
-            "text": {"type": "mrkdwn", "text": text}
-        })
-    
-    if price_increases:
-        text = "*📈 Price Increases:*\n"
-        for change in price_increases[:8]:
-            text += format_change_line(change) + "\n"
-        if len(price_increases) > 8:
-            text += f"_...and {len(price_increases) - 8} more_"
-        
-        blocks.append({
-            "type": "section",
-            "text": {"type": "mrkdwn", "text": text}
-        })
-    
-    if new_models:
-        text = "*🆕 New Models:*\n"
-        for change in new_models[:8]:
-            text += format_change_line(change) + "\n"
-        if len(new_models) > 8:
-            text += f"_...and {len(new_models) - 8} more_"
-        
+
+    for section_emoji, section_title, section_changes in [
+        ("📉", "Price Decreases", price_decreases),
+        ("📈", "Price Increases", price_increases),
+        ("🆕", "New Models", new_models),
+    ]:
+        if not section_changes:
+            continue
+        text = f"*{section_emoji} {section_title}:*\n"
+        by_type = _group_by_model_type(section_changes)
+        for mt, mt_changes in by_type.items():
+            label = _model_type_label(mt)
+            text += f"_{label}_\n"
+            for change in mt_changes[:8]:
+                text += format_change_line(change) + "\n"
+            if len(mt_changes) > 8:
+                text += f"_...and {len(mt_changes) - 8} more_\n"
+
         blocks.append({
             "type": "section",
             "text": {"type": "mrkdwn", "text": text}
@@ -324,30 +326,24 @@ def format_email(changelog: dict[str, Any]) -> tuple[str, str]:
     price_decreases = [c for c in changes if c.get("change_type") == "price_decrease" and c.get("percent_change", 0) != 0]
     price_increases = [c for c in changes if c.get("change_type") == "price_increase" and c.get("percent_change", 0) != 0]
     new_models = [c for c in changes if c.get("change_type") == "new_model"]
-    
-    if price_decreases:
-        html_parts.append("<h3>📉 Price Decreases</h3><ul>")
-        for change in price_decreases[:15]:
-            html_parts.append(f"<li>{format_change_line(change)[2:]}</li>")  # Remove bullet
-        if len(price_decreases) > 15:
-            html_parts.append(f"<li><em>...and {len(price_decreases) - 15} more</em></li>")
-        html_parts.append("</ul>")
-    
-    if price_increases:
-        html_parts.append("<h3>📈 Price Increases</h3><ul>")
-        for change in price_increases[:15]:
-            html_parts.append(f"<li>{format_change_line(change)[2:]}</li>")
-        if len(price_increases) > 15:
-            html_parts.append(f"<li><em>...and {len(price_increases) - 15} more</em></li>")
-        html_parts.append("</ul>")
-    
-    if new_models:
-        html_parts.append("<h3>🆕 New Models</h3><ul>")
-        for change in new_models[:15]:
-            html_parts.append(f"<li>{format_change_line(change)[2:]}</li>")
-        if len(new_models) > 15:
-            html_parts.append(f"<li><em>...and {len(new_models) - 15} more</em></li>")
-        html_parts.append("</ul>")
+
+    for section_emoji, section_title, section_changes in [
+        ("📉", "Price Decreases", price_decreases),
+        ("📈", "Price Increases", price_increases),
+        ("🆕", "New Models", new_models),
+    ]:
+        if not section_changes:
+            continue
+        html_parts.append(f"<h3>{section_emoji} {section_title}</h3>")
+        by_type = _group_by_model_type(section_changes)
+        for mt, mt_changes in by_type.items():
+            label = _model_type_label(mt)
+            html_parts.append(f"<h4>{label}</h4><ul>")
+            for change in mt_changes[:15]:
+                html_parts.append(f"<li>{format_change_line(change)[2:]}</li>")
+            if len(mt_changes) > 15:
+                html_parts.append(f"<li><em>...and {len(mt_changes) - 15} more</em></li>")
+            html_parts.append("</ul>")
     
     html_parts.extend([
         "<hr>",
@@ -450,6 +446,90 @@ def send_email(changelog: dict[str, Any]) -> bool:
         return False
 
 
+def format_telegram_message(changelog: dict[str, Any]) -> str:
+    """
+    Create Telegram HTML message.
+
+    Args:
+        changelog: Changelog data
+
+    Returns:
+        HTML-formatted message string for Telegram's sendMessage API
+    """
+    summary = changelog.get("summary", {})
+    changes = changelog.get("changes", [])
+
+    parts = [
+        "<b>🔔 LLM Price Alert</b>",
+        "",
+        f"<b>Summary:</b> {summary.get('price_decreases', 0)} decreases, "
+        f"{summary.get('price_increases', 0)} increases, "
+        f"{summary.get('new_models', 0)} new models",
+        "",
+    ]
+
+    price_decreases = [c for c in changes if c.get("change_type") == "price_decrease" and c.get("percent_change", 0) != 0]
+    price_increases = [c for c in changes if c.get("change_type") == "price_increase" and c.get("percent_change", 0) != 0]
+    new_models = [c for c in changes if c.get("change_type") == "new_model"]
+
+    for section_emoji, section_title, section_changes in [
+        ("📉", "Price Decreases", price_decreases),
+        ("📈", "Price Increases", price_increases),
+        ("🆕", "New Models", new_models),
+    ]:
+        if not section_changes:
+            continue
+        parts.append(f"<b>{section_emoji} {section_title}:</b>")
+        by_type = _group_by_model_type(section_changes)
+        for mt, mt_changes in by_type.items():
+            label = _model_type_label(mt)
+            parts.append(f"<i>{label}</i>")
+            for change in mt_changes[:8]:
+                parts.append(format_change_line(change))
+            if len(mt_changes) > 8:
+                parts.append(f"  ...and {len(mt_changes) - 8} more")
+        parts.append("")
+
+    parts.append(f'<a href="{WEBSITE_URL}/changelog">View full changelog</a>')
+
+    return "\n".join(parts)
+
+
+def send_telegram(message: str) -> bool:
+    """
+    Send message to Telegram via Bot API.
+
+    Args:
+        message: HTML-formatted message string
+
+    Returns:
+        True if successful, False otherwise
+    """
+    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
+    if not bot_token or not chat_id:
+        print("⚠ TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set, skipping Telegram notification")
+        return False
+
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+
+    try:
+        with httpx.Client(timeout=REQUEST_TIMEOUT) as client:
+            response = client.post(url, json={
+                "chat_id": chat_id,
+                "text": message,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": True,
+            })
+            response.raise_for_status()
+            print("✓ Telegram notification sent successfully")
+            return True
+    except httpx.HTTPError as e:
+        print(f"❌ Failed to send Telegram notification: {e}")
+        return False
+
+
 def create_test_changelog() -> dict[str, Any]:
     """
     Create a dummy changelog for testing Discord webhook.
@@ -463,6 +543,7 @@ def create_test_changelog() -> dict[str, Any]:
             {
                 "model_id": "openai/gpt-4o",
                 "change_type": "price_decrease",
+                "model_type": "chat",
                 "field": "input_per_million",
                 "old_value": 5.00,
                 "new_value": 2.50,
@@ -472,6 +553,7 @@ def create_test_changelog() -> dict[str, Any]:
             {
                 "model_id": "anthropic/claude-3-5-sonnet",
                 "change_type": "price_decrease",
+                "model_type": "chat",
                 "field": "output_per_million",
                 "old_value": 15.00,
                 "new_value": 12.00,
@@ -481,6 +563,7 @@ def create_test_changelog() -> dict[str, Any]:
             {
                 "model_id": "google/gemini-2-pro",
                 "change_type": "new_model",
+                "model_type": "chat",
                 "new_value": {
                     "input_per_million": 1.25,
                     "output_per_million": 5.00
@@ -504,14 +587,14 @@ def main() -> None:
     Workflow:
     1. Load changelog/latest.json (or use test data with --test flag)
     2. Format messages for each platform
-    3. Send to Discord, Slack, Email (if configured)
-    
+    3. Send to Discord, Slack, Email, Telegram (if configured)
+
     Usage:
         python send_alerts.py          # Send real changelog alerts
         python send_alerts.py --test    # Send dummy test notification
     """
     parser = argparse.ArgumentParser(
-        description="Send tokentracking alerts to Discord, Slack, and Email"
+        description="Send tokentracking alerts to Discord, Slack, Email, and Telegram"
     )
     parser.add_argument(
         "--test",
@@ -567,22 +650,30 @@ def main() -> None:
     results = {
         "discord": False,
         "slack": False,
-        "email": False
+        "email": False,
+        "telegram": False,
     }
-    
+
     # Discord
     discord_message = format_discord_message(changelog)
     results["discord"] = send_discord(discord_message)
-    
+
     # Slack
     slack_message = format_slack_message(changelog)
     results["slack"] = send_slack(slack_message)
-    
+
     # Email (skip in test mode to avoid spamming subscribers)
     if args.test:
         print("⚠ Skipping email in test mode to avoid spamming subscribers")
     else:
         results["email"] = send_email(changelog)
+
+    # Telegram (skip in test mode to avoid spamming subscribers)
+    if args.test:
+        print("⚠ Skipping Telegram in test mode to avoid spamming subscribers")
+    else:
+        telegram_message = format_telegram_message(changelog)
+        results["telegram"] = send_telegram(telegram_message)
     
     # Summary
     print("\n" + "=" * 60)
