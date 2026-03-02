@@ -75,7 +75,7 @@ class ModelInfo(BaseModel):
     max_output_tokens: int = Field(default=0, description="Maximum output tokens")
     model_type: str = Field(
         default="chat",
-        description="Model type: chat, image_generation, embedding, transcription, reranking, etc.",
+        description="Model type: chat, image-generation, embedding, transcription, reranking, etc.",
     )
     supports_vision: bool = Field(default=False)
     supports_function_calling: bool = Field(default=False)
@@ -356,9 +356,9 @@ def normalize_openrouter(
             ]
 
             if "image" in (output_modalities or []):
-                model_type = "image_generation"
+                model_type = "image-generation"
             elif any(p in model_name_lower for p in image_patterns):
-                model_type = "image_generation"
+                model_type = "image-generation"
             elif modality and "text" in modality.lower():
                 model_type = "chat"
             else:
@@ -524,13 +524,13 @@ def normalize_litellm(
 
             # Override with name-based detection
             if is_image_by_name:
-                model_type = "image_generation"
+                model_type = "image-generation"
             elif is_embedding_by_name:
                 model_type = "embedding"
             elif mode in ("chat", "completion", "responses"):
                 model_type = "chat"
             elif mode in ("image_generation", "image_edit"):
-                model_type = "image_generation"
+                model_type = "image-generation"
             elif mode == "embedding":
                 model_type = "embedding"
             elif mode in ("audio_transcription", "audio_speech"):

@@ -111,7 +111,7 @@ def format_change_line(change: dict[str, Any], include_links: bool = False) -> s
 
 MODEL_TYPE_LABELS = {
     "chat": "Chat",
-    "image_generation": "Image Generation",
+    "image-generation": "Image Generation",
     "embedding": "Embedding",
     "transcription": "Transcription",
     "reranking": "Reranking",
