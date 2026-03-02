@@ -1,4 +1,4 @@
-# LLMTracker (tokenprice fork)
+# LLMTracker (fork)
 
 This is a fork of [LLMTracker](https://github.com/MrUnreal/LLMTracker) with extended support for **cache pricing** fields.
 
@@ -12,9 +12,8 @@ The original LLMTracker doesn't track cache read/write token pricing, even thoug
 ## Features
 
 - **Cache Pricing Support**: Track cache read and cache creation costs
-- **GitHub Pages Dashboard**: Interactive website to compare model prices
 - **Automated Updates**: Prices updated every 6 hours via GitHub Actions
-- **Alerting**: Discord, Slack, and email notifications for price changes
+- **Discord Alerts**: Notifications for price changes
 - **Uses uv**: Modern Python package manager for fast, reproducible builds
 
 ## Setup
@@ -34,8 +33,8 @@ uv run python scripts/normalize.py
 # Detect changes
 uv run python scripts/detect_changes.py
 
-# Generate website
-uv run python scripts/generate_site.py
+# Send alerts (requires DISCORD_WEBHOOK_URL env var)
+uv run python scripts/send_alerts.py
 ```
 
 ## Data Sources
@@ -68,17 +67,9 @@ uv run python scripts/generate_site.py
 }
 ```
 
-## GitHub Actions Workflows
-
-- **scrape.yml**: Runs every 6 hours to fetch and normalize pricing data
-- **deploy.yml**: Deploys the website to GitHub Pages
-- **alerts.yml**: Sends notifications when price changes are detected
-
-## Environment Variables (for alerts)
+## Environment Variables
 
 - `WEBHOOK_URL` / `DISCORD_WEBHOOK_URL`: Discord webhook for notifications
-- `SLACK_WEBHOOK_URL`: Slack webhook for notifications
-- `BUTTONDOWN_API_KEY`: Buttondown API key for email alerts
 
 ## Credits
 
