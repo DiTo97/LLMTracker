@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-03-05T19:15:00.149313+00:00",
+  "fetched_at": "2026-03-06T02:00:28.084631+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 346,
   "data": [
@@ -1123,9 +1123,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.0000018999999999999998",
-        "input_cache_read": "0.000000119"
+        "prompt": "0.0000008",
+        "completion": "0.00000256",
+        "input_cache_read": "0.00000016"
       },
       "top_provider": {
         "context_length": 202752,
@@ -1536,13 +1536,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000041",
-        "completion": "0.00000206",
-        "input_cache_read": "0.00000007"
+        "prompt": "0.00000045",
+        "completion": "0.0000022",
+        "input_cache_read": "0.000000225"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 65535,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -9809,7 +9809,6 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -9823,7 +9822,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -9892,7 +9890,7 @@
       "name": "Anthropic: Claude Sonnet 4",
       "created": 1747930371,
       "description": "Claude Sonnet 4 significantly enhances the capabilities of its predecessor, Sonnet 3.7, excelling in both coding and reasoning tasks with improved precision and controllability. Achieving state-of-the-art performance on SWE-bench (72.7%), Sonnet 4 balances capability and computational efficiency, making it suitable for a broad range of applications from routine coding tasks to complex software development projects. Key enhancements include improved autonomous codebase navigation, reduced error rates in agent-driven workflows, and increased reliability in following intricate instructions. Sonnet 4 is optimized for practical everyday use, providing advanced reasoning capabilities while maintaining efficiency and responsiveness in diverse internal and external scenarios.\n\nRead more at the [blog post here](https://www.anthropic.com/news/claude-4)",
-      "context_length": 1000000,
+      "context_length": 200000,
       "architecture": {
         "modality": "text+image+file->text",
         "input_modalities": [
@@ -9914,9 +9912,9 @@
         "input_cache_write": "0.00000375"
       },
       "top_provider": {
-        "context_length": 1000000,
+        "context_length": 200000,
         "max_completion_tokens": 64000,
-        "is_moderated": false
+        "is_moderated": true
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -11380,11 +11378,11 @@
       "pricing": {
         "prompt": "0.0000002",
         "completion": "0.00000077",
-        "input_cache_read": "0.000000135"
+        "input_cache_read": "0.00000013"
       },
       "top_provider": {
         "context_length": 163840,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 163840,
         "is_moderated": false
       },
       "per_request_limits": null,
