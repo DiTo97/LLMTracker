@@ -1,35 +1,45 @@
 {
-  "generated_at": "2026-03-06T12:53:54.655349+00:00",
+  "generated_at": "2026-03-06T18:43:19.033921+00:00",
   "changes": [
     {
-      "model_id": "z-ai/glm-4.7",
+      "model_id": "qwen/qwen3-235b-a22b-thinking-2507",
       "change_type": "price_increase",
       "model_type": "chat",
       "field": "input_per_million",
-      "old_value": 0.3,
-      "new_value": 0.38,
-      "percent_change": 26.67,
-      "detected_at": "2026-03-06T12:53:54.652023+00:00"
+      "old_value": 0.0,
+      "new_value": 0.11,
+      "percent_change": 100.0,
+      "detected_at": "2026-03-06T18:43:19.030298+00:00"
     },
     {
-      "model_id": "z-ai/glm-4.7",
+      "model_id": "qwen/qwen3-235b-a22b-thinking-2507",
       "change_type": "price_increase",
       "model_type": "chat",
       "field": "output_per_million",
-      "old_value": 1.4,
-      "new_value": 1.98,
-      "percent_change": 41.43,
-      "detected_at": "2026-03-06T12:53:54.652023+00:00"
+      "old_value": 0.0,
+      "new_value": 0.6,
+      "percent_change": 100.0,
+      "detected_at": "2026-03-06T18:43:19.030298+00:00"
     },
     {
-      "model_id": "z-ai/glm-4.7",
+      "model_id": "qwen/qwen3-235b-a22b-thinking-2507",
       "change_type": "cache_price_change",
       "model_type": "chat",
       "field": "cache_read_per_million",
-      "old_value": 0.15,
-      "new_value": 0.19,
-      "percent_change": 26.67,
-      "detected_at": "2026-03-06T12:53:54.652023+00:00"
+      "old_value": null,
+      "new_value": 0.055,
+      "percent_change": null,
+      "detected_at": "2026-03-06T18:43:19.030298+00:00"
+    },
+    {
+      "model_id": "qwen/qwen3-235b-a22b-thinking-2507",
+      "change_type": "context_change",
+      "model_type": "chat",
+      "field": "context_window",
+      "old_value": 131072,
+      "new_value": 262144,
+      "percent_change": 100.0,
+      "detected_at": "2026-03-06T18:43:19.030298+00:00"
     }
   ],
   "summary": {
@@ -38,8 +48,6 @@
     "new_models": 0,
     "removed_models": 0,
     "cache_price_changes": 1,
-    "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-03-06T12:54:14.393057+00:00"
+    "other_changes": 1
+  }
 }
