@@ -1,123 +1,43 @@
 {
-  "generated_at": "2026-03-06T02:00:28.864213+00:00",
+  "generated_at": "2026-03-06T06:46:19.931345+00:00",
   "changes": [
     {
-      "model_id": "au.anthropic.claude-sonnet-4-6",
+      "model_id": "gpt-5.4-pro",
       "change_type": "new_model",
       "model_type": "chat",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 3.3,
-        "output_per_million": 16.5,
-        "cache_read_per_million": 0.33,
-        "cache_creation_per_million": 4.125
+        "input_per_million": 30.0,
+        "output_per_million": 180.0,
+        "cache_read_per_million": 3.0,
+        "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
+      "detected_at": "2026-03-06T06:46:19.929225+00:00"
     },
     {
-      "model_id": "apac.anthropic.claude-sonnet-4-6",
-      "change_type": "removed_model",
+      "model_id": "gpt-5.4-pro-2026-03-05",
+      "change_type": "new_model",
       "model_type": "chat",
       "field": "model",
-      "old_value": {
-        "input_per_million": 3.3,
-        "output_per_million": 16.5,
-        "cache_read_per_million": 0.33,
-        "cache_creation_per_million": 4.125
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 30.0,
+        "output_per_million": 180.0,
+        "cache_read_per_million": 3.0,
+        "cache_creation_per_million": null
       },
-      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
-    },
-    {
-      "model_id": "deepseek/deepseek-chat-v3-0324",
-      "change_type": "cache_price_change",
-      "model_type": "chat",
-      "field": "cache_read_per_million",
-      "old_value": 0.135,
-      "new_value": 0.13,
-      "percent_change": -3.7,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-5",
-      "change_type": "price_increase",
-      "model_type": "chat",
-      "field": "input_per_million",
-      "old_value": 0.6,
-      "new_value": 0.8,
-      "percent_change": 33.33,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-5",
-      "change_type": "price_increase",
-      "model_type": "chat",
-      "field": "output_per_million",
-      "old_value": 1.9,
-      "new_value": 2.56,
-      "percent_change": 34.74,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-5",
-      "change_type": "cache_price_change",
-      "model_type": "chat",
-      "field": "cache_read_per_million",
-      "old_value": 0.119,
-      "new_value": 0.16,
-      "percent_change": 34.45,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
-    },
-    {
-      "model_id": "anthropic/claude-sonnet-4",
-      "change_type": "context_change",
-      "model_type": "chat",
-      "field": "context_window",
-      "old_value": 1000000,
-      "new_value": 200000,
-      "percent_change": -80.0,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
-    },
-    {
-      "model_id": "moonshotai/kimi-k2.5",
-      "change_type": "price_increase",
-      "model_type": "chat",
-      "field": "input_per_million",
-      "old_value": 0.41,
-      "new_value": 0.45,
-      "percent_change": 9.76,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
-    },
-    {
-      "model_id": "moonshotai/kimi-k2.5",
-      "change_type": "price_increase",
-      "model_type": "chat",
-      "field": "output_per_million",
-      "old_value": 2.06,
-      "new_value": 2.2,
-      "percent_change": 6.8,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
-    },
-    {
-      "model_id": "moonshotai/kimi-k2.5",
-      "change_type": "cache_price_change",
-      "model_type": "chat",
-      "field": "cache_read_per_million",
-      "old_value": 0.07,
-      "new_value": 0.225,
-      "percent_change": 221.43,
-      "detected_at": "2026-03-06T02:00:28.861164+00:00"
+      "detected_at": "2026-03-06T06:46:19.929225+00:00"
     }
   ],
   "summary": {
-    "price_increases": 4,
+    "price_increases": 0,
     "price_decreases": 0,
-    "new_models": 1,
-    "removed_models": 1,
-    "cache_price_changes": 3,
-    "other_changes": 1
+    "new_models": 2,
+    "removed_models": 0,
+    "cache_price_changes": 0,
+    "other_changes": 0
   }
 }
