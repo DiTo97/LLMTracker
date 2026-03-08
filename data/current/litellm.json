@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-03-07T18:32:24.495433+00:00",
+  "fetched_at": "2026-03-08T02:01:52.086098+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 2690,
   "data": {
@@ -2115,7 +2115,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/eu/gpt-5.1-chat": {
       "cache_read_input_token_cost": 1.4e-07,
@@ -2148,7 +2149,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/eu/gpt-5.1-codex": {
       "cache_read_input_token_cost": 1.4e-07,
@@ -2415,7 +2417,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/global/gpt-5.1-chat": {
       "cache_read_input_token_cost": 1.25e-07,
@@ -2448,7 +2451,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/global/gpt-5.1-codex": {
       "cache_read_input_token_cost": 1.25e-07,
@@ -3461,7 +3465,8 @@
       "supports_system_messages": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/gpt-5.1-chat-2025-11-13": {
       "cache_read_input_token_cost": 1.25e-07,
@@ -3496,7 +3501,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": false,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/gpt-5.1-codex-2025-11-13": {
       "cache_read_input_token_cost": 1.25e-07,
@@ -3911,7 +3917,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/gpt-5.1-chat": {
       "cache_read_input_token_cost": 1.25e-07,
@@ -3944,7 +3951,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/gpt-5.1-codex": {
       "cache_read_input_token_cost": 1.25e-07,
@@ -5278,7 +5286,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/us/gpt-5.1-chat": {
       "cache_read_input_token_cost": 1.4e-07,
@@ -5311,7 +5320,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_none_reasoning_effort": true
     },
     "azure/us/gpt-5.1-codex": {
       "cache_read_input_token_cost": 1.4e-07,

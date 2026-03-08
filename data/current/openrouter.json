@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-03-07T18:32:24.385066+00:00",
+  "fetched_at": "2026-03-08T02:01:52.031176+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 346,
   "data": [
@@ -775,7 +775,10 @@
       "default_parameters": {
         "temperature": null,
         "top_p": null,
-        "frequency_penalty": null
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
