@@ -1,88 +1,158 @@
 {
-  "generated_at": "2026-03-10T06:48:13.016710+00:00",
+  "generated_at": "2026-03-10T18:45:05.879886+00:00",
   "changes": [
     {
-      "model_id": "azure/gpt-5.3-chat",
+      "model_id": "qwen/qwen3.5-9b",
       "change_type": "new_model",
       "model_type": "chat",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 1.75,
-        "output_per_million": 14.0,
-        "cache_read_per_million": 0.175,
+        "input_per_million": 0.1,
+        "output_per_million": 0.15,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-03-10T06:48:13.013108+00:00"
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
     },
     {
-      "model_id": "azure/gpt-5.4-2026-03-05",
+      "model_id": "bytedance-seed/seed-2.0-lite",
       "change_type": "new_model",
       "model_type": "chat",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 2.5,
-        "output_per_million": 15.0,
-        "cache_read_per_million": 0.25,
+        "input_per_million": 0.25,
+        "output_per_million": 2.0,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-03-10T06:48:13.013108+00:00"
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
     },
     {
-      "model_id": "azure/gpt-5.4",
-      "change_type": "new_model",
+      "model_id": "neversleep/llama-3.1-lumimaid-8b",
+      "change_type": "removed_model",
       "model_type": "chat",
       "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.5,
-        "output_per_million": 15.0,
-        "cache_read_per_million": 0.25,
+      "old_value": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.6,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
+      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-03-10T06:48:13.013108+00:00"
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
     },
     {
-      "model_id": "azure/gpt-5.4-pro-2026-03-05",
-      "change_type": "new_model",
+      "model_id": "neversleep/noromaid-20b",
+      "change_type": "removed_model",
       "model_type": "chat",
       "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 30.0,
-        "output_per_million": 180.0,
-        "cache_read_per_million": 3.0,
+      "old_value": {
+        "input_per_million": 1.0,
+        "output_per_million": 1.75,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
+      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-03-10T06:48:13.013108+00:00"
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
     },
     {
-      "model_id": "azure/gpt-5.4-pro",
-      "change_type": "new_model",
+      "model_id": "meta-llama/llama-guard-2-8b",
+      "change_type": "removed_model",
       "model_type": "chat",
       "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 30.0,
-        "output_per_million": 180.0,
-        "cache_read_per_million": 3.0,
+      "old_value": {
+        "input_per_million": 0.2,
+        "output_per_million": 0.2,
+        "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
+      "new_value": null,
       "percent_change": null,
-      "detected_at": "2026-03-10T06:48:13.013108+00:00"
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
+    },
+    {
+      "model_id": "minimax/minimax-m2.5",
+      "change_type": "price_decrease",
+      "model_type": "chat",
+      "field": "input_per_million",
+      "old_value": 0.295,
+      "new_value": 0.27,
+      "percent_change": -8.47,
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
+    },
+    {
+      "model_id": "minimax/minimax-m2.5",
+      "change_type": "price_decrease",
+      "model_type": "chat",
+      "field": "output_per_million",
+      "old_value": 1.2,
+      "new_value": 0.95,
+      "percent_change": -20.83,
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
+    },
+    {
+      "model_id": "deepseek/deepseek-chat-v3-0324",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": 0.13,
+      "new_value": 0.135,
+      "percent_change": 3.85,
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
+    },
+    {
+      "model_id": "sao10k/l3.1-euryale-70b",
+      "change_type": "price_increase",
+      "model_type": "chat",
+      "field": "input_per_million",
+      "old_value": 0.65,
+      "new_value": 0.85,
+      "percent_change": 30.77,
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
+    },
+    {
+      "model_id": "sao10k/l3.1-euryale-70b",
+      "change_type": "price_increase",
+      "model_type": "chat",
+      "field": "output_per_million",
+      "old_value": 0.75,
+      "new_value": 0.85,
+      "percent_change": 13.33,
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
+    },
+    {
+      "model_id": "sao10k/l3.1-euryale-70b",
+      "change_type": "context_change",
+      "model_type": "chat",
+      "field": "context_window",
+      "old_value": 32768,
+      "new_value": 131072,
+      "percent_change": 300.0,
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
+    },
+    {
+      "model_id": "nousresearch/hermes-3-llama-3.1-70b",
+      "change_type": "context_change",
+      "model_type": "chat",
+      "field": "context_window",
+      "old_value": 65536,
+      "new_value": 131072,
+      "percent_change": 100.0,
+      "detected_at": "2026-03-10T18:45:05.876203+00:00"
     }
   ],
   "summary": {
-    "price_increases": 0,
-    "price_decreases": 0,
-    "new_models": 5,
-    "removed_models": 0,
-    "cache_price_changes": 0,
-    "other_changes": 0
+    "price_increases": 2,
+    "price_decreases": 2,
+    "new_models": 2,
+    "removed_models": 3,
+    "cache_price_changes": 1,
+    "other_changes": 2
   }
 }
