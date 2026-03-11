@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-03-10T18:45:05.162682+00:00",
+  "fetched_at": "2026-03-11T01:55:16.445765+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 2697,
   "data": {
@@ -19558,7 +19558,8 @@
       "supports_system_messages": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "gpt-4.1-2025-04-14": {
       "cache_read_input_token_cost": 5e-07,
@@ -19592,7 +19593,8 @@
       "supports_system_messages": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "gpt-4.1-mini": {
       "cache_read_input_token_cost": 1e-07,
@@ -19629,7 +19631,8 @@
       "supports_system_messages": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "gpt-4.1-mini-2025-04-14": {
       "cache_read_input_token_cost": 1e-07,
@@ -19663,7 +19666,8 @@
       "supports_system_messages": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "gpt-4.1-nano": {
       "cache_read_input_token_cost": 2.5e-08,
@@ -20871,6 +20875,7 @@
       "supports_tool_choice": true,
       "supports_service_tier": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21510,6 +21515,7 @@
       "supports_tool_choice": true,
       "supports_service_tier": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21610,6 +21616,7 @@
       "supports_system_messages": false,
       "supports_tool_choice": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21645,6 +21652,7 @@
       "supports_system_messages": false,
       "supports_tool_choice": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21677,6 +21685,7 @@
       "supports_system_messages": false,
       "supports_tool_choice": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": true
     },
@@ -21712,6 +21721,7 @@
       "supports_system_messages": false,
       "supports_tool_choice": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21747,6 +21757,7 @@
       "supports_system_messages": false,
       "supports_tool_choice": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": true
     },
@@ -21782,6 +21793,7 @@
       "supports_system_messages": false,
       "supports_tool_choice": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21823,6 +21835,7 @@
       "supports_tool_choice": true,
       "supports_service_tier": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21864,6 +21877,7 @@
       "supports_tool_choice": true,
       "supports_service_tier": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21902,6 +21916,7 @@
       "supports_system_messages": true,
       "supports_tool_choice": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -21939,6 +21954,7 @@
       "supports_system_messages": true,
       "supports_tool_choice": true,
       "supports_vision": true,
+      "supports_web_search": true,
       "supports_none_reasoning_effort": false,
       "supports_xhigh_reasoning_effort": false
     },
@@ -25726,7 +25742,8 @@
       "supports_response_schema": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o3-2025-04-16": {
       "cache_read_input_token_cost": 5e-07,
@@ -25758,7 +25775,8 @@
       "supports_response_schema": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o3-deep-research": {
       "cache_read_input_token_cost": 2.5e-06,
@@ -25791,7 +25809,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o3-deep-research-2025-06-26": {
       "cache_read_input_token_cost": 2.5e-06,
@@ -25824,7 +25843,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o3-mini": {
       "cache_read_input_token_cost": 5.5e-07,
@@ -25888,7 +25908,8 @@
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o3-pro-2025-06-10": {
       "input_cost_per_token": 2e-05,
@@ -25918,7 +25939,8 @@
       "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o4-mini": {
       "cache_read_input_token_cost": 2.75e-07,
@@ -25943,7 +25965,8 @@
       "supports_response_schema": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o4-mini-2025-04-16": {
       "cache_read_input_token_cost": 2.75e-07,
@@ -25962,7 +25985,8 @@
       "supports_response_schema": true,
       "supports_tool_choice": true,
       "supports_service_tier": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o4-mini-deep-research": {
       "cache_read_input_token_cost": 5e-07,
@@ -25995,7 +26019,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "o4-mini-deep-research-2025-06-26": {
       "cache_read_input_token_cost": 5e-07,
@@ -26028,7 +26053,8 @@
       "supports_response_schema": true,
       "supports_system_messages": true,
       "supports_tool_choice": true,
-      "supports_vision": true
+      "supports_vision": true,
+      "supports_web_search": true
     },
     "oci/meta.llama-3.1-405b-instruct": {
       "input_cost_per_token": 1.068e-05,
