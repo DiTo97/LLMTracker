@@ -1,13 +1,128 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-03-11T18:55:17.511683+00:00",
+  "fetched_at": "2026-03-12T02:01:31.793366+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 340,
+  "model_count": 342,
   "data": [
+    {
+      "id": "openrouter/hunter-alpha",
+      "canonical_slug": "openrouter/hunter-alpha",
+      "hugging_face_id": "",
+      "name": "Hunter Alpha",
+      "created": 1773260671,
+      "description": "Hunter Alpha is a 1 Trillion parameter + 1M token context frontier intelligence model built for agentic use. It excels at long-horizon planning, complex reasoning, and sustained multi-step task execution, with the reliability and instruction-following precision that frameworks like OpenClaw need.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model.",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0",
+        "request": "0",
+        "image": "0",
+        "web_search": "0",
+        "internal_reasoning": "0"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "response_format",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "expiration_date": null
+    },
+    {
+      "id": "openrouter/healer-alpha",
+      "canonical_slug": "openrouter/healer-alpha",
+      "hugging_face_id": "",
+      "name": "Healer Alpha",
+      "created": 1773260668,
+      "description": "Healer Alpha is a frontier omni-modal model with vision, hearing, reasoning, and action capabilities. It brings the full power of agentic intelligence into the real world: natively perceiving visual and audio inputs, reasoning across modalities, and executing complex multi-step tasks with precision and reliability.\n\n**Note:** All prompts and completions for this model are logged by the provider and may be used to improve the model.",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image+audio+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0",
+        "request": "0",
+        "image": "0",
+        "web_search": "0",
+        "internal_reasoning": "0"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "response_format",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "expiration_date": null
+    },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
       "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",
-      "hugging_face_id": "",
+      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "name": "NVIDIA: Nemotron 3 Super (free)",
       "created": 1773245239,
       "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent MoE enables calling 4 experts for the inference cost of only one, improving intelligence and generalization. Multi-environment RL training across 10+ environments delivers leading accuracy on benchmarks including AIME 2025, TerminalBench, and SWE-Bench Verified.\n \nFully open with weights, datasets, and recipes under the NVIDIA Open License, Nemotron 3 Super allows easy customization and secure deployment anywhere — from workstation to cloud.",
@@ -1102,7 +1217,10 @@
       "default_parameters": {
         "temperature": null,
         "top_p": null,
-        "frequency_penalty": null
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -3382,8 +3500,10 @@
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
+        "logprobs",
         "max_tokens",
         "presence_penalty",
+        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
@@ -3391,6 +3511,7 @@
         "temperature",
         "tool_choice",
         "tools",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -7641,7 +7762,10 @@
       "default_parameters": {
         "temperature": null,
         "top_p": null,
-        "frequency_penalty": null
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -7688,7 +7812,14 @@
         "tool_choice",
         "tools"
       ],
-      "default_parameters": {},
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
       "expiration_date": null
     },
     {
@@ -7734,7 +7865,14 @@
         "tool_choice",
         "tools"
       ],
-      "default_parameters": {},
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
       "expiration_date": null
     },
     {
@@ -14320,94 +14458,6 @@
       "expiration_date": null
     },
     {
-      "id": "meta-llama/llama-3.2-11b-vision-instruct",
-      "canonical_slug": "meta-llama/llama-3.2-11b-vision-instruct",
-      "hugging_face_id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
-      "name": "Meta: Llama 3.2 11B Vision Instruct",
-      "created": 1727222400,
-      "description": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and visual question answering, bridging the gap between language generation and visual reasoning. Pre-trained on a massive dataset of image-text pairs, it performs well in complex, high-accuracy image analysis.\n\nIts ability to integrate visual understanding with language processing makes it an ideal solution for industries requiring comprehensive visual-linguistic AI applications, such as content creation, AI-driven customer service, and research.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/).",
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Llama3",
-        "instruct_type": "llama3"
-      },
-      "pricing": {
-        "prompt": "0.000000049",
-        "completion": "0.000000049"
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 16384,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "expiration_date": null
-    },
-    {
-      "id": "meta-llama/llama-3.2-1b-instruct",
-      "canonical_slug": "meta-llama/llama-3.2-1b-instruct",
-      "hugging_face_id": "meta-llama/Llama-3.2-1B-Instruct",
-      "name": "Meta: Llama 3.2 1B Instruct",
-      "created": 1727222400,
-      "description": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance.\n\nSupporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/).",
-      "context_length": 60000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Llama3",
-        "instruct_type": "llama3"
-      },
-      "pricing": {
-        "prompt": "0.000000027",
-        "completion": "0.0000002"
-      },
-      "top_provider": {
-        "context_length": 60000,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "repetition_penalty",
-        "seed",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "expiration_date": null
-    },
-    {
       "id": "meta-llama/llama-3.2-3b-instruct:free",
       "canonical_slug": "meta-llama/llama-3.2-3b-instruct",
       "hugging_face_id": "meta-llama/Llama-3.2-3B-Instruct",
@@ -14483,6 +14533,94 @@
         "presence_penalty",
         "repetition_penalty",
         "seed",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "expiration_date": null
+    },
+    {
+      "id": "meta-llama/llama-3.2-1b-instruct",
+      "canonical_slug": "meta-llama/llama-3.2-1b-instruct",
+      "hugging_face_id": "meta-llama/Llama-3.2-1B-Instruct",
+      "name": "Meta: Llama 3.2 1B Instruct",
+      "created": 1727222400,
+      "description": "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently performing natural language tasks, such as summarization, dialogue, and multilingual text analysis. Its smaller size allows it to operate efficiently in low-resource environments while maintaining strong task performance.\n\nSupporting eight core languages and fine-tunable for more, Llama 1.3B is ideal for businesses or developers seeking lightweight yet powerful AI solutions that can operate in diverse multilingual settings without the high computational demand of larger models.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/).",
+      "context_length": 60000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Llama3",
+        "instruct_type": "llama3"
+      },
+      "pricing": {
+        "prompt": "0.000000027",
+        "completion": "0.0000002"
+      },
+      "top_provider": {
+        "context_length": 60000,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "repetition_penalty",
+        "seed",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "expiration_date": null
+    },
+    {
+      "id": "meta-llama/llama-3.2-11b-vision-instruct",
+      "canonical_slug": "meta-llama/llama-3.2-11b-vision-instruct",
+      "hugging_face_id": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+      "name": "Meta: Llama 3.2 11B Vision Instruct",
+      "created": 1727222400,
+      "description": "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, designed to handle tasks combining visual and textual data. It excels in tasks such as image captioning and visual question answering, bridging the gap between language generation and visual reasoning. Pre-trained on a massive dataset of image-text pairs, it performs well in complex, high-accuracy image analysis.\n\nIts ability to integrate visual understanding with language processing makes it an ideal solution for industries requiring comprehensive visual-linguistic AI applications, such as content creation, AI-driven customer service, and research.\n\nClick here for the [original model card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md).\n\nUsage of this model is subject to [Meta's Acceptable Use Policy](https://www.llama.com/llama3/use-policy/).",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Llama3",
+        "instruct_type": "llama3"
+      },
+      "pricing": {
+        "prompt": "0.000000049",
+        "completion": "0.000000049"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": 16384,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
         "temperature",
         "top_k",
         "top_p"
@@ -15473,6 +15611,57 @@
       "expiration_date": null
     },
     {
+      "id": "openai/gpt-4o-2024-05-13",
+      "canonical_slug": "openai/gpt-4o-2024-05-13",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-4o (2024-05-13)",
+      "created": 1715558400,
+      "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as fast and 50% more cost-effective. GPT-4o also offers improved performance in processing non-English languages and enhanced visual capabilities.\n\nFor benchmarking against other models, it was briefly called [\"im-also-a-good-gpt2-chatbot\"](https://twitter.com/LiamFedus/status/1790064963966370209)\n\n#multimodal",
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000015"
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": 4096,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p",
+        "web_search_options"
+      ],
+      "default_parameters": {},
+      "expiration_date": null
+    },
+    {
       "id": "openai/gpt-4o",
       "canonical_slug": "openai/gpt-4o",
       "hugging_face_id": null,
@@ -15576,52 +15765,46 @@
       "expiration_date": null
     },
     {
-      "id": "openai/gpt-4o-2024-05-13",
-      "canonical_slug": "openai/gpt-4o-2024-05-13",
-      "hugging_face_id": null,
-      "name": "OpenAI: GPT-4o (2024-05-13)",
-      "created": 1715558400,
-      "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as fast and 50% more cost-effective. GPT-4o also offers improved performance in processing non-English languages and enhanced visual capabilities.\n\nFor benchmarking against other models, it was briefly called [\"im-also-a-good-gpt2-chatbot\"](https://twitter.com/LiamFedus/status/1790064963966370209)\n\n#multimodal",
-      "context_length": 128000,
+      "id": "meta-llama/llama-3-70b-instruct",
+      "canonical_slug": "meta-llama/llama-3-70b-instruct",
+      "hugging_face_id": "meta-llama/Meta-Llama-3-70B-Instruct",
+      "name": "Meta: Llama 3 70B Instruct",
+      "created": 1713398400,
+      "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
+      "context_length": 8192,
       "architecture": {
-        "modality": "text+image+file->text",
+        "modality": "text->text",
         "input_modalities": [
-          "text",
-          "image",
-          "file"
+          "text"
         ],
         "output_modalities": [
           "text"
         ],
-        "tokenizer": "GPT",
-        "instruct_type": null
+        "tokenizer": "Llama3",
+        "instruct_type": "llama3"
       },
       "pricing": {
-        "prompt": "0.000005",
-        "completion": "0.000015"
+        "prompt": "0.00000051",
+        "completion": "0.00000074"
       },
       "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 4096,
-        "is_moderated": true
+        "context_length": 8192,
+        "max_completion_tokens": 8000,
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
-        "logit_bias",
-        "logprobs",
         "max_tokens",
         "presence_penalty",
+        "repetition_penalty",
         "response_format",
         "seed",
         "stop",
         "structured_outputs",
         "temperature",
-        "tool_choice",
-        "tools",
-        "top_logprobs",
-        "top_p",
-        "web_search_options"
+        "top_k",
+        "top_p"
       ],
       "default_parameters": {},
       "expiration_date": null
@@ -15668,51 +15851,6 @@
         "temperature",
         "tool_choice",
         "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "expiration_date": null
-    },
-    {
-      "id": "meta-llama/llama-3-70b-instruct",
-      "canonical_slug": "meta-llama/llama-3-70b-instruct",
-      "hugging_face_id": "meta-llama/Meta-Llama-3-70B-Instruct",
-      "name": "Meta: Llama 3 70B Instruct",
-      "created": 1713398400,
-      "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases.\n\nIt has demonstrated strong performance compared to leading closed-source models in human evaluations.\n\nTo read more about the model release, [click here](https://ai.meta.com/blog/meta-llama-3/). Usage of this model is subject to [Meta's Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/).",
-      "context_length": 8192,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Llama3",
-        "instruct_type": "llama3"
-      },
-      "pricing": {
-        "prompt": "0.00000051",
-        "completion": "0.00000074"
-      },
-      "top_provider": {
-        "context_length": 8192,
-        "max_completion_tokens": 8000,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
         "top_k",
         "top_p"
       ],
