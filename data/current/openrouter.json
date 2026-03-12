@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-03-12T02:01:31.793366+00:00",
+  "fetched_at": "2026-03-12T06:54:16.196599+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 342,
   "data": [
@@ -33,7 +33,7 @@
       },
       "top_provider": {
         "context_length": 1048576,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 32000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -92,7 +92,7 @@
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 32000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -6019,7 +6019,10 @@
       "default_parameters": {
         "temperature": 1,
         "top_p": 1,
-        "frequency_penalty": null
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
