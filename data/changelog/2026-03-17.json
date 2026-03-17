@@ -1,28 +1,243 @@
 {
-  "generated_at": "2026-03-17T13:10:00.683069+00:00",
+  "generated_at": "2026-03-17T19:00:07.923689+00:00",
   "changes": [
     {
-      "model_id": "mistralai/mistral-small-2603",
+      "model_id": "openai/gpt-5.4-nano",
       "change_type": "new_model",
       "model_type": "chat",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.15,
-        "output_per_million": 0.6,
-        "cache_read_per_million": null,
+        "input_per_million": 0.2,
+        "output_per_million": 1.25,
+        "cache_read_per_million": 0.02,
         "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-03-17T13:10:00.679960+00:00"
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "openai/gpt-5.4-mini",
+      "change_type": "new_model",
+      "model_type": "chat",
+      "field": "model",
+      "old_value": null,
+      "new_value": {
+        "input_per_million": 0.75,
+        "output_per_million": 4.5,
+        "cache_read_per_million": 0.075,
+        "cache_creation_per_million": null
+      },
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/ministral-3b-2512",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.01,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mixtral-8x22b-instruct",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.2,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/ministral-8b-2512",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.015,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/devstral-small",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.01,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-large",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.2,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-medium-3",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.04,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-large-2407",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.2,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/ministral-14b-2512",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.02,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/devstral-medium",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.04,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/devstral-2512",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.04,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "minimax/minimax-m2.5",
+      "change_type": "price_decrease",
+      "model_type": "chat",
+      "field": "input_per_million",
+      "old_value": 0.25,
+      "new_value": 0.2,
+      "percent_change": -20.0,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/voxtral-small-24b-2507",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.01,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/codestral-2508",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.03,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-large-2411",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.2,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-small-creative",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.01,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/pixtral-large-2411",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.2,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-saba",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.02,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-small-2603",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.015,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-medium-3.1",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.04,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-large-2512",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": null,
+      "new_value": 0.05,
+      "percent_change": null,
+      "detected_at": "2026-03-17T19:00:07.919996+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 0,
-    "new_models": 1,
+    "price_decreases": 1,
+    "new_models": 2,
     "removed_models": 0,
-    "cache_price_changes": 0,
+    "cache_price_changes": 19,
     "other_changes": 0
   }
 }
