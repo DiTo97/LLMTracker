@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-03-17T19:00:07.220886+00:00",
+  "fetched_at": "2026-03-18T02:06:04.772339+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 348,
   "data": [
@@ -1752,7 +1752,7 @@
       "name": "Z.ai: GLM 5",
       "created": 1770829182,
       "description": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution.",
-      "context_length": 202752,
+      "context_length": 80000,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -1769,7 +1769,7 @@
         "completion": "0.0000023"
       },
       "top_provider": {
-        "context_length": 202752,
+        "context_length": 80000,
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
@@ -3164,7 +3164,9 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
         "max_tokens",
+        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -4205,13 +4207,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000026",
-        "completion": "0.00000038",
-        "input_cache_read": "0.00000013"
+        "prompt": "0.000000255",
+        "completion": "0.0000004"
       },
       "top_provider": {
         "context_length": 163840,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 163840,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -13717,7 +13718,7 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
+        "prompt": "0.000000065",
         "completion": "0.00000014"
       },
       "top_provider": {
