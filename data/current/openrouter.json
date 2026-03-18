@@ -1,9 +1,59 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-03-18T13:09:45.444438+00:00",
+  "fetched_at": "2026-03-18T18:58:10.519415+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
-  "model_count": 348,
+  "model_count": 349,
   "data": [
+    {
+      "id": "minimax/minimax-m2.7",
+      "canonical_slug": "minimax/minimax-m2.7-20260318",
+      "hugging_face_id": "MiniMaxAI/MiniMax-M2.7",
+      "name": "MiniMax: MiniMax M2.7",
+      "created": 1773836697,
+      "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent collaboration, enabling it to plan, execute, and refine complex tasks across dynamic environments.\n\nTrained for production-grade performance, M2.7 handles workflows such as live debugging, root cause analysis, financial modeling, and full document generation across Word, Excel, and PowerPoint. It delivers strong results on benchmarks including 56.2% on SWE-Pro and 57.0% on Terminal Bench 2, while achieving a 1495 ELO on GDPval-AA, setting a new standard for multi-agent systems operating in real-world digital workflows.",
+      "context_length": 204800,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000003",
+        "completion": "0.0000012",
+        "input_cache_read": "0.00000006"
+      },
+      "top_provider": {
+        "context_length": 204800,
+        "max_completion_tokens": 131072,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "expiration_date": null
+    },
     {
       "id": "openai/gpt-5.4-nano",
       "canonical_slug": "openai/gpt-5.4-nano-20260317",
@@ -459,7 +509,7 @@
           "text"
         ],
         "tokenizer": "Other",
-        "instruct_type": "nemotron"
+        "instruct_type": null
       },
       "pricing": {
         "prompt": "0",
@@ -1682,7 +1732,10 @@
       "default_parameters": {
         "temperature": 1,
         "top_p": 0.95,
-        "frequency_penalty": null
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -1741,7 +1794,10 @@
       "default_parameters": {
         "temperature": 1,
         "top_p": 0.95,
-        "frequency_penalty": null
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -4207,12 +4263,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000255",
-        "completion": "0.0000004"
+        "prompt": "0.00000026",
+        "completion": "0.00000038",
+        "input_cache_read": "0.00000013"
       },
       "top_provider": {
         "context_length": 163840,
-        "max_completion_tokens": 163840,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -7164,7 +7221,7 @@
       "name": "Qwen: Qwen3 Next 80B A3B Instruct",
       "created": 1757612213,
       "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows that require consistent final answers rather than visible chain-of-thought.\n\nThe model employs scaling-efficient training and decoding to improve parameter efficiency and inference speed, and has been validated on a broad set of public benchmarks where it reaches or approaches larger Qwen3 systems in several categories while outperforming earlier mid-sized baselines. It is best used as a general assistant, code helper, and long-context task solver in production settings where deterministic, instruction-following outputs are preferred.",
-      "context_length": 131072,
+      "context_length": 262144,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -7181,7 +7238,7 @@
         "completion": "0.0000011"
       },
       "top_provider": {
-        "context_length": 131072,
+        "context_length": 262144,
         "max_completion_tokens": null,
         "is_moderated": false
       },
@@ -10825,7 +10882,7 @@
         "top_p"
       ],
       "default_parameters": {},
-      "expiration_date": null
+      "expiration_date": "2026-03-29"
     },
     {
       "id": "meta-llama/llama-guard-4-12b",
@@ -11930,7 +11987,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
-      "expiration_date": null
+      "expiration_date": "2026-03-29"
     },
     {
       "id": "mistralai/mistral-small-3.1-24b-instruct",
@@ -12343,8 +12400,6 @@
         "seed",
         "stop",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_p"
       ],
       "default_parameters": {
@@ -12593,7 +12648,7 @@
       "name": "Qwen: QwQ 32B",
       "created": 1741208814,
       "description": "QwQ is the reasoning model of the Qwen series. Compared with conventional instruction-tuned models, QwQ, which is capable of thinking and reasoning, can achieve significantly enhanced performance in downstream tasks, especially hard problems. QwQ-32B is the medium-sized reasoning model, which is capable of achieving competitive performance against state-of-the-art reasoning models, e.g., DeepSeek-R1, o1-mini.",
-      "context_length": 32768,
+      "context_length": 131072,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -12607,29 +12662,22 @@
       },
       "pricing": {
         "prompt": "0.00000015",
-        "completion": "0.0000004"
+        "completion": "0.00000058"
       },
       "top_provider": {
-        "context_length": 32768,
-        "max_completion_tokens": 32768,
+        "context_length": 131072,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
         "reasoning",
-        "response_format",
-        "stop",
-        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -13989,7 +14037,7 @@
       "name": "Meta: Llama 3.3 70B Instruct (free)",
       "created": 1733506137,
       "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.\n\nSupported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.\n\n[Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md)",
-      "context_length": 128000,
+      "context_length": 65536,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -14006,16 +14054,15 @@
         "completion": "0"
       },
       "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 128000,
-        "is_moderated": true
+        "context_length": 65536,
+        "max_completion_tokens": null,
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
         "max_tokens",
         "presence_penalty",
-        "seed",
         "stop",
         "temperature",
         "tool_choice",
