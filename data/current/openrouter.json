@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-03-20T18:48:55.159504+00:00",
+  "fetched_at": "2026-03-21T01:55:05.353817+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 350,
   "data": [
@@ -1140,7 +1140,10 @@
       "default_parameters": {
         "temperature": 1,
         "top_p": 0.95,
-        "frequency_penalty": null
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -1199,7 +1202,10 @@
       "default_parameters": {
         "temperature": 0.6,
         "top_p": 0.95,
-        "frequency_penalty": null
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -1258,7 +1264,10 @@
       "default_parameters": {
         "temperature": 0.6,
         "top_p": 0.95,
-        "frequency_penalty": null
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -1738,7 +1747,10 @@
       "default_parameters": {
         "temperature": 0.6,
         "top_p": 0.95,
-        "frequency_penalty": null
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -5547,9 +5559,12 @@
         "top_p"
       ],
       "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "frequency_penalty": null
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": 1
       },
       "expiration_date": null
     },
@@ -6284,7 +6299,11 @@
       ],
       "default_parameters": {
         "temperature": 0.8,
-        "top_p": 0.95
+        "top_p": 0.95,
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": 1
       },
       "expiration_date": null
     },
@@ -6337,7 +6356,10 @@
       "default_parameters": {
         "temperature": 0.7,
         "top_p": 0.8,
-        "frequency_penalty": null
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": 1
       },
       "expiration_date": null
     },
@@ -6757,7 +6779,10 @@
       "default_parameters": {
         "temperature": 0.8,
         "top_p": 0.95,
-        "frequency_penalty": null
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": 1
       },
       "expiration_date": null
     },
@@ -11095,9 +11120,12 @@
         "top_p"
       ],
       "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "frequency_penalty": null
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -12054,7 +12082,7 @@
       "name": "Mistral: Mistral Small 3.1 24B",
       "created": 1742238937,
       "description": "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (2501), featuring 24 billion parameters with advanced multimodal capabilities. It provides state-of-the-art performance in text-based reasoning and vision tasks, including image analysis, programming, mathematical reasoning, and multilingual support across dozens of languages. Equipped with an extensive 128k token context window and optimized for efficient local inference, it supports use cases such as conversational agents, function calling, long-document comprehension, and privacy-sensitive deployments. The updated version is [Mistral Small 3.2](mistralai/mistral-small-3.2-24b-instruct)",
-      "context_length": 128000,
+      "context_length": 131072,
       "architecture": {
         "modality": "text+image->text",
         "input_modalities": [
@@ -12068,12 +12096,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000035",
-        "completion": "0.00000056"
+        "prompt": "0.00000003",
+        "completion": "0.00000011",
+        "input_cache_read": "0.000000015"
       },
       "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": null,
+        "context_length": 131072,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12082,7 +12111,10 @@
         "max_tokens",
         "presence_penalty",
         "repetition_penalty",
+        "response_format",
         "seed",
+        "stop",
+        "structured_outputs",
         "temperature",
         "top_k",
         "top_p"
