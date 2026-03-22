@@ -1,88 +1,63 @@
 {
-  "generated_at": "2026-03-22T02:07:25.207238+00:00",
+  "generated_at": "2026-03-22T18:36:00.511977+00:00",
   "changes": [
     {
-      "model_id": "gpt-4-0314",
-      "change_type": "new_model",
+      "model_id": "tngtech/deepseek-r1t2-chimera",
+      "change_type": "price_increase",
       "model_type": "chat",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 30.0,
-        "output_per_million": 60.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-03-22T02:07:25.202185+00:00"
+      "field": "input_per_million",
+      "old_value": 0.25,
+      "new_value": 0.3,
+      "percent_change": 20.0,
+      "detected_at": "2026-03-22T18:36:00.508858+00:00"
     },
     {
-      "model_id": "gpt-5.4-mini",
-      "change_type": "new_model",
+      "model_id": "tngtech/deepseek-r1t2-chimera",
+      "change_type": "price_increase",
       "model_type": "chat",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.75,
-        "output_per_million": 4.5,
-        "cache_read_per_million": 0.075,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-03-22T02:07:25.202185+00:00"
+      "field": "output_per_million",
+      "old_value": 0.85,
+      "new_value": 1.1,
+      "percent_change": 29.41,
+      "detected_at": "2026-03-22T18:36:00.508858+00:00"
     },
     {
-      "model_id": "gpt-5.4-nano",
-      "change_type": "new_model",
+      "model_id": "tngtech/deepseek-r1t2-chimera",
+      "change_type": "cache_price_change",
       "model_type": "chat",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.2,
-        "output_per_million": 1.25,
-        "cache_read_per_million": 0.02,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-03-22T02:07:25.202185+00:00"
+      "field": "cache_read_per_million",
+      "old_value": 0.125,
+      "new_value": 0.15,
+      "percent_change": 20.0,
+      "detected_at": "2026-03-22T18:36:00.508858+00:00"
     },
     {
-      "model_id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
-      "change_type": "new_model",
+      "model_id": "deepseek/deepseek-v3.1-terminus",
+      "change_type": "price_increase",
       "model_type": "chat",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.6,
-        "output_per_million": 1.8,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-03-22T02:07:25.202185+00:00"
+      "field": "output_per_million",
+      "old_value": 0.78,
+      "new_value": 0.79,
+      "percent_change": 1.28,
+      "detected_at": "2026-03-22T18:36:00.508858+00:00"
     },
     {
-      "model_id": "mistralai/pixtral-12b",
-      "change_type": "new_model",
+      "model_id": "deepseek/deepseek-v3.1-terminus",
+      "change_type": "cache_price_change",
       "model_type": "chat",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.1,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-03-22T02:07:25.202185+00:00"
+      "field": "cache_read_per_million",
+      "old_value": 0.105,
+      "new_value": 0.13,
+      "percent_change": 23.81,
+      "detected_at": "2026-03-22T18:36:00.508858+00:00"
     }
   ],
   "summary": {
-    "price_increases": 0,
+    "price_increases": 3,
     "price_decreases": 0,
-    "new_models": 5,
+    "new_models": 0,
     "removed_models": 0,
-    "cache_price_changes": 0,
+    "cache_price_changes": 2,
     "other_changes": 0
   }
 }
