@@ -1,58 +1,43 @@
 {
-  "generated_at": "2026-03-23T02:08:14.850204+00:00",
+  "generated_at": "2026-03-23T18:53:17.013076+00:00",
   "changes": [
     {
-      "model_id": "allenai/molmo-2-8b",
-      "change_type": "removed_model",
+      "model_id": "z-ai/glm-5-turbo",
+      "change_type": "price_increase",
       "model_type": "chat",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.2,
-        "output_per_million": 0.2,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-03-23T02:08:14.847383+00:00"
+      "field": "input_per_million",
+      "old_value": 0.96,
+      "new_value": 1.2,
+      "percent_change": 25.0,
+      "detected_at": "2026-03-23T18:53:17.008503+00:00"
     },
     {
-      "model_id": "allenai/olmo-3-7b-think",
-      "change_type": "removed_model",
+      "model_id": "z-ai/glm-5-turbo",
+      "change_type": "price_increase",
       "model_type": "chat",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.12,
-        "output_per_million": 0.2,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-03-23T02:08:14.847383+00:00"
+      "field": "output_per_million",
+      "old_value": 3.2,
+      "new_value": 4.0,
+      "percent_change": 25.0,
+      "detected_at": "2026-03-23T18:53:17.008503+00:00"
     },
     {
-      "model_id": "allenai/olmo-3-7b-instruct",
-      "change_type": "removed_model",
+      "model_id": "z-ai/glm-5-turbo",
+      "change_type": "cache_price_change",
       "model_type": "chat",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.1,
-        "output_per_million": 0.2,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-03-23T02:08:14.847383+00:00"
+      "field": "cache_read_per_million",
+      "old_value": 0.192,
+      "new_value": 0.24,
+      "percent_change": 25.0,
+      "detected_at": "2026-03-23T18:53:17.008503+00:00"
     }
   ],
   "summary": {
-    "price_increases": 0,
+    "price_increases": 2,
     "price_decreases": 0,
     "new_models": 0,
-    "removed_models": 3,
-    "cache_price_changes": 0,
+    "removed_models": 0,
+    "cache_price_changes": 1,
     "other_changes": 0
   }
 }
