@@ -1,25 +1,33 @@
 {
-  "generated_at": "2026-03-24T02:00:21.238979+00:00",
+  "generated_at": "2026-03-24T13:09:48.328313+00:00",
   "changes": [
     {
-      "model_id": "nvidia/nemotron-3-super-120b-a12b",
-      "change_type": "cache_price_change",
+      "model_id": "nex-agi/deepseek-v3.1-nex-n1",
+      "change_type": "price_decrease",
       "model_type": "chat",
-      "field": "cache_read_per_million",
-      "old_value": 0.04,
-      "new_value": 0.1,
-      "percent_change": 150.0,
-      "detected_at": "2026-03-24T02:00:21.235516+00:00"
+      "field": "input_per_million",
+      "old_value": 0.27,
+      "new_value": 0.135,
+      "percent_change": -50.0,
+      "detected_at": "2026-03-24T13:09:48.325089+00:00"
+    },
+    {
+      "model_id": "nex-agi/deepseek-v3.1-nex-n1",
+      "change_type": "price_decrease",
+      "model_type": "chat",
+      "field": "output_per_million",
+      "old_value": 1.0,
+      "new_value": 0.5,
+      "percent_change": -50.0,
+      "detected_at": "2026-03-24T13:09:48.325089+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 0,
+    "price_decreases": 2,
     "new_models": 0,
     "removed_models": 0,
-    "cache_price_changes": 1,
+    "cache_price_changes": 0,
     "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-03-24T02:00:41.173348+00:00"
+  }
 }
