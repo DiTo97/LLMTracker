@@ -1,23 +1,33 @@
 {
-  "generated_at": "2026-03-26T13:13:22.519148+00:00",
+  "generated_at": "2026-03-26T19:03:37.801738+00:00",
   "changes": [
     {
-      "model_id": "stepfun/step-3.5-flash",
-      "change_type": "context_change",
+      "model_id": "reka/reka-edge",
+      "change_type": "price_decrease",
       "model_type": "chat",
-      "field": "context_window",
-      "old_value": 256000,
-      "new_value": 262144,
-      "percent_change": 2.4,
-      "detected_at": "2026-03-26T13:13:22.516168+00:00"
+      "field": "input_per_million",
+      "old_value": 0.2,
+      "new_value": 0.1,
+      "percent_change": -50.0,
+      "detected_at": "2026-03-26T19:03:37.798766+00:00"
+    },
+    {
+      "model_id": "reka/reka-edge",
+      "change_type": "price_decrease",
+      "model_type": "chat",
+      "field": "output_per_million",
+      "old_value": 0.2,
+      "new_value": 0.1,
+      "percent_change": -50.0,
+      "detected_at": "2026-03-26T19:03:37.798766+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 0,
+    "price_decreases": 2,
     "new_models": 0,
     "removed_models": 0,
     "cache_price_changes": 0,
-    "other_changes": 1
+    "other_changes": 0
   }
 }
