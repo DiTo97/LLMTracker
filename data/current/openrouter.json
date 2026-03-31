@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-03-31T07:12:07.371679+00:00",
+  "fetched_at": "2026-03-31T13:16:17.154824+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 348,
   "data": [
@@ -2122,13 +2122,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000019",
-        "completion": "0.00000115",
-        "input_cache_read": "0.000000095"
+        "prompt": "0.00000018",
+        "completion": "0.0000011",
+        "input_cache_read": "0.0000001"
       },
       "top_provider": {
         "context_length": 196608,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 196608,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -2511,11 +2511,12 @@
       },
       "pricing": {
         "prompt": "0.0000001",
-        "completion": "0.0000003"
+        "completion": "0.0000003",
+        "input_cache_read": "0.00000002"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -2531,7 +2532,6 @@
         "seed",
         "stop",
         "temperature",
-        "tool_choice",
         "tools",
         "top_k",
         "top_p"
