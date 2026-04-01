@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-04-01T07:19:06.077048+00:00",
+  "generated_at": "2026-04-01T13:19:40.624268+00:00",
   "changes": [
     {
       "model_id": "minimax/minimax-m2.5",
       "change_type": "price_decrease",
       "model_type": "chat",
       "field": "input_per_million",
-      "old_value": 0.16,
-      "new_value": 0.156,
-      "percent_change": -2.5,
-      "detected_at": "2026-04-01T07:19:06.074839+00:00"
+      "old_value": 0.156,
+      "new_value": 0.12,
+      "percent_change": -23.08,
+      "detected_at": "2026-04-01T13:19:40.620623+00:00"
     },
     {
       "model_id": "minimax/minimax-m2.5",
-      "change_type": "price_decrease",
+      "change_type": "cache_price_change",
       "model_type": "chat",
-      "field": "output_per_million",
-      "old_value": 1.1,
-      "new_value": 1.0,
-      "percent_change": -9.09,
-      "detected_at": "2026-04-01T07:19:06.074839+00:00"
+      "field": "cache_read_per_million",
+      "old_value": 0.08,
+      "new_value": 0.06,
+      "percent_change": -25.0,
+      "detected_at": "2026-04-01T13:19:40.620623+00:00"
     },
     {
       "model_id": "minimax/minimax-m2.5",
       "change_type": "context_change",
       "model_type": "chat",
       "field": "context_window",
-      "old_value": 196608,
-      "new_value": 196600,
-      "percent_change": -0.0,
-      "detected_at": "2026-04-01T07:19:06.074839+00:00"
+      "old_value": 196600,
+      "new_value": 196608,
+      "percent_change": 0.0,
+      "detected_at": "2026-04-01T13:19:40.620623+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 2,
+    "price_decreases": 1,
     "new_models": 0,
     "removed_models": 0,
-    "cache_price_changes": 0,
+    "cache_price_changes": 1,
     "other_changes": 1
   }
 }
