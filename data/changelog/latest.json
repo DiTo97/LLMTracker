@@ -1,100 +1,78 @@
 {
-  "generated_at": "2026-04-02T13:11:31.516486+00:00",
+  "generated_at": "2026-04-02T18:55:29.756425+00:00",
   "changes": [
     {
-      "model_id": "qwen/qwen3.6-plus:free",
+      "model_id": "google/gemma-4-31b-it",
       "change_type": "new_model",
       "model_type": "chat",
       "field": "model",
       "old_value": null,
       "new_value": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0,
+        "input_per_million": 0.14,
+        "output_per_million": 0.4,
         "cache_read_per_million": null,
         "cache_creation_per_million": null
       },
       "percent_change": null,
-      "detected_at": "2026-04-02T13:11:31.513163+00:00"
-    },
-    {
-      "model_id": "arcee-ai/trinity-large-thinking",
-      "change_type": "price_decrease",
-      "model_type": "chat",
-      "field": "input_per_million",
-      "old_value": 0.25,
-      "new_value": 0.22,
-      "percent_change": -12.0,
-      "detected_at": "2026-04-02T13:11:31.513163+00:00"
-    },
-    {
-      "model_id": "arcee-ai/trinity-large-thinking",
-      "change_type": "price_decrease",
-      "model_type": "chat",
-      "field": "output_per_million",
-      "old_value": 0.9,
-      "new_value": 0.85,
-      "percent_change": -5.56,
-      "detected_at": "2026-04-02T13:11:31.513163+00:00"
-    },
-    {
-      "model_id": "arcee-ai/trinity-large-thinking",
-      "change_type": "cache_price_change",
-      "model_type": "chat",
-      "field": "cache_read_per_million",
-      "old_value": 0.06,
-      "new_value": null,
-      "percent_change": -100.0,
-      "detected_at": "2026-04-02T13:11:31.513163+00:00"
+      "detected_at": "2026-04-02T18:55:29.754002+00:00"
     },
     {
       "model_id": "minimax/minimax-m2.5",
       "change_type": "price_decrease",
       "model_type": "chat",
-      "field": "input_per_million",
-      "old_value": 0.12,
-      "new_value": 0.118,
-      "percent_change": -1.67,
-      "detected_at": "2026-04-02T13:11:31.513163+00:00"
-    },
-    {
-      "model_id": "minimax/minimax-m2.5",
-      "change_type": "price_increase",
-      "model_type": "chat",
       "field": "output_per_million",
-      "old_value": 1.0,
-      "new_value": 1.25,
-      "percent_change": 25.0,
-      "detected_at": "2026-04-02T13:11:31.513163+00:00"
+      "old_value": 1.25,
+      "new_value": 1.0,
+      "percent_change": -20.0,
+      "detected_at": "2026-04-02T18:55:29.754002+00:00"
     },
     {
       "model_id": "minimax/minimax-m2.5",
       "change_type": "cache_price_change",
       "model_type": "chat",
       "field": "cache_read_per_million",
-      "old_value": 0.06,
-      "new_value": 0.1,
-      "percent_change": 66.67,
-      "detected_at": "2026-04-02T13:11:31.513163+00:00"
+      "old_value": 0.1,
+      "new_value": 0.059,
+      "percent_change": -41.0,
+      "detected_at": "2026-04-02T18:55:29.754002+00:00"
     },
     {
       "model_id": "minimax/minimax-m2.5",
       "change_type": "context_change",
       "model_type": "chat",
       "field": "context_window",
-      "old_value": 196608,
-      "new_value": 196600,
-      "percent_change": -0.0,
-      "detected_at": "2026-04-02T13:11:31.513163+00:00"
+      "old_value": 196600,
+      "new_value": 196608,
+      "percent_change": 0.0,
+      "detected_at": "2026-04-02T18:55:29.754002+00:00"
+    },
+    {
+      "model_id": "moonshotai/kimi-k2.5",
+      "change_type": "price_decrease",
+      "model_type": "chat",
+      "field": "output_per_million",
+      "old_value": 1.9092,
+      "new_value": 1.909,
+      "percent_change": -0.01,
+      "detected_at": "2026-04-02T18:55:29.754002+00:00"
+    },
+    {
+      "model_id": "moonshotai/kimi-k2.5",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": 0.1935,
+      "new_value": 0.19135,
+      "percent_change": -1.11,
+      "detected_at": "2026-04-02T18:55:29.754002+00:00"
     }
   ],
   "summary": {
-    "price_increases": 1,
-    "price_decreases": 3,
+    "price_increases": 0,
+    "price_decreases": 2,
     "new_models": 1,
     "removed_models": 0,
     "cache_price_changes": 2,
     "other_changes": 1
-  },
-  "notified": true,
-  "notified_at": "2026-04-02T13:11:50.608137+00:00"
+  }
 }
