@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-04-03T07:06:32.283845+00:00",
+  "fetched_at": "2026-04-03T13:01:24.740136+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 349,
   "data": [
@@ -22,7 +22,7 @@
         "output_modalities": [
           "text"
         ],
-        "tokenizer": "Gemini",
+        "tokenizer": "Gemma",
         "instruct_type": null
       },
       "pricing": {
@@ -48,6 +48,8 @@
         "stop",
         "structured_outputs",
         "temperature",
+        "tool_choice",
+        "tools",
         "top_k",
         "top_p"
       ],
@@ -2281,7 +2283,7 @@
       "name": "MiniMax: MiniMax M2.5",
       "created": 1770908502,
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning.",
-      "context_length": 196600,
+      "context_length": 196608,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -2296,11 +2298,11 @@
       "pricing": {
         "prompt": "0.000000118",
         "completion": "0.00000099",
-        "input_cache_read": "0.0000001"
+        "input_cache_read": "0.000000059"
       },
       "top_provider": {
-        "context_length": 196600,
-        "max_completion_tokens": 196600,
+        "context_length": 196608,
+        "max_completion_tokens": 65536,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -3532,6 +3534,7 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
+        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -3545,6 +3548,7 @@
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -9547,6 +9551,7 @@
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
