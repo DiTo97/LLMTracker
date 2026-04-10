@@ -1,58 +1,23 @@
 {
-  "generated_at": "2026-04-10T02:27:56.910941+00:00",
+  "generated_at": "2026-04-10T18:51:22.952292+00:00",
   "changes": [
     {
-      "model_id": "arcee-ai/trinity-mini:free",
-      "change_type": "removed_model",
-      "model_type": "chat",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.0,
-        "output_per_million": 0.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-04-10T02:27:56.907751+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-5.1",
+      "model_id": "google/gemma-4-26b-a4b-it",
       "change_type": "price_decrease",
       "model_type": "chat",
       "field": "input_per_million",
-      "old_value": 1.395,
-      "new_value": 1.26,
-      "percent_change": -9.68,
-      "detected_at": "2026-04-10T02:27:56.907751+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-5.1",
-      "change_type": "price_decrease",
-      "model_type": "chat",
-      "field": "output_per_million",
-      "old_value": 4.4,
-      "new_value": 3.96,
-      "percent_change": -10.0,
-      "detected_at": "2026-04-10T02:27:56.907751+00:00"
-    },
-    {
-      "model_id": "z-ai/glm-5.1",
-      "change_type": "cache_price_change",
-      "model_type": "chat",
-      "field": "cache_read_per_million",
-      "old_value": 0.26,
-      "new_value": null,
-      "percent_change": -100.0,
-      "detected_at": "2026-04-10T02:27:56.907751+00:00"
+      "old_value": 0.13,
+      "new_value": 0.12,
+      "percent_change": -7.69,
+      "detected_at": "2026-04-10T18:51:22.949909+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
-    "price_decreases": 2,
+    "price_decreases": 1,
     "new_models": 0,
-    "removed_models": 1,
-    "cache_price_changes": 1,
+    "removed_models": 0,
+    "cache_price_changes": 0,
     "other_changes": 0
   }
 }
