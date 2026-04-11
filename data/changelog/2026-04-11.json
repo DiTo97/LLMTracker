@@ -1,63 +1,63 @@
 {
-  "generated_at": "2026-04-11T06:59:44.474015+00:00",
+  "generated_at": "2026-04-11T12:55:49.969754+00:00",
   "changes": [
     {
-      "model_id": "openai/gpt-5.1-codex-mini",
+      "model_id": "thedrummer/cydonia-24b-v4.1",
       "change_type": "cache_price_change",
       "model_type": "chat",
       "field": "cache_read_per_million",
-      "old_value": 0.025,
-      "new_value": 0.03,
-      "percent_change": 20.0,
-      "detected_at": "2026-04-11T06:59:44.470575+00:00"
+      "old_value": null,
+      "new_value": 0.15,
+      "percent_change": null,
+      "detected_at": "2026-04-11T12:55:49.966566+00:00"
     },
     {
-      "model_id": "openai/gpt-5.1",
+      "model_id": "mistralai/mistral-small-3.1-24b-instruct",
+      "change_type": "price_increase",
+      "model_type": "chat",
+      "field": "input_per_million",
+      "old_value": 0.03,
+      "new_value": 0.35,
+      "percent_change": 1066.67,
+      "detected_at": "2026-04-11T12:55:49.966566+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-small-3.1-24b-instruct",
+      "change_type": "price_increase",
+      "model_type": "chat",
+      "field": "output_per_million",
+      "old_value": 0.11,
+      "new_value": 0.56,
+      "percent_change": 409.09,
+      "detected_at": "2026-04-11T12:55:49.966566+00:00"
+    },
+    {
+      "model_id": "mistralai/mistral-small-3.1-24b-instruct",
       "change_type": "cache_price_change",
       "model_type": "chat",
       "field": "cache_read_per_million",
-      "old_value": 0.125,
-      "new_value": 0.13,
-      "percent_change": 4.0,
-      "detected_at": "2026-04-11T06:59:44.470575+00:00"
+      "old_value": 0.015,
+      "new_value": null,
+      "percent_change": -100.0,
+      "detected_at": "2026-04-11T12:55:49.966566+00:00"
     },
     {
-      "model_id": "openai/gpt-5-nano",
-      "change_type": "cache_price_change",
-      "model_type": "chat",
-      "field": "cache_read_per_million",
-      "old_value": 0.005,
-      "new_value": 0.01,
-      "percent_change": 100.0,
-      "detected_at": "2026-04-11T06:59:44.470575+00:00"
-    },
-    {
-      "model_id": "anthropic/claude-sonnet-4",
+      "model_id": "mistralai/mistral-small-3.1-24b-instruct",
       "change_type": "context_change",
       "model_type": "chat",
       "field": "context_window",
-      "old_value": 200000,
-      "new_value": 1000000,
-      "percent_change": 400.0,
-      "detected_at": "2026-04-11T06:59:44.470575+00:00"
-    },
-    {
-      "model_id": "openai/gpt-4o",
-      "change_type": "cache_price_change",
-      "model_type": "chat",
-      "field": "cache_read_per_million",
-      "old_value": 1.25,
-      "new_value": null,
-      "percent_change": -100.0,
-      "detected_at": "2026-04-11T06:59:44.470575+00:00"
+      "old_value": 131072,
+      "new_value": 128000,
+      "percent_change": -2.34,
+      "detected_at": "2026-04-11T12:55:49.966566+00:00"
     }
   ],
   "summary": {
-    "price_increases": 0,
+    "price_increases": 2,
     "price_decreases": 0,
     "new_models": 0,
     "removed_models": 0,
-    "cache_price_changes": 4,
+    "cache_price_changes": 2,
     "other_changes": 1
   }
 }
