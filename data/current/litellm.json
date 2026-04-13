@@ -1,6 +1,6 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-04-13T02:35:05.259278+00:00",
+  "fetched_at": "2026-04-13T08:01:18.981823+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
   "model_count": 2656,
   "data": {
@@ -28622,12 +28622,15 @@
     "together_ai/openai/gpt-oss-120b": {
       "input_cost_per_token": 1.5e-07,
       "litellm_provider": "together_ai",
-      "max_input_tokens": 128000,
+      "max_input_tokens": 131072,
+      "max_output_tokens": 131072,
+      "max_tokens": 131072,
       "mode": "chat",
       "output_cost_per_token": 6e-07,
       "source": "https://www.together.ai/models/gpt-oss-120b",
       "supports_function_calling": true,
       "supports_parallel_function_calling": true,
+      "supports_reasoning": true,
       "supports_response_schema": true,
       "supports_tool_choice": true
     },

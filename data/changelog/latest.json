@@ -1,30 +1,43 @@
 {
-  "generated_at": "2026-04-13T02:35:05.951445+00:00",
+  "generated_at": "2026-04-13T08:01:19.633503+00:00",
   "changes": [
     {
-      "model_id": "eleutherai/llemma_7b",
-      "change_type": "removed_model",
+      "model_id": "minimax/minimax-m2.7",
+      "change_type": "cache_price_change",
       "model_type": "chat",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 0.8,
-        "output_per_million": 1.2,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-04-13T02:35:05.947720+00:00"
+      "field": "cache_read_per_million",
+      "old_value": 0.06,
+      "new_value": 0.059,
+      "percent_change": -1.67,
+      "detected_at": "2026-04-13T08:01:19.631019+00:00"
+    },
+    {
+      "model_id": "minimax/minimax-m2.7",
+      "change_type": "context_change",
+      "model_type": "chat",
+      "field": "context_window",
+      "old_value": 204800,
+      "new_value": 196608,
+      "percent_change": -4.0,
+      "detected_at": "2026-04-13T08:01:19.631019+00:00"
+    },
+    {
+      "model_id": "together_ai/openai/gpt-oss-120b",
+      "change_type": "context_change",
+      "model_type": "chat",
+      "field": "context_window",
+      "old_value": 128000,
+      "new_value": 131072,
+      "percent_change": 2.4,
+      "detected_at": "2026-04-13T08:01:19.631019+00:00"
     }
   ],
   "summary": {
     "price_increases": 0,
     "price_decreases": 0,
     "new_models": 0,
-    "removed_models": 1,
-    "cache_price_changes": 0,
-    "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-04-13T02:35:24.883306+00:00"
+    "removed_models": 0,
+    "cache_price_changes": 1,
+    "other_changes": 2
+  }
 }
