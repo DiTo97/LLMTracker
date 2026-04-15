@@ -44,5 +44,7 @@
     "removed_models": 0,
     "cache_price_changes": 0,
     "other_changes": 0
-  }
+  },
+  "notified": true,
+  "notified_at": "2026-04-15T19:16:27.440986+00:00"
 }
