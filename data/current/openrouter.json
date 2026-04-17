@@ -1,6 +1,6 @@
 {
   "source": "openrouter",
-  "fetched_at": "2026-04-17T13:17:23.495323+00:00",
+  "fetched_at": "2026-04-17T18:58:43.118916+00:00",
   "api_url": "https://openrouter.ai/api/v1/models",
   "model_count": 345,
   "data": [
@@ -1600,7 +1600,7 @@
       "name": "Qwen: Qwen3.5-9B",
       "created": 1773152396,
       "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design...",
-      "context_length": 256000,
+      "context_length": 262144,
       "architecture": {
         "modality": "text+image+video->text",
         "input_modalities": [
@@ -1615,12 +1615,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000005",
+        "prompt": "0.0000001",
         "completion": "0.00000015"
       },
       "top_provider": {
-        "context_length": 256000,
-        "max_completion_tokens": 32768,
+        "context_length": 262144,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -3314,7 +3314,7 @@
       "name": "MoonshotAI: Kimi K2.5",
       "created": 1769487076,
       "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed...",
-      "context_length": 262144,
+      "context_length": 256000,
       "architecture": {
         "modality": "text+image->text",
         "input_modalities": [
@@ -3328,13 +3328,15 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000003827",
-        "completion": "0.00000172",
-        "input_cache_read": "0.00000019135"
+        "prompt": "0",
+        "completion": "0",
+        "audio": "0",
+        "web_search": "0",
+        "input_cache_read": "0"
       },
       "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 65535,
+        "context_length": 256000,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -5358,13 +5360,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000026",
-        "completion": "0.00000038",
-        "input_cache_read": "0.00000013"
+        "prompt": "0.000000259",
+        "completion": "0.00000042",
+        "input_cache_read": "0.000000135"
       },
       "top_provider": {
         "context_length": 163840,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 163840,
         "is_moderated": false
       },
       "per_request_limits": null,

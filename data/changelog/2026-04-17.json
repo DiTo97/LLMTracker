@@ -1,53 +1,103 @@
 {
-  "generated_at": "2026-04-17T13:17:24.206934+00:00",
+  "generated_at": "2026-04-17T18:58:43.885311+00:00",
   "changes": [
     {
-      "model_id": "google/gemini-2.0-flash-001",
-      "change_type": "context_change",
-      "model_type": "chat",
-      "field": "context_window",
-      "old_value": 1048576,
-      "new_value": 1000000,
-      "percent_change": -4.63,
-      "detected_at": "2026-04-17T13:17:24.204025+00:00"
-    },
-    {
-      "model_id": "google/gemma-4-26b-a4b-it",
-      "change_type": "price_increase",
+      "model_id": "moonshotai/kimi-k2.5",
+      "change_type": "price_decrease",
       "model_type": "chat",
       "field": "input_per_million",
-      "old_value": 0.07,
-      "new_value": 0.08,
-      "percent_change": 14.29,
-      "detected_at": "2026-04-17T13:17:24.204025+00:00"
+      "old_value": 0.3827,
+      "new_value": 0.0,
+      "percent_change": -100.0,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
     },
     {
-      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_id": "moonshotai/kimi-k2.5",
       "change_type": "price_decrease",
       "model_type": "chat",
       "field": "output_per_million",
-      "old_value": 0.4,
-      "new_value": 0.35,
-      "percent_change": -12.5,
-      "detected_at": "2026-04-17T13:17:24.204025+00:00"
+      "old_value": 1.72,
+      "new_value": 0.0,
+      "percent_change": -100.0,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
     },
     {
-      "model_id": "google/gemma-4-26b-a4b-it",
+      "model_id": "moonshotai/kimi-k2.5",
       "change_type": "cache_price_change",
       "model_type": "chat",
       "field": "cache_read_per_million",
-      "old_value": 0.04,
-      "new_value": 0.01,
-      "percent_change": -75.0,
-      "detected_at": "2026-04-17T13:17:24.204025+00:00"
+      "old_value": 0.19135,
+      "new_value": null,
+      "percent_change": -100.0,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
+    },
+    {
+      "model_id": "moonshotai/kimi-k2.5",
+      "change_type": "context_change",
+      "model_type": "chat",
+      "field": "context_window",
+      "old_value": 262144,
+      "new_value": 256000,
+      "percent_change": -2.34,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
+    },
+    {
+      "model_id": "qwen/qwen3.5-9b",
+      "change_type": "price_increase",
+      "model_type": "chat",
+      "field": "input_per_million",
+      "old_value": 0.05,
+      "new_value": 0.1,
+      "percent_change": 100.0,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
+    },
+    {
+      "model_id": "qwen/qwen3.5-9b",
+      "change_type": "context_change",
+      "model_type": "chat",
+      "field": "context_window",
+      "old_value": 256000,
+      "new_value": 262144,
+      "percent_change": 2.4,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
+    },
+    {
+      "model_id": "deepseek/deepseek-v3.2",
+      "change_type": "price_decrease",
+      "model_type": "chat",
+      "field": "input_per_million",
+      "old_value": 0.26,
+      "new_value": 0.259,
+      "percent_change": -0.38,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
+    },
+    {
+      "model_id": "deepseek/deepseek-v3.2",
+      "change_type": "price_increase",
+      "model_type": "chat",
+      "field": "output_per_million",
+      "old_value": 0.38,
+      "new_value": 0.42,
+      "percent_change": 10.53,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
+    },
+    {
+      "model_id": "deepseek/deepseek-v3.2",
+      "change_type": "cache_price_change",
+      "model_type": "chat",
+      "field": "cache_read_per_million",
+      "old_value": 0.13,
+      "new_value": 0.135,
+      "percent_change": 3.85,
+      "detected_at": "2026-04-17T18:58:43.882391+00:00"
     }
   ],
   "summary": {
-    "price_increases": 1,
-    "price_decreases": 1,
+    "price_increases": 2,
+    "price_decreases": 3,
     "new_models": 0,
     "removed_models": 0,
-    "cache_price_changes": 1,
-    "other_changes": 1
+    "cache_price_changes": 2,
+    "other_changes": 2
   }
 }
