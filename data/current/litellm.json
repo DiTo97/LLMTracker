@@ -1,8 +1,8 @@
 {
   "source": "litellm",
-  "fetched_at": "2026-04-18T18:50:12.929904+00:00",
+  "fetched_at": "2026-04-19T02:35:03.366513+00:00",
   "source_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
-  "model_count": 2671,
+  "model_count": 2672,
   "data": {
     "sample_spec": {
       "code_interpreter_cost_per_session": 0.0,
@@ -33659,6 +33659,22 @@
       "supports_web_search": true
     },
     "xai/grok-4.20-beta-0309-reasoning": {
+      "cache_read_input_token_cost": 2e-07,
+      "input_cost_per_token": 2e-06,
+      "litellm_provider": "xai",
+      "max_input_tokens": 2000000,
+      "max_output_tokens": 2000000,
+      "max_tokens": 2000000,
+      "mode": "chat",
+      "output_cost_per_token": 6e-06,
+      "source": "https://docs.x.ai/docs/models",
+      "supports_function_calling": true,
+      "supports_reasoning": true,
+      "supports_tool_choice": true,
+      "supports_vision": true,
+      "supports_web_search": true
+    },
+    "xai/grok-4.20-0309-reasoning": {
       "cache_read_input_token_cost": 2e-07,
       "input_cost_per_token": 2e-06,
       "litellm_provider": "xai",
