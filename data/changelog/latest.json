@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-19T07:17:41.727668+00:00",
+  "generated_at": "2026-04-19T12:59:51.204970+00:00",
   "changes": [
     {
       "model_id": "google/gemini-2.0-flash-001",
       "change_type": "context_change",
       "model_type": "chat",
       "field": "context_window",
-      "old_value": 1000000,
-      "new_value": 1048576,
-      "percent_change": 4.86,
-      "detected_at": "2026-04-19T07:17:41.725234+00:00"
+      "old_value": 1048576,
+      "new_value": 1000000,
+      "percent_change": -4.63,
+      "detected_at": "2026-04-19T12:59:51.202612+00:00"
     }
   ],
   "summary": {
@@ -19,7 +19,5 @@
     "removed_models": 0,
     "cache_price_changes": 0,
     "other_changes": 1
-  },
-  "notified": true,
-  "notified_at": "2026-04-19T07:17:58.823355+00:00"
+  }
 }
