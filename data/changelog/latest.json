@@ -1,65 +1,23 @@
 {
-  "generated_at": "2026-04-19T02:35:04.039473+00:00",
+  "generated_at": "2026-04-19T07:17:41.727668+00:00",
   "changes": [
     {
-      "model_id": "xai/grok-4.20-0309-reasoning",
-      "change_type": "new_model",
+      "model_id": "google/gemini-2.0-flash-001",
+      "change_type": "context_change",
       "model_type": "chat",
-      "field": "model",
-      "old_value": null,
-      "new_value": {
-        "input_per_million": 2.0,
-        "output_per_million": 6.0,
-        "cache_read_per_million": 0.2,
-        "cache_creation_per_million": null
-      },
-      "percent_change": null,
-      "detected_at": "2026-04-19T02:35:04.035993+00:00"
-    },
-    {
-      "model_id": "openai/gpt-4o:extended",
-      "change_type": "removed_model",
-      "model_type": "chat",
-      "field": "model",
-      "old_value": {
-        "input_per_million": 6.0,
-        "output_per_million": 18.0,
-        "cache_read_per_million": null,
-        "cache_creation_per_million": null
-      },
-      "new_value": null,
-      "percent_change": null,
-      "detected_at": "2026-04-19T02:35:04.035993+00:00"
-    },
-    {
-      "model_id": "meta-llama/llama-3.3-70b-instruct",
-      "change_type": "price_increase",
-      "model_type": "chat",
-      "field": "input_per_million",
-      "old_value": 0.1,
-      "new_value": 0.12,
-      "percent_change": 20.0,
-      "detected_at": "2026-04-19T02:35:04.035993+00:00"
-    },
-    {
-      "model_id": "meta-llama/llama-3.3-70b-instruct",
-      "change_type": "price_increase",
-      "model_type": "chat",
-      "field": "output_per_million",
-      "old_value": 0.32,
-      "new_value": 0.38,
-      "percent_change": 18.75,
-      "detected_at": "2026-04-19T02:35:04.035993+00:00"
+      "field": "context_window",
+      "old_value": 1000000,
+      "new_value": 1048576,
+      "percent_change": 4.86,
+      "detected_at": "2026-04-19T07:17:41.725234+00:00"
     }
   ],
   "summary": {
-    "price_increases": 2,
+    "price_increases": 0,
     "price_decreases": 0,
-    "new_models": 1,
-    "removed_models": 1,
+    "new_models": 0,
+    "removed_models": 0,
     "cache_price_changes": 0,
-    "other_changes": 0
-  },
-  "notified": true,
-  "notified_at": "2026-04-19T02:35:24.468948+00:00"
+    "other_changes": 1
+  }
 }
